@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum CommandStatus
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum CommandStatus
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NixUniversalSDK.CommandStatus">
+
+
+
+
+  <h1 id="NixUniversalSDK_CommandStatus" data-uid="NixUniversalSDK.CommandStatus" class="text-break">
+    Enum CommandStatus
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Enum describing the possible status of commands executed by the Nix device, as provided in the <a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> class. See <a class="xref" href="NixUniversalSDK.CommandStatusExtensions.html">CommandStatusExtensions</a> for extension methods.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum CommandStatus</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="NixUniversalSDK.CommandStatusExtensions.html#NixUniversalSDK_CommandStatusExtensions_GetName_NixUniversalSDK_CommandStatus_">CommandStatusExtensions.GetName(CommandStatus)</a>
+  </div>
+  </dd></dl>
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="NixUniversalSDK_CommandStatus_ErrorAmbientLight"><code>ErrorAmbientLight = 6</code></dt>
+    <dd><p>Status code indicating that the measurement operation failed due to the detection of ambient light leakage.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorInternal"><code>ErrorInternal = 8</code></dt>
+    <dd><p>Status code indicating that the command failed due to an unknown / internal SDK error.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorInvalidArgument"><code>ErrorInvalidArgument = 3</code></dt>
+    <dd><p>Status code indicating that the command was aborted because it contained invalid arguments.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorLowPower"><code>ErrorLowPower = 4</code></dt>
+    <dd><p>Status code indicating that the command was aborted because of a low power state on the Nix device (e.g. - insufficient battery power to complete a measurement).</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorNotReady"><code>ErrorNotReady = 1</code></dt>
+    <dd><p>Status code indicating that the command was aborted because the Nix device was not ready (i.e. - it was already executing another command).</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorNotSupported"><code>ErrorNotSupported = 2</code></dt>
+    <dd><p>Status code indicating that the command was aborted because the it was not supported by the Nix device instance.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorScanDelta"><code>ErrorScanDelta = 7</code></dt>
+    <dd><p>Status code indicating that the in-field calibration operation failed due to high delta E (i.e. - the calibration reference tile could not be verified by its color value). This status is only possible after a <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_System_String_">RunFieldCalibrationAsync(string)</a> command.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_ErrorTimeout"><code>ErrorTimeout = 5</code></dt>
+    <dd><p>Status code indicating that the command failed due to a timeout error.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_Success"><code>Success = 0</code></dt>
+    <dd><p>Status code indicating that the command completed successfully.</p>
+</dd>
+    <dt id="NixUniversalSDK_CommandStatus_WarningTemperature"><code>WarningTemperature = 9</code></dt>
+    <dd><p>Status code indicating that the in-field calibration operation completed successfully, but a temperature warning was issued (i.e. - the ambient temperature of the device is currently outside of the recommended range). This status is only possible after a <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_System_String_">RunFieldCalibrationAsync(string)</a> command.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

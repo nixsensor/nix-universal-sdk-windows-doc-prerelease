@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Nix Universal SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Nix Universal SDK ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.min.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="docs/toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/index.md/#L1">
+
+      <script type="text/javascript" src="styles/docfx.min.js"></script>
+      <script type="text/javascript" src="styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="nix-universal-sdk">Nix Universal SDK</h1>
+
+<p>A library to allow integration of Nix devices into third party Windows .NET applications.</p>
+<p>The latest version of this documentation is available <a href="https://www.nixsensor.com/sdk-doc-windows">online</a>.</p>
+<h2 id="overview">Overview</h2>
+<p>This library was written to allow integration of Nix devices into third party Windows .NET applications. It provides tools to discover nearby Nix devices, open a connection, perform measurements, and obtain data. Tools are also provided for basic colour conversions and colour difference calculations.</p>
+<p>This library replaces the previous <code>NixLibrary.dll</code> library. These two libraries should not be used together; remove <code>NixLibrary.dll</code> from your project before adding <code>NixUniversalSDK</code>.</p>
+<h2 id="minimum-requirements">Minimum Requirements</h2>
+<ul>
+<li>Microsoft Visual Studio (tested with Visual Studio 2022, version 17.5.2)</li>
+<li>Windows device running Windows 10 version 1703 ('Creators Update') or later
+<ul>
+<li>Version code 10.0.15063 or higher</li>
+</ul>
+</li>
+<li>.NET Framework 4.7.2 or higher</li>
+<li>Bluetooth 4.0 ('Bluetooh Low Energy') hardware for Bluetooth connectivity</li>
+<li>USB 2.0 port for USB connectivity</li>
+<li>Supported Nix devices:
+<ul>
+<li>Nix Mini</li>
+<li>Nix Mini 2</li>
+<li>Nix Mini 3</li>
+<li>Nix Pro</li>
+<li>Nix Pro 2</li>
+<li>Nix QC</li>
+<li>Nix Spectro 2</li>
+</ul>
+</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>The Nix Universal SDK is provided as a NuGet package, which must be added to a local NuGet feed before it can be used in your Visual Studio project. See <a href="docs/add-to-vs.html">Adding to Your Visual Studio Project</a> for instructions.</li>
+<li>Once added to your Visual Studio project, the <a class="xref" href="api/NixUniversalSDK.DeviceScanner.html">DeviceScanner</a> class can be used to discover nearby and attached Nix devices as <a class="xref" href="api/NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instances. These objects can be used to open a connection to the the device. See <a href="docs/discovering-connecting.html">Discovering and Connecting to Nix Devices</a> for more details.</li>
+<li>Once connected, measurements and other device operations can be performed. Device parameters can also be queried. See <a href="docs/device-operations.html">Device Operations</a> for more details.</li>
+<li>Once a measurement has been completed, results are provided as <a class="xref" href="api/NixUniversalSDK.IMeasurementData.html">IMeasurementData</a> instances. These objects provide colorimetry data, density, and spectral measurements (if supported by the device). See <a href="docs/handling-measurements.html">Handling Measurement Data</a> for more details</li>
+<li>Several additional utility functions are provided by the <a class="xref" href="api/NixUniversalSDK.ColorUtils.html">ColorUtils</a> class. These include functions for manual colour conversions, delta E calculations, and more.</li>
+<li>To demonstrate integration of the Nix Universal SDK, two <a href="docs/example-apps.html">examples</a> are provided with the SDK download:
+<ul>
+<li>A basic console application <code>NixExampleConsole</code>, targeting .NET Framework 4.7.2</li>
+<li>A WinUI3 based application <code>NixExampleWinUI</code>, targeting .NET 7.0</li>
+</ul>
+</li>
+</ol>
+<h2 id="additional-support">Additional Support</h2>
+<p>This document is not intended as an exhaustive reference. Please refer to the <a class="xref" href="api/NixUniversalSDK.html">API</a> documentation section for further details on the classes and methods provided by the Nix Universal SDK.</p>
+<p>If you encounter any issues with SDK implementation, please contact us via:</p>
+<ul>
+<li>E-mail: sdk@nixsensor.com</li>
+<li>Phone (Monday to Friday 9 a.m. to 5 p.m. Eastern Time)
+<ul>
+<li>Toll Free (North America): 1 (800) 649-1387</li>
+<li>Main Office: 1 (905) 581-6363</li>
+<li>San Francisco: 1 (415) 632-3448</li>
+</ul>
+</li>
+</ul>
+<h2 id="privacy-disclaimer">Privacy Disclaimer</h2>
+<p>Limited anonymous usage data is tracked by the Nix Universal SDK using Google Analytics. No personal user data is collected and no data which uniquely identifies an individual Nix device is collected. Collected data is subject to the Nix Apps <a href="https://www.nixsensor.com/nix-apps-privacy-policy/">privacy policy</a>. Events and usage data tracked by the Nix SDK are solely limited to the following information:</p>
+<ul>
+<li>Device connection events:
+<ul>
+<li>Device type (e.g. - Nix Pro, Nix Mini, etc)</li>
+<li>Device manufacturing batch identifier</li>
+<li>Nix SDK build identifier</li>
+</ul>
+</li>
+<li>Device color scan events:
+<ul>
+<li>Device type</li>
+<li>Scanned color data</li>
+</ul>
+</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

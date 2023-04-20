@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Handling Measurement Data </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Handling Measurement Data ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/handling-measurements.md/#L1">
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="handling-measurement-data">Handling Measurement Data</h1>
+
+<p>Measurements from Nix devices are provided as objects conforming to the <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> interface. These contain all data and metadata to completely describe the measurement. Color, spectral, and density data are obtained from the <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> object as <a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a>, <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a>, and <a class="xref" href="../api/NixUniversalSDK.IDensityData.html"><code>IDensityData</code></a> respectively. The differences between these object types are listed below.</p>
+<h2 id="imeasurementdata"><a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a></h2>
+<ul>
+<li>Corresponds to a single measurement in a single <a class="xref" href="../api/NixUniversalSDK.ScanMode.html"><code>ScanMode</code></a> from a Nix device</li>
+<li>Provides color data as <a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a>
+<ul>
+<li>To get color data use <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ToColorData_"><code>ToColorData()</code></a></li>
+<li>All devices provide data for <a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_2">D50/2°</a> reference white</li>
+<li>Some devices provide additional color data for other reference white values</li>
+<li>To check if available, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ProvidesColor_"><code>ProvidesColor()</code></a></li>
+</ul>
+</li>
+<li>May provide spectral data as <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a>, depending on the device type
+<ul>
+<li>To check if available: check the property <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ProvidesSpectral"><code>ProvidesSpectral</code></a></li>
+<li>To get spectral data, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_SpectralData"><code>SpectralData</code></a></li>
+</ul>
+</li>
+<li>May provide density data as <a class="xref" href="../api/NixUniversalSDK.IDensityData.html"><code>IDensityData</code></a>, depending on the device type
+<ul>
+<li>To check if available: check the property <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ProvidesDensity"><code>ProvidesDensity</code></a></li>
+<li>To get density data, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ToDensityData_"><code>ToDensityData()</code></a></li>
+</ul>
+</li>
+<li>The measurement data contains all data and metadata to completely describe the measurement
+<ul>
+<li>For maximum fidelity and ease of use when saving data, save the <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_Raw"><code>Raw</code></a> string data</li>
+<li>The raw string value can be used to reconstruct measurement data using <a class="xref" href="../api/NixUniversalSDK.MeasurementData.html#NixUniversalSDK_MeasurementData_FromRaw_"><code>FromRaw()</code></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="supported-icolordata-output-based-on-device-type">Supported <code>IColorData</code> output based on device type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Reference</th>
+<th style="text-align: center;">Mini</th>
+<th style="text-align: center;">Mini 2</th>
+<th style="text-align: center;">Mini 3</th>
+<th style="text-align: center;">Pro</th>
+<th style="text-align: center;">Pro 2</th>
+<th style="text-align: center;">QC</th>
+<th style="text-align: center;">Spectro 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_A_2">A/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_A_10">A/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_C_2">C/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_C_10">C/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_2">D50/2°</a></td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_10">D50/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D55_2">D55/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D55_10">D55/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D65_2">D65/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D65_10">D65/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D75_2">D75/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D75_10">D75/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_F2_2">F2/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_F2_10">F2/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_F7_2">F7/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_F7_10">F7/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_F11_2">F11/2°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_F11_10">F11/10°</a></td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supported-ispectraldata-and-idensitydata-output-based-on-device-type">Supported <code>ISpectralData</code> and <code>IDensityData</code> output based on device type</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device Type</th>
+<th style="text-align: center;">Supports spectral output</th>
+<th style="text-align: center;">Supports density output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mini</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 2</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 3</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro 2</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">QC</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro 2</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="icolordata"><a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a></h2>
+<ul>
+<li>Consists of colorimetry data for a single reference white point (eg - <a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_2">D50/2°</a>) and single measurement mode</li>
+<li>Can be obtained directly from an <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> object, or an <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a> object</li>
+<li>Full description of a color consisting of:
+<ul>
+<li>Type / color system: <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Type"><code>Type</code></a>
+<ul>
+<li>One of <a class="xref" href="../api/NixUniversalSDK.ColorType.html#NixUniversalSDK_ColorType_CIEXYZ">CIEXYZ</a>, <a class="xref" href="../api/NixUniversalSDK.ColorType.html#NixUniversalSDK_ColorType_CIELAB">CIELAB</a>, <a class="xref" href="../api/NixUniversalSDK.ColorType.html#NixUniversalSDK_ColorType_CIELCH">CIELCH</a>, <a class="xref" href="../api/NixUniversalSDK.ColorType.html#NixUniversalSDK_ColorType_CIELUV">CIELUV</a></li>
+</ul>
+</li>
+<li>Value: <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Value"><code>Value</code></a>
+<ul>
+<li>Numeric array (three channels)</li>
+<li>Format matches the system defined by <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Type"><code>Type</code></a></li>
+</ul>
+</li>
+<li>Reference white point: <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Reference"><code>Reference</code></a>
+<ul>
+<li>One of <a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html"><code>ReferenceWhite</code></a></li>
+</ul>
+</li>
+<li>Scan mode: <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Mode"><code>Mode</code></a>
+<ul>
+<li>One of <a class="xref" href="../api/NixUniversalSDK.ScanMode.html"><code>ScanMode</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Regardless of <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Type"><code>Type</code></a>, the color is always backed internally by a CIEXYZ value</li>
+<li>Color can be converted between any of the types specified in the <a class="xref" href="../api/NixUniversalSDK.ColorType.html"><code>ColorType</code></a> enum using <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_ConvertTo_"><code>ConvertTo()</code></a></li>
+<li>Delta E to another <a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a> can be evaluated using <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_CompareTo_"><code>CompareTo()</code></a>
+<ul>
+<li>Both <a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a> objects must share the same reference, otherwise the result with be <code>NaN</code></li>
+<li>If the color difference type is not specified, the default is <a class="xref" href="../api/NixUniversalSDK.ColorDifferenceType.html#NixUniversalSDK_ColorDifferenceType_CIE2000">CIE2000</a></li>
+</ul>
+</li>
+<li>sRGB value can be fetched from <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_RgbValue"><code>RgbValue</code></a></li>
+</ul>
+<h2 id="ispectraldata"><a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a></h2>
+<ul>
+<li>Consists of spectral data for a single measurement mode</li>
+<li>Obtained from an <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> object that supports spectral data</li>
+<li>Full description of the spectral measurement consisting of:
+<ul>
+<li>Scan mode: <a class="xref" href="../api/NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Mode"><code>Mode</code></a></li>
+<li>Wavelength values: <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html#NixUniversalSDK_ISpectralData_Lambda"><code>Lambda</code></a> (numeric array)</li>
+<li>Spectral values: <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html#NixUniversalSDK_ISpectralData_Value"><code>Value</code></a> (numeric array)</li>
+</ul>
+</li>
+<li>Can be used to obtain density data as an <a class="xref" href="../api/NixUniversalSDK.IDensityData.html"><code>IDensityData</code></a> object
+<ul>
+<li>Use <a class="xref" href="../api/NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToDensityData_"><code>ToDensityData()</code></a></li>
+</ul>
+</li>
+<li>Can be used to obtain colorimetry data as an <a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a> object for any reference white
+<ul>
+<li>Use <a class="xref" href="../api/NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToColorData_"><code>ToColorData()</code></a></li>
+</ul>
+</li>
+<li>sRGB value can be fetched for any reference white
+<ul>
+<li>Use <a class="xref" href="../api/NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToRgbValue_"><code>ToRgbValue()</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="idensitydata"><a class="xref" href="../api/NixUniversalSDK.IDensityData.html"><code>IDensityData</code></a></h2>
+<ul>
+<li>Consists of density data for a single measurement mode and single 'ISO status' / lookup table</li>
+<li>Obtained from an <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> object that supports spectral data, or an <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a> object</li>
+<li>Description of the density values for a specific 'ISO Status' consisting of:
+<ul>
+<li>Scan mode: <a class="xref" href="../api/NixUniversalSDK.IDensityData.html#NixUniversalSDK_IDensityData_Mode"><code>Mode</code></a></li>
+<li>ISO status: <a class="xref" href="../api/NixUniversalSDK.IDensityData.html#NixUniversalSDK_IDensityData_Status"><code>Status</code></a></li>
+<li>Density values: <a class="xref" href="../api/NixUniversalSDK.IDensityData.html#NixUniversalSDK_IDensityData_Value"><code>Value</code></a>
+<ul>
+<li>Index 0: C</li>
+<li>Index 1: M</li>
+<li>Index 2: Y</li>
+<li>Index 3: K</li>
+</ul>
+</li>
+<li>Automatic density index <a class="xref" href="../api/NixUniversalSDK.IDensityData.html#NixUniversalSDK_IDensityData_AutoIndex"><code>AutoIndex</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="other-utilities">Other utilities</h2>
+<p>The <a class="xref" href="../api/NixUniversalSDK.ColorUtils.html"><code>ColorUtils</code></a> class provides many helpful functions for manual colour conversions and delta E calculations.</p>
+<h1 id="next-steps">Next Steps</h1>
+<ul>
+<li>Review the <a href="example-apps.html">example applications</a></li>
+<li><a href="../index.html#additional-support">Get additional support</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/handling-measurements.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

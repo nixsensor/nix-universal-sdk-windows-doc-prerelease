@@ -1,0 +1,1712 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ColorUtils
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ColorUtils
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NixUniversalSDK.ColorUtils">
+
+
+
+  <h1 id="NixUniversalSDK_ColorUtils" data-uid="NixUniversalSDK.ColorUtils" class="text-break">
+    Class ColorUtils
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Color math utility functions</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ColorUtils</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ColorUtils</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NixUniversalSDK_ColorUtils_AdaptXyz_" data-uid="NixUniversalSDK.ColorUtils.AdaptXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_AdaptXyz_System_Double___System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.AdaptXyz(System.Double[],System.Double[],System.Double[])">
+  AdaptXyz(double[], double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapts colour in XYZ from one reference white to another using Bradford adaptation method. NOTE: refIn, refOut, xyzIn must all be on the same scale</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] AdaptXyz(double[] xyzIn, double[] refIn, double[] refOut)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyzIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Source color, referenced to refIn (element order X, Y, Z)</p>
+</dd>
+    <dt><code>refIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Source reference white (element order X, Y, Z)</p>
+</dd>
+    <dt><code>refOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Destination reference white (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Adapted color, referenced to refOut (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_ClipXyz_" data-uid="NixUniversalSDK.ColorUtils.ClipXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_ClipXyz_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.ClipXyz(System.Double[],System.Double[])">
+  ClipXyz(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clips CIEXYZ values in between 0 and the value of the reference white to ensure X, Y, Z are in the proper range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] ClipXyz(double[] xyz, double[] xyzRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value for reference white (X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Clipped CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_CmykToXyz_" data-uid="NixUniversalSDK.ColorUtils.CmykToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_CmykToXyz_System_Double___System_Double___System_Boolean_System_Double_____System_Int32_____System_Int32_____System_Int32_____" data-uid="NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean,System.Double[][],System.Int32[][],System.Int32[][],System.Int32[][])">
+  CmykToXyz(double[], double[], bool, double[][], int[][], int[][], int[][])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates XYZ value from CMYK input using lookup tables provided as input arguments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] CmykToXyz(double[] cmykIn, double[] refOut, bool bpc, double[][] m, int[][] input, int[][] clut, int[][] output)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cmykIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CMYK colour input, unity scale (element order C, M, Y, K)</p>
+</dd>
+    <dt><code>refOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white value for XYZ output, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>bpc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set to true to perform black point compensation</p>
+</dd>
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[][]</dt>
+    <dd><p>3x3 Extracted from ICC profile: transformation matrix to perform on LAB value (NOT used in current function)</p>
+</dd>
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[][]</dt>
+    <dd><p>256x4 Extracted from ICC profile: InputCurves</p>
+</dd>
+    <dt><code>clut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[][]</dt>
+    <dd><p>6561x3 Extracted from ICC profile: CMYK to LAB LUT (flattened 9x9x9x9 array with 3 channels, one each for L, A, B)</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[][]</dt>
+    <dd><p>Extracted from ICC profile: OutputCurves (NOT used in current function, default profile has 1:1 output)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>XYZ value output, unity scale (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_CmykToXyz_" data-uid="NixUniversalSDK.ColorUtils.CmykToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_CmykToXyz_System_Double___System_Double___System_Boolean_" data-uid="NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean)">
+  CmykToXyz(double[], double[], bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates XYZ value from CMYK input using built-in lookup tables</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] CmykToXyz(double[] cmykIn, double[] refOut, bool bpc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cmykIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CMYK colour input, unity scale (element order C, M, Y, K)</p>
+</dd>
+    <dt><code>refOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white value for XYZ output, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>bpc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set to true to perform black point compensation</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>XYZ value output, unity scale (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DegToRad_" data-uid="NixUniversalSDK.ColorUtils.DegToRad*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DegToRad_System_Double_" data-uid="NixUniversalSDK.ColorUtils.DegToRad(System.Double)">
+  DegToRad(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts angle in degrees to radians (used in dE2000 function)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DegToRad(double deg)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deg</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Angle in degrees</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Angle in radians</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DeltaE00_" data-uid="NixUniversalSDK.ColorUtils.DeltaE00*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DeltaE00_System_Double___System_Double___System_Double_System_Double_System_Double_" data-uid="NixUniversalSDK.ColorUtils.DeltaE00(System.Double[],System.Double[],System.Double,System.Double,System.Double)">
+  DeltaE00(double[], double[], double, double, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes two CIELAB values and calculates color difference (dE) using the CIE2000 formula. NOTE: both CIELAB values must share the same reference white. If they do not, convert to XYZ, adapt, convert back to CIELAB before calculating dE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DeltaE00(double[] lab1, double[] lab2, double kL = 1, double kC = 1, double kH = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>lab2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Second CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>kL</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Model parameter (optional, default 1)</p>
+</dd>
+    <dt><code>kC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Model parameter (optional, default 1)</p>
+</dd>
+    <dt><code>kH</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Model parameter (optional, default 1)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Delta E (2000) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DeltaE76_" data-uid="NixUniversalSDK.ColorUtils.DeltaE76*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DeltaE76_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.DeltaE76(System.Double[],System.Double[])">
+  DeltaE76(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes two CIELAB values and calculates color difference (dE) using CIE1976 formula. NOTE: both CIELAB values must share the same reference white. If they do not: convert to XYZ, adapt, convert back to CIELAB before calculating dE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DeltaE76(double[] lab1, double[] lab2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>lab2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Second CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Delta E (1976) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DeltaE94_" data-uid="NixUniversalSDK.ColorUtils.DeltaE94*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DeltaE94_System_Double___System_Double___System_Double_System_Double_System_Double_" data-uid="NixUniversalSDK.ColorUtils.DeltaE94(System.Double[],System.Double[],System.Double,System.Double,System.Double)">
+  DeltaE94(double[], double[], double, double, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes two CIELAB values and calculates color difference (dE) using the CIE1994 formula. Requires weighting factors kL, k1, and k2 which are dependent on application. Use <a class="xref" href="NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_DeltaE94G_System_Double___System_Double___">DeltaE94G(double[], double[])</a> for graphic design applications and<a class="xref" href="NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_DeltaE94T_System_Double___System_Double___">DeltaE94T(double[], double[])</a> for textile applications. Both CIELAB values must share the same reference white.If they do not, convert to XYZ, adapt, convert back to CIELAB before calculating dE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DeltaE94(double[] lab1, double[] lab2, double kL, double k1, double k2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>lab2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Second CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>kL</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Weighting factor (application dependent)</p>
+</dd>
+    <dt><code>k1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Weighting factor (application dependent)</p>
+</dd>
+    <dt><code>k2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Weighting factor (application dependent)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Delta E (1994) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DeltaE94G_" data-uid="NixUniversalSDK.ColorUtils.DeltaE94G*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DeltaE94G_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.DeltaE94G(System.Double[],System.Double[])">
+  DeltaE94G(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes two CIELAB values and calculates color difference (dE) using the CIE1994 formula for the graphic design application (kL = 1, k1 = 0.045, k2 = 0.015). See also <a class="xref" href="NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_DeltaE94_System_Double___System_Double___System_Double_System_Double_System_Double_">DeltaE94(double[], double[], double, double, double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DeltaE94G(double[] lab1, double[] lab2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>lab2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Second CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Delta E (1994) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DeltaE94T_" data-uid="NixUniversalSDK.ColorUtils.DeltaE94T*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DeltaE94T_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.DeltaE94T(System.Double[],System.Double[])">
+  DeltaE94T(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes two CIELAB values and calculates color difference (dE) using the CIE1994 formula for the textiles design application (kL = 2, k1 = 0.048, k2 = 0.014). See also <a class="xref" href="NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_DeltaE94_System_Double___System_Double___System_Double_System_Double_System_Double_">DeltaE94(double[], double[], double, double, double)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DeltaE94T(double[] lab1, double[] lab2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>lab2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Second CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Delta E (1994) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_DeltaECmc_" data-uid="NixUniversalSDK.ColorUtils.DeltaECmc*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_DeltaECmc_System_Double___System_Double___System_Double_System_Double_" data-uid="NixUniversalSDK.ColorUtils.DeltaECmc(System.Double[],System.Double[],System.Double,System.Double)">
+  DeltaECmc(double[], double[], double, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes two CIELAB values and calculates color difference (dE) using the CMC(l:c) formula. Depends on model parameters l and c; common values used are CMC(2:1) for acceptability and CMC(1:1) for perceptibility.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DeltaECmc(double[] lab1, double[] lab2, double l, double c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>lab2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>First CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>l</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Model parameter l</p>
+</dd>
+    <dt><code>c</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Model parameter c</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Delta E (CMC) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LabToLch_" data-uid="NixUniversalSDK.ColorUtils.LabToLch*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LabToLch_System_Double___" data-uid="NixUniversalSDK.ColorUtils.LabToLch(System.Double[])">
+  LabToLch(double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIELAB value and converts to polar coordinates (LCH)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LabToLch(double[] labIn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>labIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>LCHab value (element order L, c, h). Hue angle h is in degrees</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LabToXyz_" data-uid="NixUniversalSDK.ColorUtils.LabToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LabToXyz_System_Double___NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_" data-uid="NixUniversalSDK.ColorUtils.LabToXyz(System.Double[],NixUniversalSDK.Illuminant,NixUniversalSDK.Observer)">
+  LabToXyz(double[], Illuminant, Observer)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIELAB value and its reference white to calculate CIEXYZ value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LabToXyz(double[] lab, Illuminant illuminant, Observer observer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd></dd>
+    <dt><code>illuminant</code> <a class="xref" href="NixUniversalSDK.Illuminant.html">Illuminant</a></dt>
+    <dd><p>Illuminant for reference white point</p>
+</dd>
+    <dt><code>observer</code> <a class="xref" href="NixUniversalSDK.Observer.html">Observer</a></dt>
+    <dd><p>Observer for reference white point</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LabToXyz_" data-uid="NixUniversalSDK.ColorUtils.LabToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LabToXyz_System_Double___NixUniversalSDK_ReferenceWhite_" data-uid="NixUniversalSDK.ColorUtils.LabToXyz(System.Double[],NixUniversalSDK.ReferenceWhite)">
+  LabToXyz(double[], ReferenceWhite)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIELAB value and its reference white to calculate CIEXYZ value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LabToXyz(double[] lab, ReferenceWhite reference)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>reference</code> <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a></dt>
+    <dd><p>Reference white point for input CIEXYZ value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LabToXyz_" data-uid="NixUniversalSDK.ColorUtils.LabToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LabToXyz_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.LabToXyz(System.Double[],System.Double[])">
+  LabToXyz(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIELAB value and its reference white to calculate CIEXYZ value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LabToXyz(double[] lab, double[] xyzRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lab</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LchToLab_" data-uid="NixUniversalSDK.ColorUtils.LchToLab*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LchToLab_System_Double___" data-uid="NixUniversalSDK.ColorUtils.LchToLab(System.Double[])">
+  LchToLab(double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes LCHab value and converts to CIELAB</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LchToLab(double[] lchIn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lchIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>LCHab value (element order L, c, h). Hue angle h is in degrees</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LchToLuv_" data-uid="NixUniversalSDK.ColorUtils.LchToLuv*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LchToLuv_System_Double___" data-uid="NixUniversalSDK.ColorUtils.LchToLuv(System.Double[])">
+  LchToLuv(double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes LCHuv value and converts to CIELUV</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LchToLuv(double[] lchIn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lchIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>LCHuv value (element order L, c, h). Hue angle h is in degrees</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELUV value (element order L, u, v)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LuvToLch_" data-uid="NixUniversalSDK.ColorUtils.LuvToLch*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LuvToLch_System_Double___" data-uid="NixUniversalSDK.ColorUtils.LuvToLch(System.Double[])">
+  LuvToLch(double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIELUV value and converts to polar coordinates (LCH)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LuvToLch(double[] LuvIn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>LuvIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELUV value (element order L, u, v)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>LCHuv value (element order L, c, h). Hue angle h is in degrees</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_LuvToXyz_" data-uid="NixUniversalSDK.ColorUtils.LuvToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_LuvToXyz_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.LuvToXyz(System.Double[],System.Double[])">
+  LuvToXyz(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIELUV value and its reference white to calculate CIEXYZ value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] LuvToXyz(double[] luvIn, double[] xyzRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>luvIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELUV value (element order L, u, v)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ reference white (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_RadToDeg_" data-uid="NixUniversalSDK.ColorUtils.RadToDeg*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_RadToDeg_System_Double_" data-uid="NixUniversalSDK.ColorUtils.RadToDeg(System.Double)">
+  RadToDeg(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts angle in radians to degrees (used in dE2000 function)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double RadToDeg(double rads)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rads</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Angle in radians</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Angle in degrees</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_RgbToXyz_" data-uid="NixUniversalSDK.ColorUtils.RgbToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_RgbToXyz_System_Double___System_Double___System_Double___System_Double___System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.RgbToXyz(System.Double[],System.Double[],System.Double[],System.Double[],System.Double[],System.Double[])">
+  RgbToXyz(double[], double[], double[], double[], double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates XYZ from linear RGB given chromaticity coordinates of RGB working space primaries and reference whites of RGB and XYZ value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] RgbToXyz(double[] rgbIn, double[] rC, double[] gC, double[] bC, double[] wC, double[] refOut)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rgbIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Input linear RGB value, unity scale (element order R, G, B)</p>
+</dd>
+    <dt><code>rC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space red primary chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>gC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space green primary chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>bC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space blue primary chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>wC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space reference white/grey chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>refOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Selected reference white of output XYZ color, unity scale (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>XYZ value, unity scale, with reference white refOut (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_RgbTripletToHexString_" data-uid="NixUniversalSDK.ColorUtils.RgbTripletToHexString*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_RgbTripletToHexString_System_Byte___" data-uid="NixUniversalSDK.ColorUtils.RgbTripletToHexString(System.Byte[])">
+  RgbTripletToHexString(byte[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes a RGB triplet and formats it as a HEX string (e.g. - &quot;#RRGGBB&quot;)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RgbTripletToHexString(byte[] rgb)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rgb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if array does not have three entries</p>
+</dd>
+  </dl>
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_Spectral10ToDensity_" data-uid="NixUniversalSDK.ColorUtils.Spectral10ToDensity*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_Spectral10ToDensity_System_Int32___System_Single___NixUniversalSDK_DensityStatus_" data-uid="NixUniversalSDK.ColorUtils.Spectral10ToDensity(System.Int32[],System.Single[],NixUniversalSDK.DensityStatus)">
+  Spectral10ToDensity(int[], float[], DensityStatus)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes reflectance data on 10 nm intervals and calculates CMYK densities according to ISO 5-3:2009. Data must be provided on 10 nm intervals corresponding to the nearest 10  nanometer. Density values are calculated across the range 340 - 770 nm.If the provided data spans a shorter range(eg - 400 - 700 nm), the values at the boundaries are repeated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] Spectral10ToDensity(int[] lambda, float[] reflectance, DensityStatus status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lambda</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>Wavelength values of provided reflectance data.</p>
+</dd>
+    <dt><code>reflectance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd><p>Reflectance data. Must contain the same number of elements as lambda</p>
+</dd>
+    <dt><code>status</code> <a class="xref" href="NixUniversalSDK.DensityStatus.html">DensityStatus</a></dt>
+    <dd><p>Selected density status</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CMYK densities (element order C, M, Y, K)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_Spectral10ToXyz_" data-uid="NixUniversalSDK.ColorUtils.Spectral10ToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_Spectral10ToXyz_System_Int32___System_Single___NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_" data-uid="NixUniversalSDK.ColorUtils.Spectral10ToXyz(System.Int32[],System.Single[],NixUniversalSDK.Illuminant,NixUniversalSDK.Observer)">
+  Spectral10ToXyz(int[], float[], Illuminant, Observer)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes reflectance data on 10 nm intervals and calculates a CIEXYZ value according to ASTM  E308. Data must be provided on 10 nm intervals corresponding to the nearest 10 nanometer. CIEXYZ values are calculated across the range 360 - 780 nm.If the provided data spans a shorter range (eg - 400 - 700 nm), the values at the boundaries are repeated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] Spectral10ToXyz(int[] lambda, float[] reflectance, Illuminant illuminant, Observer observer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lambda</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>Wavelength values of provided reflectance data.</p>
+</dd>
+    <dt><code>reflectance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd><p>Reflectance data. Must contain the same number of elements as lambda</p>
+</dd>
+    <dt><code>illuminant</code> <a class="xref" href="NixUniversalSDK.Illuminant.html">Illuminant</a></dt>
+    <dd><p>Reference illuminant</p>
+</dd>
+    <dt><code>observer</code> <a class="xref" href="NixUniversalSDK.Observer.html">Observer</a></dt>
+    <dd><p>Reference observer</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value reported on 0 - 1.0 scale (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_Spectral10ToXyz_" data-uid="NixUniversalSDK.ColorUtils.Spectral10ToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_Spectral10ToXyz_System_Int32___System_Single___NixUniversalSDK_ReferenceWhite_" data-uid="NixUniversalSDK.ColorUtils.Spectral10ToXyz(System.Int32[],System.Single[],NixUniversalSDK.ReferenceWhite)">
+  Spectral10ToXyz(int[], float[], ReferenceWhite)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes reflectance data on 10 nm intervals and calculates a CIEXYZ value according to ASTM  E308. Data must be provided on 10 nm intervals corresponding to the nearest 10 nanometer. CIEXYZ values are calculated across the range 360 - 780 nm.If the provided data spans a shorter range (eg - 400 - 700 nm), the values at the boundaries are repeated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] Spectral10ToXyz(int[] lambda, float[] reflectance, ReferenceWhite reference)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lambda</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd><p>Wavelength values of provided reflectance data.</p>
+</dd>
+    <dt><code>reflectance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd><p>Reflectance data. Must contain the same number of elements as lambda</p>
+</dd>
+    <dt><code>reference</code> <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a></dt>
+    <dd><p>Selected reference white</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value reported on 0 - 1.0 scale (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_SRgbToXyz_" data-uid="NixUniversalSDK.ColorUtils.SRgbToXyz*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_SRgbToXyz_System_Byte___System_Double___" data-uid="NixUniversalSDK.ColorUtils.SRgbToXyz(System.Byte[],System.Double[])">
+  SRgbToXyz(byte[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates XYZ from sRGB value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] SRgbToXyz(byte[] sRgb, double[] refOut)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sRgb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Non-linear sRGB value, 0 - 255 scale (element order R, G, B)</p>
+</dd>
+    <dt><code>refOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><blockquote>
+<p>Reference white of colour output, unity scale (element order X, Y, Z)</p>
+</blockquote>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>XYZ value, unity scale, with reference white refOut (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzChromaticity_" data-uid="NixUniversalSDK.ColorUtils.XyzChromaticity*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzChromaticity_System_Double___" data-uid="NixUniversalSDK.ColorUtils.XyzChromaticity(System.Double[])">
+  XyzChromaticity(double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates chromaticity coordinates x,y from a given xyz value. WARNING: Be aware that for black xyz(0, 0, 0), the result is undefined. For this case, use chromaticity of reference white instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzChromaticity(double[] xyz)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Source color (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Chromaticity of input color, unity scale (element order x, y)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToCmyk_" data-uid="NixUniversalSDK.ColorUtils.XyzToCmyk*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToCmyk_System_Double___System_Double___System_Boolean_System_Double_____System_Int32_____System_Int32_____System_Int32_____" data-uid="NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean,System.Double[][],System.Int32[][],System.Int32[][],System.Int32[][])">
+  XyzToCmyk(double[], double[], bool, double[][], int[][], int[][], int[][])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates CMYK value from XYZ using lookup tables provided as <code>inputCurves</code> arguments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToCmyk(double[] xyzIn, double[] xyzRef, bool bpc, double[][] m, int[][] inputCurves, int[][] clut, int[][] outputCurves)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyzIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>XYZ colour, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white value for xyzIn, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>bpc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Black point compensation enabled / disabled</p>
+</dd>
+    <dt><code>m</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[][]</dt>
+    <dd><p>3x3 Extracted from ICC profile: transformation matrix to perform on LAB value (code only tested with identity matrix)</p>
+</dd>
+    <dt><code>inputCurves</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[][]</dt>
+    <dd><p>256x3 Extracted from ICC profile: InputCurves</p>
+</dd>
+    <dt><code>clut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[][]</dt>
+    <dd><p>35937x4: Extracted from ICC profile: Lab to CMYK LUT (flattened 33x33x33 array with 4 channels, one each for C,M,Y,K)</p>
+</dd>
+    <dt><code>outputCurves</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[][]</dt>
+    <dd><p>256x4: Extracted from ICC profile: OutputCurves</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CMYK value on unity scale (element order C, M, Y, K)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToCmyk_" data-uid="NixUniversalSDK.ColorUtils.XyzToCmyk*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToCmyk_System_Double___System_Double___System_Boolean_" data-uid="NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean)">
+  XyzToCmyk(double[], double[], bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates CMYK value from XYZ input using built in lookup tables</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToCmyk(double[] xyzIn, double[] xyzRef, bool bpc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyzIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>XYZ colour, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white value for xyzIn, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>bpc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Black point compensation enabled / disabled</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CMYK value on unity scale (element order C, M, Y, K)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToLab_" data-uid="NixUniversalSDK.ColorUtils.XyzToLab*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToLab_System_Double___NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_" data-uid="NixUniversalSDK.ColorUtils.XyzToLab(System.Double[],NixUniversalSDK.Illuminant,NixUniversalSDK.Observer)">
+  XyzToLab(double[], Illuminant, Observer)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIEXYZ value and its reference white to calculate CIELAB value. Value <code>xyz</code> and <code>xyzRef</code> must be either unity (Y on 0 - 1) input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToLab(double[] xyz, Illuminant illuminant, Observer observer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd></dd>
+    <dt><code>illuminant</code> <a class="xref" href="NixUniversalSDK.Illuminant.html">Illuminant</a></dt>
+    <dd><p>Illuminant for reference white point</p>
+</dd>
+    <dt><code>observer</code> <a class="xref" href="NixUniversalSDK.Observer.html">Observer</a></dt>
+    <dd><p>Observer for reference white point</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToLab_" data-uid="NixUniversalSDK.ColorUtils.XyzToLab*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToLab_System_Double___NixUniversalSDK_ReferenceWhite_" data-uid="NixUniversalSDK.ColorUtils.XyzToLab(System.Double[],NixUniversalSDK.ReferenceWhite)">
+  XyzToLab(double[], ReferenceWhite)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIEXYZ value and its reference white to calculate CIELAB value. Value <code>xyz</code> and <code>xyzRef</code> must be either unity (Y on 0 - 1) input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToLab(double[] xyz, ReferenceWhite reference)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+    <dt><code>reference</code> <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a></dt>
+    <dd><p>Reference white point for input CIEXYZ value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToLab_" data-uid="NixUniversalSDK.ColorUtils.XyzToLab*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToLab_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.XyzToLab(System.Double[],System.Double[])">
+  XyzToLab(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIEXYZ value and its reference white to calculate CIELAB value. Values <code>xyz</code> and <code>xyzRef</code> can be either unity (0 - 1) or scaled (0 - 100) input, but both vectors must be the same scale. (i.e., if <code>xyz</code> is unity scale, <code>xyzRef</code> must also be unity scale)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToLab(double[] xyz, double[] xyzRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value for reference white (X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELAB value (element order L, a, b)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToLuv_" data-uid="NixUniversalSDK.ColorUtils.XyzToLuv*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToLuv_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.XyzToLuv(System.Double[],System.Double[])">
+  XyzToLuv(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes CIEXYZ value and its reference white to calculate CIELUV value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToLuv(double[] xyzIn, double[] xyzRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyzIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ value (element order X, Y, Z)</p>
+</dd>
+    <dt><code>xyzRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIEXYZ reference white (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>CIELUV value (element order L, u, v)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToRgb_" data-uid="NixUniversalSDK.ColorUtils.XyzToRgb*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToRgb_System_Double___System_Double___System_Double___System_Double___System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.XyzToRgb(System.Double[],System.Double[],System.Double[],System.Double[],System.Double[],System.Double[])">
+  XyzToRgb(double[], double[], double[], double[], double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates linear RGB from XYZ given chromaticity coordinates of RGB working space primaries and reference whites of RGB and XYZ value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] XyzToRgb(double[] xyzIn, double[] refIn, double[] rC, double[] gC, double[] bC, double[] wC)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyzIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Input colour XYZ values, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>refIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white of input colour xyzIn, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>rC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space red primary chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>gC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space green primary chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>bC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space blue primary chromaticity coordinates (element order x, y)</p>
+</dd>
+    <dt><code>wC</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>RGB space reference white/grey chromaticity coordinates (element order x, y)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ColorUtils_XyzToSRgb_" data-uid="NixUniversalSDK.ColorUtils.XyzToSRgb*"></a>
+
+  <h3 id="NixUniversalSDK_ColorUtils_XyzToSRgb_System_Double___System_Double___" data-uid="NixUniversalSDK.ColorUtils.XyzToSRgb(System.Double[],System.Double[])">
+  XyzToSRgb(double[], double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates companded sRGB value from XYZ given reference white of XYZ value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] XyzToSRgb(double[] xyzIn, double[] refIn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xyzIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Input colour XYZ values, unity scale (element order X, Y, Z)</p>
+</dd>
+    <dt><code>refIn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>Reference white of input colour xyzIn, unity scale (element order X, Y, Z)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Non-linear sRGB value, 0 - 255 scale (element order R, G, B)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

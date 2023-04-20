@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Adding to Your Visual Studio Project </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Adding to Your Visual Studio Project ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/add-to-vs.md/#L1">
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="adding-to-your-visual-studio-project">Adding to Your Visual Studio Project</h1>
+
+<p>The Nix Universal SDK is provided as a NuGet package, which allows for easier dependency resolution. This example outlines how to install the package in a local NuGet feed.</p>
+<h2 id="creating-a-local-nuget-feed">Creating a local NuGet feed</h2>
+<ol>
+<li>Download the NuGet executable <a href="https://www.nuget.org/downloads">here</a>.</li>
+<li>Create a local folder on your PC, for example <code>C:\NuGetLocal</code></li>
+<li>Add the <code>NixUniversalSDK</code> NuGet package file to the local feed from the command line using the <code>nuget add</code> command:</li>
+</ol>
+<pre><code class="lang-shell">nuget add &lt;PATH_TO_NUPKG&gt; -Source &lt;PATH_TO_LOCAL_FEED&gt;
+</code></pre>
+<p>For example, using with <code>nuget.exe</code> and the <code>NixUniversalSDK.4.0.0.nupkg</code> in the local folder, and <code>C:\NuGetLocal</code> as the local feed path:</p>
+<pre><code class="lang-shell">./nuget add NixUniversalSDK.4.0.0.nupkg -Source C:\NuGetLocal
+</code></pre>
+<ol start="4">
+<li>If successful, the NuGet executable will display a message indicating the same. For example:</li>
+</ol>
+<pre><code class="lang-shell">Installed NixUniversalSDK 4.0.0 from &lt;SOURCE&gt; with content hash &lt;HASH&gt; 
+Successfully added package '.\NixUniversalSDK.4.0.0.nupkg' to feed 'C:\NuGetLocal'.
+</code></pre>
+<h2 id="adding-the-local-nuget-feed-to-visual-studio">Adding the local NuGet feed to Visual Studio</h2>
+<ol>
+<li>In Visual Studio, navigate to <code>Tools</code> -&gt; <code>NuGet Package Manager</code> -&gt; <code>Package Manager Settings</code>.</li>
+<li>Select <code>Package Sources</code> in the menu on the left hand side.</li>
+<li>Add a new source by clicking on the <code>+</code> icon at the top right.</li>
+<li>Enter a name for your local feed (e.g. <code>Local</code>), and enter the path selected in step 2 above (e.g. <code>C:\NuGetLocal</code>).</li>
+<li>Click <code>OK</code> to add the local feed to your package sources list.</li>
+</ol>
+<p><img src="../images/nuget_package_sources.png" alt="Package Sources"></p>
+<h3 id="updating-the-local-nuget-feed">Updating the local NuGet feed</h3>
+<p>New versions of the Nix Universal SDK will be delivered as new <code>nupkg</code> downloads. To use the updated packages, install the new package version from the command line using the <code>nuget add</code> command as outlined in step 3 above.</p>
+<h2 id="adding-to-your-visual-studio-project-1">Adding to your Visual Studio project</h2>
+<ol>
+<li>In Visual Studio, right-click on your project and select <code>Manage NuGet Packages</code>.</li>
+<li>Select your local feed (e.g. <code>Local</code>) as the <code>Package source</code>, located at the top right of the NuGet Package Manager.</li>
+<li>Select the <code>Browse</code> tab in the NuGet Package Manager. The <code>NixUniversalSDK</code> package will show up in the list of available packages.</li>
+<li>Click on <code>Install</code> to add to your project.</li>
+</ol>
+<p><img src="../images/nuget_package_manager.png" alt="NuGet Package Manager"></p>
+<ol start="5">
+<li>If your Windows application is a packaged UWP or WinUI app, it is necessary to add Bluetooth and serial device capabilities to the App package manifest.
+<ul>
+<li>If your application already runs with 'full trust', or is unpackaged, this step is not necessary</li>
+<li>An overview of declaring device capabilities in an app manifest is provided by Microsoft <a href="https://learn.microsoft.com/en-us/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest">here</a></li>
+<li>The specific capabilities required by the Nix Universal SDK are listed below</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-xml">&lt;Capabilities&gt;
+  &lt;!-- Existing capabilities here --&gt;
+  &lt;!-- ... --&gt;
+  
+  &lt;!-- Nix required capabilities --&gt;
+  &lt;DeviceCapability Name=&quot;bluetooth.genericAttributeProfile&quot;&gt;
+    &lt;Device Id=&quot;any&quot;&gt;
+      &lt;Function Type=&quot;name:00001800-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:00001801-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:0000180a-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:0000180f-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:0000fe59-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:bebc4000-c4ba-e4a6-4422-dbb176d3a537&quot;/&gt;
+      &lt;Function Type=&quot;name:72d51000-b0da-4368-952f-dd2a64db5b61&quot;/&gt;        
+    &lt;/Device&gt;
+  &lt;/DeviceCapability&gt;
+  &lt;DeviceCapability Name=&quot;serialcommunication&quot;&gt;
+    &lt;Device Id=&quot;any&quot;&gt;
+      &lt;Function Type=&quot;name:serialPort&quot;/&gt;
+    &lt;/Device&gt;      
+  &lt;/DeviceCapability&gt;
+&lt;/Capabilities&gt;
+</code></pre>
+<h2 id="advanced-options">Advanced options</h2>
+<p>The SDK package could also be hosted on a private networked NuGet feed, though this is beyond the scope of this example. For further examples, refer to online documentation <a href="https://learn.microsoft.com/en-us/nuget/hosting-packages/overview">here</a>.</p>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li><a href="discovering-connecting.html">Discovering and Connecting to Nix Devices</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/add-to-vs.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

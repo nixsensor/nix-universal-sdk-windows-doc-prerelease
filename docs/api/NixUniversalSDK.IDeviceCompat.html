@@ -1,0 +1,1555 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IDeviceCompat
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IDeviceCompat
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NixUniversalSDK.IDeviceCompat">
+
+
+
+  <h1 id="NixUniversalSDK_IDeviceCompat" data-uid="NixUniversalSDK.IDeviceCompat" class="text-break">
+    Interface IDeviceCompat
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interface describing the supported properties and methods for a Nix device. <a class="xref" href="NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> objects are found nearby using the <a class="xref" href="NixUniversalSDK.DeviceScanner.html">DeviceScanner</a>. See <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html">IDeviceCompatExtensions</a> for extension methods.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDeviceCompat : IDeviceCompatEvents, IComparable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_Connected">IDeviceCompatEvents.Connected</a>
+    </div>
+    <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_Disconnected">IDeviceCompatEvents.Disconnected</a>
+    </div>
+    <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_BatteryStateChanged">IDeviceCompatEvents.BatteryStateChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_ExtPowerStateChanged">IDeviceCompatEvents.ExtPowerStateChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable.compareto">IComparable.CompareTo(object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_HasOptions_NixUniversalSDK_IDeviceCompat_">IDeviceCompatExtensions.HasOptions(IDeviceCompat)</a>
+  </div>
+  <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_IsModeSupported_NixUniversalSDK_IDeviceCompat_NixUniversalSDK_ScanMode_">IDeviceCompatExtensions.IsModeSupported(IDeviceCompat, ScanMode)</a>
+  </div>
+  <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_ProvidesColor_NixUniversalSDK_IDeviceCompat_NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_">IDeviceCompatExtensions.ProvidesColor(IDeviceCompat, Illuminant, Observer)</a>
+  </div>
+  <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_ProvidesColor_NixUniversalSDK_IDeviceCompat_NixUniversalSDK_ReferenceWhite_">IDeviceCompatExtensions.ProvidesColor(IDeviceCompat, ReferenceWhite)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_BatteryLevel_" data-uid="NixUniversalSDK.IDeviceCompat.BatteryLevel*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_BatteryLevel" data-uid="NixUniversalSDK.IDeviceCompat.BatteryLevel">
+  BatteryLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current battery level for this device (0 - 100), or <code>null</code> if not available. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int? BatteryLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ExtPowerState_" data-uid="NixUniversalSDK.IDeviceCompat.ExtPowerState*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ExtPowerState" data-uid="NixUniversalSDK.IDeviceCompat.ExtPowerState">
+  ExtPowerState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>External power connection state for this device. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ExtPowerState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_FieldCalibrationDue_" data-uid="NixUniversalSDK.IDeviceCompat.FieldCalibrationDue*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_FieldCalibrationDue" data-uid="NixUniversalSDK.IDeviceCompat.FieldCalibrationDue">
+  FieldCalibrationDue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if in-field calibration is recommended for this device at this time (if supported). This value is only valid after opening a connection and is a function of both time and ambient temperature. This value also updates each time a measurement is completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool FieldCalibrationDue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_FieldCalibrationEnabled_" data-uid="NixUniversalSDK.IDeviceCompat.FieldCalibrationEnabled*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_FieldCalibrationEnabled" data-uid="NixUniversalSDK.IDeviceCompat.FieldCalibrationEnabled">
+  FieldCalibrationEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if in-field calibration results are applied (<code>true</code>) or bypassed (<code>false</code>) when evaluating the final calibrated measurement result. Value is <code>true</code> by default if supported by the device. It is recommended to leave this set to <code>true</code> if supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool FieldCalibrationEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_FirmwareVersion_" data-uid="NixUniversalSDK.IDeviceCompat.FirmwareVersion*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_FirmwareVersion" data-uid="NixUniversalSDK.IDeviceCompat.FirmwareVersion">
+  FirmwareVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Firmware version of this device. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DeviceVersion FirmwareVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.DeviceVersion.html">DeviceVersion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_HapticFeedbackEnabled_" data-uid="NixUniversalSDK.IDeviceCompat.HapticFeedbackEnabled*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_HapticFeedbackEnabled" data-uid="NixUniversalSDK.IDeviceCompat.HapticFeedbackEnabled">
+  HapticFeedbackEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if device haptic feedback is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HapticFeedbackEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_HardwareVersion_" data-uid="NixUniversalSDK.IDeviceCompat.HardwareVersion*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_HardwareVersion" data-uid="NixUniversalSDK.IDeviceCompat.HardwareVersion">
+  HardwareVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hardware version of this device. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DeviceVersion HardwareVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.DeviceVersion.html">DeviceVersion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_Id_" data-uid="NixUniversalSDK.IDeviceCompat.Id*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_Id" data-uid="NixUniversalSDK.IDeviceCompat.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique identifier for this device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_InterfaceType_" data-uid="NixUniversalSDK.IDeviceCompat.InterfaceType*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_InterfaceType" data-uid="NixUniversalSDK.IDeviceCompat.InterfaceType">
+  InterfaceType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interface / connection type for this device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">InterfaceType InterfaceType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.InterfaceType.html">InterfaceType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_Name_" data-uid="NixUniversalSDK.IDeviceCompat.Name*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_Name" data-uid="NixUniversalSDK.IDeviceCompat.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Name for this device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_Note_" data-uid="NixUniversalSDK.IDeviceCompat.Note*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_Note" data-uid="NixUniversalSDK.IDeviceCompat.Note">
+  Note
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Factory note for this device, containing allocation code. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Note { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_PowerState_" data-uid="NixUniversalSDK.IDeviceCompat.PowerState*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_PowerState" data-uid="NixUniversalSDK.IDeviceCompat.PowerState">
+  PowerState
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag: <code>true</code> if sufficient power is available to complete a measurement, <code>false</code> if a measurement will be aborted (function of external power connection and battery level)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool PowerState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ProvidesDensity_" data-uid="NixUniversalSDK.IDeviceCompat.ProvidesDensity*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ProvidesDensity" data-uid="NixUniversalSDK.IDeviceCompat.ProvidesDensity">
+  ProvidesDensity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if this device type provides density information in its supplied <a class="xref" href="NixUniversalSDK.IMeasurementData.html">IMeasurementData</a> results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ProvidesDensity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ProvidesSpectral_" data-uid="NixUniversalSDK.IDeviceCompat.ProvidesSpectral*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ProvidesSpectral" data-uid="NixUniversalSDK.IDeviceCompat.ProvidesSpectral">
+  ProvidesSpectral
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if this device type provides spectral information in its supplied <a class="xref" href="NixUniversalSDK.IMeasurementData.html">IMeasurementData</a> results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ProvidesSpectral { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ReferenceDate_" data-uid="NixUniversalSDK.IDeviceCompat.ReferenceDate*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ReferenceDate" data-uid="NixUniversalSDK.IDeviceCompat.ReferenceDate">
+  ReferenceDate
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Date that the last in-field normalization was last performed, or <code>null</code> if this device does not support this feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime? ReferenceDate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ReferenceTemperature_" data-uid="NixUniversalSDK.IDeviceCompat.ReferenceTemperature*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ReferenceTemperature" data-uid="NixUniversalSDK.IDeviceCompat.ReferenceTemperature">
+  ReferenceTemperature
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Baseline temperature for this device. Corresponds to in-field normalization temperature for <a class="xref" href="NixUniversalSDK.DeviceType.html#NixUniversalSDK_DeviceType_Spectro2">Spectro2</a> and <a class="xref" href="NixUniversalSDK.DeviceType.html#NixUniversalSDK_DeviceType_Mini3">Mini3</a>, or factory temperature for others. Value is <code>null</code> if the device does not support this feature. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float? ReferenceTemperature { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_RgbFeedbackEnabled_" data-uid="NixUniversalSDK.IDeviceCompat.RgbFeedbackEnabled*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_RgbFeedbackEnabled" data-uid="NixUniversalSDK.IDeviceCompat.RgbFeedbackEnabled">
+  RgbFeedbackEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if device RGB feedback is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RgbFeedbackEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_Rssi_" data-uid="NixUniversalSDK.IDeviceCompat.Rssi*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_Rssi" data-uid="NixUniversalSDK.IDeviceCompat.Rssi">
+  Rssi
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signal strength for this device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Rssi { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ScanCount_" data-uid="NixUniversalSDK.IDeviceCompat.ScanCount*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ScanCount" data-uid="NixUniversalSDK.IDeviceCompat.ScanCount">
+  ScanCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lifetime scan count for this device, or <code>null</code> if this device does not support this feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">uint? ScanCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ScanTemperature_" data-uid="NixUniversalSDK.IDeviceCompat.ScanTemperature*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ScanTemperature" data-uid="NixUniversalSDK.IDeviceCompat.ScanTemperature">
+  ScanTemperature
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Last known temperature of the device, corresponding to the most recently completed scan since the device was connected. Value is <code>null</code> if the device does not support this feature. This value is only valid if the device is connected and a measurement has completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float? ScanTemperature { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SdkId_" data-uid="NixUniversalSDK.IDeviceCompat.SdkId*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SdkId" data-uid="NixUniversalSDK.IDeviceCompat.SdkId">
+  SdkId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Build ID for this <code>NixUniversalSDK</code> binary</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SdkId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SerialNumber_" data-uid="NixUniversalSDK.IDeviceCompat.SerialNumber*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SerialNumber" data-uid="NixUniversalSDK.IDeviceCompat.SerialNumber">
+  SerialNumber
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serial number for this device. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SerialNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SoftwareVersion_" data-uid="NixUniversalSDK.IDeviceCompat.SoftwareVersion*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SoftwareVersion" data-uid="NixUniversalSDK.IDeviceCompat.SoftwareVersion">
+  SoftwareVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Software version of this device. The value is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DeviceVersion SoftwareVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.DeviceVersion.html">DeviceVersion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_State_" data-uid="NixUniversalSDK.IDeviceCompat.State*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_State" data-uid="NixUniversalSDK.IDeviceCompat.State">
+  State
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current state of this device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DeviceState State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.DeviceState.html">DeviceState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SupportedModes_" data-uid="NixUniversalSDK.IDeviceCompat.SupportedModes*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SupportedModes" data-uid="NixUniversalSDK.IDeviceCompat.SupportedModes">
+  SupportedModes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of scan modes that are supported by this device. The list is valid only after a connection has successfully been opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ScanMode&gt; SupportedModes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SupportedReferences_" data-uid="NixUniversalSDK.IDeviceCompat.SupportedReferences*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SupportedReferences" data-uid="NixUniversalSDK.IDeviceCompat.SupportedReferences">
+  SupportedReferences
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of supported reference white points for the colorimetry data available from the <a class="xref" href="NixUniversalSDK.IMeasurementData.html">IMeasurementData</a> results provided by this device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;ReferenceWhite&gt; SupportedReferences { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SupportsFieldCalibration_" data-uid="NixUniversalSDK.IDeviceCompat.SupportsFieldCalibration*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SupportsFieldCalibration" data-uid="NixUniversalSDK.IDeviceCompat.SupportsFieldCalibration">
+  SupportsFieldCalibration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if this device supports in-field calibration using the provided reference tile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsFieldCalibration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SupportsHapticFeedback_" data-uid="NixUniversalSDK.IDeviceCompat.SupportsHapticFeedback*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SupportsHapticFeedback" data-uid="NixUniversalSDK.IDeviceCompat.SupportsHapticFeedback">
+  SupportsHapticFeedback
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if the device supports built-in haptic feedback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsHapticFeedback { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SupportsRgbFeedback_" data-uid="NixUniversalSDK.IDeviceCompat.SupportsRgbFeedback*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SupportsRgbFeedback" data-uid="NixUniversalSDK.IDeviceCompat.SupportsRgbFeedback">
+  SupportsRgbFeedback
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if the device supports built-in RGB feedback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsRgbFeedback { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SupportsTemperatureCompensation_" data-uid="NixUniversalSDK.IDeviceCompat.SupportsTemperatureCompensation*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SupportsTemperatureCompensation" data-uid="NixUniversalSDK.IDeviceCompat.SupportsTemperatureCompensation">
+  SupportsTemperatureCompensation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if this device supports automatic temperature compensation to correct for small changes in ambient temperature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SupportsTemperatureCompensation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_TemperatureCompensationEnabled_" data-uid="NixUniversalSDK.IDeviceCompat.TemperatureCompensationEnabled*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_TemperatureCompensationEnabled" data-uid="NixUniversalSDK.IDeviceCompat.TemperatureCompensationEnabled">
+  TemperatureCompensationEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag to indicate if ambient temperature compensation / correction is applied (<code>true</code>) or bypassed (<code>false</code>) when evaluating the final calibrated measurement. Value is <code>true</code> by default if supported by the device. It is recommended to leave this set to <code>true</code> if supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TemperatureCompensationEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_Type_" data-uid="NixUniversalSDK.IDeviceCompat.Type*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_Type" data-uid="NixUniversalSDK.IDeviceCompat.Type">
+  Type
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type for this device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DeviceType Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.DeviceType.html">DeviceType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_ConnectAsync_" data-uid="NixUniversalSDK.IDeviceCompat.ConnectAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_ConnectAsync" data-uid="NixUniversalSDK.IDeviceCompat.ConnectAsync">
+  ConnectAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Open a connection to this Nix device. A connection in progress can be cancelled by calling <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Disconnect">Disconnect()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceStatus&gt; ConnectAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceStatus.html">DeviceStatus</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceStatus.html">DeviceStatus</a> indicating success or failure of the connection operation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_Disconnect_" data-uid="NixUniversalSDK.IDeviceCompat.Disconnect*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_Disconnect" data-uid="NixUniversalSDK.IDeviceCompat.Disconnect">
+  Disconnect()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disconnect from this Nix device, or cancel a connection attempt currently in progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Disconnect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_IsTileStringValid_" data-uid="NixUniversalSDK.IDeviceCompat.IsTileStringValid*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_IsTileStringValid_System_String_" data-uid="NixUniversalSDK.IDeviceCompat.IsTileStringValid(System.String)">
+  IsTileStringValid(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to check if a decoded string from the reference tile is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool? IsTileStringValid(string tileString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tileString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String value decoded from the reference tile QR code</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd><p>Returns <code>null</code> if the string is not in the expected format, <code>false</code> if the string is in a valid format but does not match this particular device, <code>true</code> if the string is valid.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_LedTestAsync_" data-uid="NixUniversalSDK.IDeviceCompat.LedTestAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_LedTestAsync" data-uid="NixUniversalSDK.IDeviceCompat.LedTestAsync">
+  LedTestAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manually run a LED test routine. On devices featuring RGB feedback, this will use the RGB LEDs. On other devices, this will flash the white LEDs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; LedTestAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing status code of the completed operation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_MeasureAsync_" data-uid="NixUniversalSDK.IDeviceCompat.MeasureAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_MeasureAsync_NixUniversalSDK_ScanMode___" data-uid="NixUniversalSDK.IDeviceCompat.MeasureAsync(NixUniversalSDK.ScanMode[])">
+  MeasureAsync(params ScanMode[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run a measurement for the specified scan modes, or all supported scan modes if none are specified. If unsupported modes are selected, the measurement will fail with status code <a class="xref" href="NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorNotSupported">ErrorNotSupported</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; MeasureAsync(params ScanMode[] modes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>modes</code> <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a>[]</dt>
+    <dd><p>Scan modes to select. If omitted, the device will measure for all supported modes</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing the status code of the completed operation and measurement data, if applicable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_" data-uid="NixUniversalSDK.IDeviceCompat.RunFieldCalibrationAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_System_String_" data-uid="NixUniversalSDK.IDeviceCompat.RunFieldCalibrationAsync(System.String)">
+  RunFieldCalibrationAsync(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start field calibration using provided reference tile, if supported. Upon executing this command, the scan of the reference tile will begin immediately.The user MUST be prompted to place the device onto the reference tile BEFORE this method is executed.This method is asynchronous and will return immediately.This command requires data from the reference tile QR code.As the format varies between different device types, the string data should be provided exactly as decoded from the QR code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; RunFieldCalibrationAsync(string tileString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tileString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String value decoded from the reference tile QR code</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing the status code of the completed operation and measurement data, if applicable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SetFieldCalibrationEnabledAsync_" data-uid="NixUniversalSDK.IDeviceCompat.SetFieldCalibrationEnabledAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SetFieldCalibrationEnabledAsync_System_Boolean_" data-uid="NixUniversalSDK.IDeviceCompat.SetFieldCalibrationEnabledAsync(System.Boolean)">
+  SetFieldCalibrationEnabledAsync(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the value for <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationEnabled">FieldCalibrationEnabled</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; SetFieldCalibrationEnabledAsync(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>New state for this option</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing status code of the completed operation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SetHapticFeedbackEnabledAsync_" data-uid="NixUniversalSDK.IDeviceCompat.SetHapticFeedbackEnabledAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SetHapticFeedbackEnabledAsync_System_Boolean_" data-uid="NixUniversalSDK.IDeviceCompat.SetHapticFeedbackEnabledAsync(System.Boolean)">
+  SetHapticFeedbackEnabledAsync(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the value for <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_HapticFeedbackEnabled">HapticFeedbackEnabled</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; SetHapticFeedbackEnabledAsync(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>New state for this option</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing status code of the completed operation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SetRgbFeedbackEnabledAsync_" data-uid="NixUniversalSDK.IDeviceCompat.SetRgbFeedbackEnabledAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SetRgbFeedbackEnabledAsync_System_Boolean_" data-uid="NixUniversalSDK.IDeviceCompat.SetRgbFeedbackEnabledAsync(System.Boolean)">
+  SetRgbFeedbackEnabledAsync(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the value for <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RgbFeedbackEnabled">RgbFeedbackEnabled</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; SetRgbFeedbackEnabledAsync(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>New state for this option</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing status code of the completed operation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_SetTemperatureCompensationEnabledAsync_" data-uid="NixUniversalSDK.IDeviceCompat.SetTemperatureCompensationEnabledAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_SetTemperatureCompensationEnabledAsync_System_Boolean_" data-uid="NixUniversalSDK.IDeviceCompat.SetTemperatureCompensationEnabledAsync(System.Boolean)">
+  SetTemperatureCompensationEnabledAsync(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the value for <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_TemperatureCompensationEnabled">TemperatureCompensationEnabled</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; SetTemperatureCompensationEnabledAsync(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>New state for this option</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing status code of the completed operation</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

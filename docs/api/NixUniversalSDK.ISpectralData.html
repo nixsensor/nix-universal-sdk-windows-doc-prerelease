@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ISpectralData
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ISpectralData
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NixUniversalSDK.ISpectralData">
+
+
+
+  <h1 id="NixUniversalSDK_ISpectralData" data-uid="NixUniversalSDK.ISpectralData" class="text-break">
+    Interface ISpectralData
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interface describing spectral data</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ISpectralData</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToColorData_NixUniversalSDK_ISpectralData_NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_NixUniversalSDK_ColorType_">ISpectralDataExtensions.ToColorData(ISpectralData, Illuminant, Observer, ColorType)</a>
+  </div>
+  <div>
+      <a class="xref" href="NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToDensityData_NixUniversalSDK_ISpectralData_NixUniversalSDK_DensityStatus_">ISpectralDataExtensions.ToDensityData(ISpectralData, DensityStatus)</a>
+  </div>
+  <div>
+      <a class="xref" href="NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToRgbValue_NixUniversalSDK_ISpectralData_NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_">ISpectralDataExtensions.ToRgbValue(ISpectralData, Illuminant, Observer)</a>
+  </div>
+  <div>
+      <a class="xref" href="NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToRgbValue_NixUniversalSDK_ISpectralData_NixUniversalSDK_ReferenceWhite_">ISpectralDataExtensions.ToRgbValue(ISpectralData, ReferenceWhite)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="NixUniversalSDK_ISpectralData_Interval_" data-uid="NixUniversalSDK.ISpectralData.Interval*"></a>
+
+  <h3 id="NixUniversalSDK_ISpectralData_Interval" data-uid="NixUniversalSDK.ISpectralData.Interval">
+  Interval
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wavelength spacing (eg - 10 nm)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Interval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ISpectralData_Lambda_" data-uid="NixUniversalSDK.ISpectralData.Lambda*"></a>
+
+  <h3 id="NixUniversalSDK_ISpectralData_Lambda" data-uid="NixUniversalSDK.ISpectralData.Lambda">
+  Lambda
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wavelength values. Each entry <code>i</code> in this array corresponds to a spectral value in <a class="xref" href="NixUniversalSDK.ISpectralData.html#NixUniversalSDK_ISpectralData_Value">Value</a> at the same index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int[] Lambda { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ISpectralData_Mode_" data-uid="NixUniversalSDK.ISpectralData.Mode*"></a>
+
+  <h3 id="NixUniversalSDK_ISpectralData_Mode" data-uid="NixUniversalSDK.ISpectralData.Mode">
+  Mode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scan mode for this measurement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ScanMode Mode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ISpectralData_Value_" data-uid="NixUniversalSDK.ISpectralData.Value*"></a>
+
+  <h3 id="NixUniversalSDK_ISpectralData_Value" data-uid="NixUniversalSDK.ISpectralData.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spectral reflectance values. Each entry <code>i</code> in this array corresponds to a wavelength value in <a class="xref" href="NixUniversalSDK.ISpectralData.html#NixUniversalSDK_ISpectralData_Lambda">Lambda</a> at the same index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float[] Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NixUniversalSDK_ISpectralData_Interpolate_" data-uid="NixUniversalSDK.ISpectralData.Interpolate*"></a>
+
+  <h3 id="NixUniversalSDK_ISpectralData_Interpolate_System_Single_" data-uid="NixUniversalSDK.ISpectralData.Interpolate(System.Single)">
+  Interpolate(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides an interpolated reflectance value at a specified wavelength value using natural cubic spines. The cubic splines are evaluated at the points specified by <a class="xref" href="NixUniversalSDK.ISpectralData.html#NixUniversalSDK_ISpectralData_Lambda">Lambda</a> and <a class="xref" href="NixUniversalSDK.ISpectralData.html#NixUniversalSDK_ISpectralData_Value">Value</a>. Interpolated values are evaluated using natural cubic splines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Interpolate(float lT)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lT</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Wavelength (nm) at which to query the interpolated reflectance</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Interpolated reflectance value at lT</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_ISpectralData_ToColorData_" data-uid="NixUniversalSDK.ISpectralData.ToColorData*"></a>
+
+  <h3 id="NixUniversalSDK_ISpectralData_ToColorData_NixUniversalSDK_ReferenceWhite_NixUniversalSDK_ColorType_" data-uid="NixUniversalSDK.ISpectralData.ToColorData(NixUniversalSDK.ReferenceWhite,NixUniversalSDK.ColorType)">
+  ToColorData(ReferenceWhite, ColorType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides color data from this measurement for the specified illuminant and observer white point. Result is <code>null</code> if an invalid white point is specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IColorData ToColorData(ReferenceWhite reference = ReferenceWhite.D50_2, ColorType type = ColorType.CIEXYZ)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reference</code> <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a></dt>
+    <dd><p>Selected reference white (defaults to <a class="xref" href="NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_2">D50_2</a>)</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="NixUniversalSDK.ColorType.html">ColorType</a></dt>
+    <dd><p>Output color type (defaults to <a class="xref" href="NixUniversalSDK.ColorType.html#NixUniversalSDK_ColorType_CIEXYZ">CIEXYZ</a>)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.IColorData.html">IColorData</a></dt>
+    <dd><p>Color data, or <code>null</code> if an invalid white point is specified</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

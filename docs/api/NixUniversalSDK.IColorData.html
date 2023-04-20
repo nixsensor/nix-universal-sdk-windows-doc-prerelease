@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IColorData
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IColorData
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NixUniversalSDK.IColorData">
+
+
+
+  <h1 id="NixUniversalSDK_IColorData" data-uid="NixUniversalSDK.IColorData" class="text-break">
+    Interface IColorData
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interface describing colorimetry data</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IColorData</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="NixUniversalSDK.IColorDataExtensions.html#NixUniversalSDK_IColorDataExtensions_HexRgbValue_NixUniversalSDK_IColorData_">IColorDataExtensions.HexRgbValue(IColorData)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="NixUniversalSDK_IColorData_Mode_" data-uid="NixUniversalSDK.IColorData.Mode*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_Mode" data-uid="NixUniversalSDK.IColorData.Mode">
+  Mode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scan mode for this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ScanMode Mode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IColorData_Reference_" data-uid="NixUniversalSDK.IColorData.Reference*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_Reference" data-uid="NixUniversalSDK.IColorData.Reference">
+  Reference
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference white point for this color value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ReferenceWhite Reference { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IColorData_RgbValue_" data-uid="NixUniversalSDK.IColorData.RgbValue*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_RgbValue" data-uid="NixUniversalSDK.IColorData.RgbValue">
+  RgbValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>sRGB value for this color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">byte[] RgbValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IColorData_Type_" data-uid="NixUniversalSDK.IColorData.Type*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_Type" data-uid="NixUniversalSDK.IColorData.Type">
+  Type
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type of color data stored in the <a class="xref" href="NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Value">Value</a> field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ColorType Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.ColorType.html">ColorType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IColorData_Value_" data-uid="NixUniversalSDK.IColorData.Value*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_Value" data-uid="NixUniversalSDK.IColorData.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Color value (3 coordinates) in the format specified by <a class="xref" href="NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Type">Type</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double[] Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NixUniversalSDK_IColorData_CompareTo_" data-uid="NixUniversalSDK.IColorData.CompareTo*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_CompareTo_NixUniversalSDK_IColorData_NixUniversalSDK_ColorDifferenceType_" data-uid="NixUniversalSDK.IColorData.CompareTo(NixUniversalSDK.IColorData,NixUniversalSDK.ColorDifferenceType)">
+  CompareTo(IColorData, ColorDifferenceType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculate delta E between this color and another. The colors must share the same reference white point (<a class="xref" href="NixUniversalSDK.IColorData.html#NixUniversalSDK_IColorData_Reference">Reference</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double CompareTo(IColorData other, ColorDifferenceType type = ColorDifferenceType.CIE2000)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="NixUniversalSDK.IColorData.html">IColorData</a></dt>
+    <dd><p>Another <a class="xref" href="NixUniversalSDK.IColorData.html">IColorData</a> instance</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="NixUniversalSDK.ColorDifferenceType.html">ColorDifferenceType</a></dt>
+    <dd><p>Delta E equation type (defaults to <a class="xref" href="NixUniversalSDK.ColorDifferenceType.html#NixUniversalSDK_ColorDifferenceType_CIE2000">CIE2000</a>)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Color difference (delta E) value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IColorData_ConvertTo_" data-uid="NixUniversalSDK.IColorData.ConvertTo*"></a>
+
+  <h3 id="NixUniversalSDK_IColorData_ConvertTo_NixUniversalSDK_ColorType_" data-uid="NixUniversalSDK.IColorData.ConvertTo(NixUniversalSDK.ColorType)">
+  ConvertTo(ColorType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert this color value to another <a class="xref" href="NixUniversalSDK.ColorType.html">ColorType</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IColorData ConvertTo(ColorType type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="NixUniversalSDK.ColorType.html">ColorType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.IColorData.html">IColorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

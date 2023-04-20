@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DeviceScanner
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DeviceScanner
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="NixUniversalSDK.DeviceScanner">
+
+
+
+  <h1 id="NixUniversalSDK_DeviceScanner" data-uid="NixUniversalSDK.DeviceScanner" class="text-break">
+    Class DeviceScanner
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Class responsible for discovering nearby Nix devices.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DeviceScanner : IDeviceScanner, IDeviceScannerEvents</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DeviceScanner</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a></div>
+      <div><a class="xref" href="NixUniversalSDK.IDeviceScannerEvents.html">IDeviceScannerEvents</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="NixUniversalSDK_DeviceScanner_DefaultGeneralScanPeriodMs" data-uid="NixUniversalSDK.DeviceScanner.DefaultGeneralScanPeriodMs">
+  DefaultGeneralScanPeriodMs
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scan period in milliseconds (20000) used when no time period is provided to <a class="xref" href="NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_Start_System_Int64_">Start(long)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const long DefaultGeneralScanPeriodMs = 20000</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="NixUniversalSDK_DeviceScanner_DefaultSingleDevicePeriodMs" data-uid="NixUniversalSDK.DeviceScanner.DefaultSingleDevicePeriodMs">
+  DefaultSingleDevicePeriodMs
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scan period in milliseconds (10000) used when no time period is provided to <a class="xref" href="NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_SearchForIdAsync_System_String_System_Int64_">SearchForIdAsync(string, long)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const long DefaultSingleDevicePeriodMs = 10000</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="NixUniversalSDK_DeviceScanner_State_" data-uid="NixUniversalSDK.DeviceScanner.State*"></a>
+
+  <h3 id="NixUniversalSDK_DeviceScanner_State" data-uid="NixUniversalSDK.DeviceScanner.State">
+  State
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current state of the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeviceScannerState State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.DeviceScannerState.html">DeviceScannerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="NixUniversalSDK_DeviceScanner_InitializeAsync_" data-uid="NixUniversalSDK.DeviceScanner.InitializeAsync*"></a>
+
+  <h3 id="NixUniversalSDK_DeviceScanner_InitializeAsync" data-uid="NixUniversalSDK.DeviceScanner.InitializeAsync">
+  InitializeAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> and verifies Bluetooth adapter state in the host PC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DeviceScannerState&gt; InitializeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceScannerState.html">DeviceScannerState</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceScannerState.html">DeviceScannerState</a> of the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> after initialization</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_DeviceScanner_ListUsbDevicesAsync_" data-uid="NixUniversalSDK.DeviceScanner.ListUsbDevicesAsync*"></a>
+
+  <h3 id="NixUniversalSDK_DeviceScanner_ListUsbDevicesAsync" data-uid="NixUniversalSDK.DeviceScanner.ListUsbDevicesAsync">
+  ListUsbDevicesAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists USB attached <a class="xref" href="NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instances without running a Bluetooth search</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;IDeviceCompat&gt;&gt; ListUsbDevicesAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a>&gt;&gt;</dt>
+    <dd><p>Task with resulting list of USB attached devices</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_DeviceScanner_SearchForIdAsync_" data-uid="NixUniversalSDK.DeviceScanner.SearchForIdAsync*"></a>
+
+  <h3 id="NixUniversalSDK_DeviceScanner_SearchForIdAsync_System_String_System_Int64_" data-uid="NixUniversalSDK.DeviceScanner.SearchForIdAsync(System.String,System.Int64)">
+  SearchForIdAsync(string, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Searches for a specific Nix device via USB and Bluetooth. The search will run until the specified device is found, or until the specified time interval elapses, whichever is shorter. If no time interval is specified, the search will run for <a class="xref" href="NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_DefaultSingleDevicePeriodMs">DefaultSingleDevicePeriodMs</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IDeviceCompat&gt; SearchForIdAsync(string id, long scanPeriodMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nix device ID used to filter search results</p>
+</dd>
+    <dt><code>scanPeriodMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Period to run the search in milliseconds. Must be positive</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a>&gt;</dt>
+    <dd><p>Nix device instance, or null if no device is found</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_DeviceScanner_Start_" data-uid="NixUniversalSDK.DeviceScanner.Start*"></a>
+
+  <h3 id="NixUniversalSDK_DeviceScanner_Start_System_Int64_" data-uid="NixUniversalSDK.DeviceScanner.Start(System.Int64)">
+  Start(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts a search for nearby Nix devices using Bluetooth for a selected time interval. If no timeout interval is specified, the search will run for <a class="xref" href="NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_DefaultGeneralScanPeriodMs">DefaultGeneralScanPeriodMs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start(long scanPeriodMs = 20000)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scanPeriodMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Period to run the search in milliseconds. Set to a negative value for continuous search</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_DeviceScanner_Stop_" data-uid="NixUniversalSDK.DeviceScanner.Stop*"></a>
+
+  <h3 id="NixUniversalSDK_DeviceScanner_Stop" data-uid="NixUniversalSDK.DeviceScanner.Stop">
+  Stop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops a Bluetooth search if one is currently running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="NixUniversalSDK_DeviceScanner_ScannerCreated" data-uid="NixUniversalSDK.DeviceScanner.ScannerCreated">
+  ScannerCreated
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event that is invoked when the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> has been created</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ScannerCreatedEventArgs&gt; ScannerCreated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="NixUniversalSDK.ScannerCreatedEventArgs.html">ScannerCreatedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="NixUniversalSDK_DeviceScanner_ScannerStarted" data-uid="NixUniversalSDK.DeviceScanner.ScannerStarted">
+  ScannerStarted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event that is invoked when the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> starts searching for devices</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler ScannerStarted</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="NixUniversalSDK_DeviceScanner_ScannerStopped" data-uid="NixUniversalSDK.DeviceScanner.ScannerStopped">
+  ScannerStopped
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event that is invoked when the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> stops searching for devices</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler ScannerStopped</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="NixUniversalSDK_DeviceScanner_ScanResult" data-uid="NixUniversalSDK.DeviceScanner.ScanResult">
+  ScanResult
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event that is invoked when the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> has found a Nix device. This is invoked each time that a device advertisement has been received, or signal strength <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Rssi">Rssi</a> has updated, so multiple events may be received for a given Nix device. The <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a> can be used to uniquely identify each separate device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ScanResultEventArgs&gt; ScanResult</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="NixUniversalSDK.ScanResultEventArgs.html">ScanResultEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

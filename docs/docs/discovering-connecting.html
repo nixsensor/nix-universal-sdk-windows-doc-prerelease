@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Discovering and Connecting to Nix Devices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Discovering and Connecting to Nix Devices ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/discovering-connecting.md/#L1">
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="discovering-and-connecting-to-nix-devices">Discovering and Connecting to Nix Devices</h1>
+
+<h2 id="device-discovery">Device discovery</h2>
+<p>Regardless of device type, each unique Nix device can be represented by an object that conforms to the <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html"><code>IDeviceCompat</code></a> interface. To obtain instances of the device object, they need to first be discovered using the <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a>. They can also be recalled at a later time directly using their <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id"><code>Id</code></a> property (for Bluetooth connected devices only).</p>
+<p>The <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a> implements the <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> interface and searches for nearby Nix devices using Bluetooth and USB. Scanner events include:</p>
+<ul>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScannerCreated"><code>ScannerCreated</code></a>
+<ul>
+<li>Invoked when the scanner has finished initializing after calling <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_InitializeAsync_"><code>InitializeAsync()</code></a></li>
+<li>State is provided via <a class="xref" href="../api/NixUniversalSDK.ScannerCreatedEventArgs.html"><code>ScannerCreatedEventArgs</code></a> arguments.</li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScannerStarted"><code>ScannerStarted</code></a>
+<ul>
+<li>Invoked when the scanner has started searching for devices</li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScannerStopped"><code>ScannerStopped</code></a>
+<ul>
+<li>Invoked when the scanner has stopped searching for devices</li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScanResult"><code>ScanResult</code></a>
+<ul>
+<li>Invoked each time that an <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html"><code>IDeviceCompat</code></a> instance has been found</li>
+<li>Device information is provided via <a class="xref" href="../api/NixUniversalSDK.ScanResultEventArgs.html"><code>ScanResultEventArgs</code></a> arguments.</li>
+<li>Note that this will be called both when a new device is found and when the RSSI/signal strength of a previously discovered device has changed. It is possible to use the <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id"><code>Id</code></a> parameter as a means to uniquely identify discovered devices.</li>
+</ul>
+</li>
+</ul>
+<p>To use the <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a>:</p>
+<ul>
+<li>Create a new scanner instance and define event handlers</li>
+<li>Call <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_InitializeAsync_"><code>InitializeAsync()</code></a> and await its completion</li>
+<li>Check the scanner <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_State"><code>State</code></a>, which will be <code>Idle</code> if the Bluetooth radio is available.
+<ul>
+<li>See a list possible states <a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html">here</a>.</li>
+</ul>
+</li>
+<li>The scanner can be started using <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_Start_"><code>Start()</code></a>
+<ul>
+<li>By default, the scanner will search for a period <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_DefaultGeneralScanPeriodMs"><code>DefaultGeneralScanPeriodMs</code></a></li>
+<li>This interval can be overridden by providing an argument for <code>scanPeriodMs</code>.</li>
+</ul>
+</li>
+<li>Discovered devices will be reported via the <a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScanResult"><code>ScanResult</code></a> event.
+<ul>
+<li>At this stage, it is valid to check a limited number of parameters:
+<ul>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id"><code>Id</code></a>: Device identifier string</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Rssi"><code>Rssi</code></a>: Device signal strength (-127 to 0). Will be 0 for USB connected devices.</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_InterfaceType"><code>InterfaceType</code></a>: Indicates whether the device was found via Bluetooth or USB connection.</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Type"><code>Type</code></a>: Indicates the specific device type.</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Name"><code>Name</code></a>: Full name of the device (e.g. 'Nix Spectro 2')</li>
+</ul>
+</li>
+<li>Note that USB connected devices will be reported only once, immediately after <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_Start_"><code>Start()</code></a> is called</li>
+</ul>
+</li>
+<li>The device search will run for the specified duration, after which the <a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScannerStopped"><code>ScannerStopped</code></a> event is invoked. The device search can also be manually stopped by calling <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_Stop_"><code>Stop()</code></a>.</li>
+<li>To recall a specific Bluetooth connected device in a later app session, you can await <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_SearchForIdAsync_"><code>SearchForIdAsync()</code></a>. This will run the <code>DeviceScanner</code> searching for a specific device by its identifier.</li>
+</ul>
+<pre><code class="lang-csharp">// DeviceScanner event handlers
+void OnScannerCreated(
+    object sender,
+    ScannerCreatedEventArgs args)
+{
+    // Scanner has initialized
+    // ...
+}
+
+void OnScannerStarted(
+    object sender,
+    EventArgs args)
+{
+    // Scanner has started 
+    // ...
+}
+
+void OnScannerStopped(
+    object sender,
+    EventArgs args)
+{
+    // Scanner has stopped
+    // ...
+}
+
+void OnScanResult(
+    object sender,
+    ScanResultEventArgs args)
+{
+    if (args.Device is IDeviceCompat device)
+    {
+        // Found a device
+        // ... 
+        Debug.WriteLine(
+            $&quot;Found {device?.Id} &quot; + 
+            &quot;({device?.Name}) &quot; + 
+            &quot;at RSSI {device?.Rssi}&quot;);
+    }
+}
+
+// New DeviceScanner instance
+IDeviceScanner scanner = new DeviceScanner();
+scanner.ScannerCreated += OnScannerCreated;
+scanner.ScannerStarted += OnScannerStarted;
+scanner.ScannerStopped += OnScannerStopped;
+scanner.ScanResult += OnScanResult;
+
+// Initialize the scanner
+// Can await state here, or check via event handler
+var state = await scanner.InitializeAsync();
+
+// Start the scanner
+if (state == DeviceScannerState.Idle)
+{
+    scanner.Start();
+}
+</code></pre>
+<p><strong>Note</strong>: If Bluetooth is disabled or unavailable, it will not be possible to run the device scanner normally. However, USB connected devices can separately be listed by calling <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_ListUsbDevicesAsync_"><code>ListUsbDevicesAsync()</code></a>. This task provides a list of USB connected devices and does not invoke the <a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScanResult"><code>ScanResult</code></a> event.</p>
+<h2 id="opening-a-connection">Opening a connection</h2>
+<p>Once an <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html"><code>IDeviceCompat</code></a> instance has been obtained, a connection can be opened by calling <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ConnectAsync_"><code>ConnectAsync()</code></a>. Connection state changes are provided via the following events:</p>
+<ul>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_Connected"><code>Connected</code></a>
+<ul>
+<li>Invoked when the connection process has completed successfully</li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_Disconnected"><code>Disconnected</code></a>
+<ul>
+<li>Invoked when the Nix device has disconnected from the host</li>
+<li>Provides a <a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html">status</a> indicating the reason for disconnecting via <a class="xref" href="../api/NixUniversalSDK.DeviceStatusArgs.html"><code>DeviceStatusArgs</code></a></li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_BatteryStateChanged"><code>BatteryStateChanged</code></a>
+<ul>
+<li>Invoked when the device battery level has updated</li>
+<li>New battery state is provided via <a class="xref" href="../api/NixUniversalSDK.BatteryStateEventArgs.html"><code>BatteryStateEventArgs</code></a></li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompatEvents.html#NixUniversalSDK_IDeviceCompatEvents_ExtPowerStateChanged"><code>ExtPowerStateChanged</code></a>
+<ul>
+<li>Invoked when external power has been connected or disconnected from the Nix device</li>
+<li>New external power state is provided via <a class="xref" href="../api/NixUniversalSDK.ExtPowerStateEventArgs.html"><code>ExtPowerStateEventArgs</code></a></li>
+</ul>
+</li>
+</ul>
+<p>The steps necessary for connecting include:</p>
+<ol>
+<li>Implement device event handlers in your class</li>
+<li>Stop the <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a> before opening a connection, if still running.
+<ul>
+<li>It is safe to call stop at any time, even if already stopped</li>
+</ul>
+</li>
+<li>Start the connection process by calling by calling <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ConnectAsync_"><code>ConnectAsync()</code></a>
+<ul>
+<li>The connection process is asynchronous. <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ConnectAsync_"><code>ConnectAsync()</code></a> returns a task that can be awaited.</li>
+<li>A call to <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ConnectAsync_"><code>ConnectAsync()</code></a> will always result in either the <code>Connected</code> or <code>Disconnected</code> event being invoked.</li>
+<li>Device operations are not possible until <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ConnectAsync_"><code>ConnectAsync()</code></a> provides a <code>Success</code> result (or equivalently, until the <code>Connected</code> event is invoked).</li>
+<li>If the connection process fails, the <code>Disconnected</code> event will be invoked with an appropriate <a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html">status code</a> indicating the cause of the error.</li>
+<li><code>Disconnected</code> will also be called later whenever the device is disconnected. This can occur normally (i.e. - if the host device calls <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Disconnect_"><code>Disconnect()</code></a>), or abnormally (i.e. - if the connection is dropped due to an error or low Bluetooth signal strength).</li>
+<li>The supplied assemblies linked to a specific allocation of Nix devices and will not operate with devices from another allocation. At connection time, the SDK will verify an allocation code stored on the Nix device. If this check does not pass, the SDK will contact a Nix authentication server to check if that device serial number is authorized. If the device cannot be authenticated (i.e. – an unknown allocation code was found and an internet connection is unavailable), the device will be disconnected with the status <code>ErrorUnauthorized</code> . The internet connection is required only once every 30 days – once authorized, this status is saved, and connections can be made offline for this time period.</li>
+</ul>
+</li>
+<li>When the user has finished using the device, the connection can be closed by calling <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Disconnect_"><code>Disconnect()</code></a>.
+<ul>
+<li>This method call can also be used to cancel an ongoing connection operation.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-csharp">// Using a device instance previously found by `DeviceScanner`
+IDeviceCompat Device;
+
+// Define device state event handlers
+void OnConnected(
+    object sender,
+    EventArgs args)
+{
+    // Device has connected successfully
+    // ...
+}
+
+void OnDisconnected(
+    object sender,
+    DeviceStatusArgs args)
+{
+    // Device has disconnected
+    DeviceStatus status = args.Status;
+    Debug.WriteLine($&quot;OnDisconnected() with status {status}&quot;);
+
+    // Remove device event handlers
+    RemoveDeviceEvents();
+
+    // Handle status codes here, if desired in your application
+    // At minimum, should check for ErrorUnauthorized status
+    switch (status)
+    {
+        case DeviceStatus.ErrorUnauthorized:
+            // Device not authorized for this SDK build
+            // ...
+            break;
+        case DeviceStatus.Success:
+            // Normal disconnect, triggered by device.Disconnect()
+            // ...
+            break;
+        case DeviceStatus.ErrorDroppedConnection:
+            // Nix device dropped the connection
+            // ...
+            break;
+        case DeviceStatus.ErrorTimeout:
+        case DeviceStatus.ErrorMaxAttempts:
+            // Connection to Nix device timed out
+            // ...
+            break;
+        default:
+            // Other internal errors
+            // ...
+            break;
+    }
+    // Other steps as necessary in your application
+    // ...
+}
+
+void OnBatteryStateChanged(
+    object sender,
+    BatteryStateEventArgs args)
+{
+    // Battery level has updated
+    // ...    
+    int newState = args.NewState;
+    Debug.WriteLine($&quot;OnBatteryStateChanged to {newState}&quot;);
+}
+
+void OnExtPowerStateChanged(
+    object sender,
+    ExtPowerStateEventArgs args)
+{
+    // External power has been connected or disconnected
+    // ...    
+    int newState = args.NewState;
+    Debug.WriteLine($&quot;OnExtPowerStateChanged to {newState}&quot;);
+}
+
+// Helpers to add/remove device event handlers
+void AddDeviceEvents() 
+{
+    if (Device != null)
+    {
+        Device.Connected += OnConnected;
+        Device.Disconnected += OnDisconnected;
+        Device.BatteryStateChanged += OnBatteryStateChanged;
+        Device.ExtPowerStateChanged += OnExtPowerStateChanged;
+    }
+}
+
+void RemoveDeviceEvent()
+{
+    if (device != null)
+    {
+        Device.Connected -= OnConnected;
+        Device.Disconnected -= OnDisconnected;
+        Device.BatteryStateChanged -= OnBatteryStateChanged;
+        Device.ExtPowerStateChanged -= OnExtPowerStateChanged;
+    }
+}
+
+// Add device handlers
+AddDeviceEvents()
+
+// Start connection process
+var connectTask = Device.ConnectAsync();
+
+// Show progress indicator here if desired
+// ...
+
+// Wait for completion
+var state = await connectTask;
+</code></pre>
+<h1 id="next-steps">Next Steps</h1>
+<ul>
+<li><a href="device-operations.html">Device Operations</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/discovering-connecting.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
