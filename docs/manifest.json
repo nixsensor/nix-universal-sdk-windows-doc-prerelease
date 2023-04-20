@@ -577,6 +577,17 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Constants.html",
+          "hash": "2+XcGgi/V2XMJG075Bfx7BAqtyUWnqlMcA2xJjErIj0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/NixUniversalSDK.Wrapper.Delegates.BoolValue.yml",
       "output": {
         ".html": {
@@ -658,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Exported.html",
-          "hash": "Roe7axZZTPsuc7XOYMIEpkVr2oxU2ka8FrSCv8RM38A="
+          "hash": "9p5M5mDqrkawXoJ/8XZE63cB0rel3H3V5xj/fQd+xAI="
         }
       },
       "version": ""
@@ -669,7 +680,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.html",
-          "hash": "gIVPl7KynwW0fHxL2+fRN3O4Xu008zEWRRvat9NFbgk="
+          "hash": "MyWCBntq0KIGGJzJFLR7zpJqgPO7Rp0iB2F/vk88dNY="
         }
       },
       "version": ""
@@ -702,11 +713,11 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0S5PWMOTKMynXyxhhzZQV4EEXUacCptZ4aDg30HYU+I="
+          "hash": "GLVJl/oWKjqsDMwzHvdT6xQp0vpgoDq3Ssg3dAu2S9g="
         },
         ".json": {
           "relative_path": "api/toc.json",
-          "hash": "Qv+ngrGeshR4+FV+22WRcTwr0o3eZgEHZjoBMtmGoC8="
+          "hash": "1N5xYlef9lkKucJfIoZ+SXuNoLsovEKCeGYXsxgyzhw="
         }
       },
       "version": ""

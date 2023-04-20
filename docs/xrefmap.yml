@@ -4336,6 +4336,24 @@ references:
   commentId: N:NixUniversalSDK.Wrapper
   fullName: NixUniversalSDK.Wrapper
   nameWithType: NixUniversalSDK.Wrapper
+- uid: NixUniversalSDK.Wrapper.Constants
+  name: Constants
+  href: api/NixUniversalSDK.Wrapper.Constants.html
+  commentId: T:NixUniversalSDK.Wrapper.Constants
+  fullName: NixUniversalSDK.Wrapper.Constants
+  nameWithType: Constants
+- uid: NixUniversalSDK.Wrapper.Constants.EmptyJson
+  name: EmptyJson
+  href: api/NixUniversalSDK.Wrapper.Constants.html#NixUniversalSDK_Wrapper_Constants_EmptyJson
+  commentId: F:NixUniversalSDK.Wrapper.Constants.EmptyJson
+  fullName: NixUniversalSDK.Wrapper.Constants.EmptyJson
+  nameWithType: Constants.EmptyJson
+- uid: NixUniversalSDK.Wrapper.Constants.TemperatureError
+  name: TemperatureError
+  href: api/NixUniversalSDK.Wrapper.Constants.html#NixUniversalSDK_Wrapper_Constants_TemperatureError
+  commentId: F:NixUniversalSDK.Wrapper.Constants.TemperatureError
+  fullName: NixUniversalSDK.Wrapper.Constants.TemperatureError
+  nameWithType: Constants.TemperatureError
 - uid: NixUniversalSDK.Wrapper.Delegates
   name: Delegates
   href: api/NixUniversalSDK.Wrapper.Delegates.html
