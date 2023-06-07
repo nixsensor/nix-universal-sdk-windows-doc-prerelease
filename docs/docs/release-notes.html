@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Example Applications </title>
+      <title>Release Notes </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Example Applications ">
+      <meta name="title" content="Release Notes ">
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -13,7 +13,7 @@
       <meta name="docfx:tocrel" content="toc.html">
       
       
-      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/example-apps.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/release-notes.md/#L1">
 
       <script type="text/javascript" src="../styles/docfx.min.js"></script>
       <script type="text/javascript" src="../styles/main.js"></script>
@@ -63,35 +63,27 @@
         </div>
 
         <article data-uid="">
-<h1 id="example-applications">Example Applications</h1>
+<h1 id="release-notes">Release Notes</h1>
 
-<p>Two example applications and their complete source code are provided with the <code>NixUniversalSDK</code> download. To review the examples, use Visual Studio 2022 to open the <code>nix-universal-sdk-windows-example.sln</code> solution file located in the <code>example-windows</code> folder. The solution contains two projects, one for each example application.</p>
-<p>Both applications demonstrate:</p>
+<h2 id="version-403">Version 4.0.3</h2>
 <ul>
-<li>Device discovery on Bluetooth and USB interfaces</li>
-<li>Opening and closing a connection to a device</li>
-<li>Displaying additional device info (serial number, battery level, etc.)</li>
-<li>Toggling device options (haptic feedback, RGB feedback, etc.)</li>
-<li>Taking measurements</li>
-<li>Obtaining colorimetry and spectral data from measurements</li>
-<li>Performing in-field calibration on the provided reference tile</li>
-<li>Displaying additional measurement information (temperature, scan settings, etc.)</li>
+<li>Add <code>NixUniversalSDK.Wrapper</code> project.</li>
+<li>Changed <code>System.Text.Json</code> dependency from <code>7.0.2</code> to <code>7.0.0</code> to resolve a compatibility issue with the wrapper project.</li>
 </ul>
-<h2 id="console-demo">Console Demo</h2>
-<p>The <code>NixExampleConsole</code> project contains a basic console application, targeting .NET Framework 4.7.2. To run this example, set <code>NixExampleConsole</code> as the 'Startup Project', build, and run.</p>
-<p><img src="../images/console_example.png" alt="Console Demo Screenshot"></p>
-<h2 id="winui3-demo">WinUI3 Demo</h2>
-<p>The <code>NixExampleWinUI</code> project contains a WinUI3 based application, targeting .NET 7.0. To run this example, set <code>NixExampleWinUI</code> as the 'Startup Project', build, and run.</p>
-<p><img src="../images/winui_example.png" alt="WinUI3 Demo Screenshot"></p>
-<h2 id="next-steps">Next steps</h2>
+<h2 id="version-402">Version 4.0.2</h2>
 <ul>
-<li><a href="wrapper.html">Wrapper for Usage in C/C++</a></li>
-<li><a href="../index.html#additional-support">Get additional support</a></li>
+<li>Fixed MAC address parsing to accept upper or lower case HEX digits.</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_SearchForIdAsync_"><code>SearchForIdAsync</code></a> is now case insensitive.</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_SearchForIdAsync_"><code>SearchForIdAsync</code></a> now only runs BLE search if a valid MAC address is provided.</li>
+</ul>
+<h2 id="version-400">Version 4.0.0</h2>
+<ul>
+<li>Initial release for <code>NixUniversalSDK</code>, replacing the older <code>NixLibrary</code> project.</li>
 </ul>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/example-apps.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/release-notes.md/#L1" class="edit-link">Edit this page</a>
         </div>
       </div>
 

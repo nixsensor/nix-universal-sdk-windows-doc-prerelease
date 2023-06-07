@@ -174,7 +174,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Closes the current device connection.</p>
+  <div class="markdown level1 summary"><p>Closes the current device connection or cancels a connection operation in progress.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -489,7 +489,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets debug information for the last field calibration performed in this application session, formatted as a JSON string</p>
+  <div class="markdown level1 summary"><p>Gets debug information for the last field calibration performed in this application session, formatted as a JSON string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -809,7 +809,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ScanCount">ScanCount</a> for the current device as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a>, or 0 if not supported.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ScanCount">ScanCount</a> for the current device as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a>, or 0 if not supported. This value is valid only if a device is connected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1405,7 +1405,7 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>referenceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Reference white, by its name defined in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;) to query</p>
+    <dd><p>Reference white, by its name defined in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;) to query D50 illuminant, 2 degree observer</p>
 </dd>
   </dl>
 
@@ -1829,8 +1829,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_System_String_System_String_System_String__examples">Examples</h4>
-  <p>An example of calling this function is shown below:</p>
-<pre><code>string color = Measurement_GetLastColorJson(&quot;M2&quot;, &quot;D50_2&quot;, &quot;CIEXYZ&quot;);</code></pre>
+  <p>An example of calling this function from C is shown below:</p>
+<pre><code>const char* color = Measurement_GetLastColorJson(&quot;M2&quot;, &quot;D50_2&quot;, &quot;CIEXYZ&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;mode&quot;: &quot;M2&quot;,
@@ -1886,8 +1886,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_System_String_System_String__examples">Examples</h4>
-  <p>An example of calling this function is shown below:</p>
-<pre><code>string density = Measurement_GetLastDensityJson(&quot;M2&quot;, &quot;T&quot;);</code></pre>
+  <p>An example of calling this function from C is shown below:</p>
+<pre><code>const char* density = Measurement_GetLastDensityJson(&quot;M2&quot;, &quot;T&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;mode&quot;: &quot;M2&quot;,
@@ -1944,8 +1944,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_System_String_System_String__examples">Examples</h4>
-  <p>An example of calling this function is shown below:</p>
-<pre><code>string hexCode = Measurement_GetLastHexCode(&quot;M2&quot;, &quot;D50_2&quot;);</code></pre>
+  <p>An example of calling this function from C is shown below:</p>
+<pre><code>const char* hexCode = Measurement_GetLastHexCode(&quot;M2&quot;, &quot;D50_2&quot;);</code></pre>
 <p>Example output:</p>
 <pre><code>#DB267C</code></pre>
 
@@ -2021,8 +2021,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_System_String__examples">Examples</h4>
-  <p>An example of calling this function is shown below:</p>
-<pre><code>string metadata = Measurement_GetLastMetadataJson(&quot;M2&quot;);</code></pre>
+  <p>An example of calling this function from C is shown below:</p>
+<pre><code>const char* metadata = Measurement_GetLastMetadataJson(&quot;M2&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;dateMs&quot;: 1682005505841,
@@ -2113,8 +2113,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_String__examples">Examples</h4>
-  <p>An example of calling this function is shown below:</p>
-<pre><code>string spectral = Measurement_GetLastSpectralJson(&quot;M2&quot;);</code></pre>
+  <p>An example of calling this function from C is shown below:</p>
+<pre><code>const char* spectral = Measurement_GetLastSpectralJson(&quot;M2&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;mode&quot;: &quot;M2&quot;,
@@ -2227,8 +2227,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Scanner_GetSortedResults_System_Int32__examples">Examples</h4>
-  <p>An example of calling this function is shown below:</p>
-<pre><code>string list = Scanner_GetSortedResults(5);</code></pre>
+  <p>An example of calling this function from C is shown below:</p>
+<pre><code>const char* list = Scanner_GetSortedResults(5);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>[
     {

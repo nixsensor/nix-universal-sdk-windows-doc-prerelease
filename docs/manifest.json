@@ -592,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.BoolValue.html",
-          "hash": "X+pzcu0DOdbfTA946+gp3aYth719DJVP1MwYkLMMF8A="
+          "hash": "YUNeaTu4qFphesrVah8hVX2AmEc82vSWHXWuQmRHoMk="
         }
       },
       "version": ""
@@ -603,7 +603,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.Empty.html",
-          "hash": "nlxhTMPi/S+i+3+Xh3i+P3iMpaT/6Wl30fR8FoAM0Vc="
+          "hash": "LFiEpXS0snWf8a3wXi+QheSM/jEA2fyIL2A3+MBsfgE="
         }
       },
       "version": ""
@@ -614,7 +614,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.IntValue.html",
-          "hash": "+7YBFTHtTkWA6KRHj+CTs7Kz3jjJytNiiDBs3Zm5q1Q="
+          "hash": "dl/fi1K4/H4GLJaJG722CKXckJ8P++dqZuiSUzGQUxU="
         }
       },
       "version": ""
@@ -625,7 +625,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.StringValue.html",
-          "hash": "hKf2fRAKPxciW2bq5dR1HicRaJHm0xJWXMa7hP0Fnlo="
+          "hash": "BDzfMf1SJgjNeE65d27NJ16UhrPNSH+CG/tTZwS2HMM="
         }
       },
       "version": ""
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Exported.html",
-          "hash": "9p5M5mDqrkawXoJ/8XZE63cB0rel3H3V5xj/fQd+xAI="
+          "hash": "IVb/FzJk9ft02OR1pcD2OErGmkogEK62ObflBvIkGo0="
         }
       },
       "version": ""
@@ -728,7 +728,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/add-to-vs.html",
-          "hash": "LQOOHQd5HGssUB02TCJzuMeFOx3ln5S62kasG283b08="
+          "hash": "D7U+3jodLEeFiebtSZ3dp4DZ8lBQJPQbY2A3HbTBaMk="
         }
       },
       "version": ""
@@ -739,7 +739,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/device-operations.html",
-          "hash": "u7SuZ814fYw8W+xfR9N4oOsuFSBT+9iCfNtAmmulAHY="
+          "hash": "9zsgursnvSGUusWWGwSijIhSf22RU9G0NtqS+BSydGQ="
         }
       },
       "version": ""
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/discovering-connecting.html",
-          "hash": "EKLqj6/vvJaXUoh3KQJp+ZdqO/rkOno+9Fyw2HJiC6s="
+          "hash": "eCMOFHvPhYwO3PRuHMnn7pnPAS54CAvOe6AhZusutHs="
         }
       },
       "version": ""
@@ -761,7 +761,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/example-apps.html",
-          "hash": "GytzZxsm4HS9aA2g5cCquWO/4dpdTqK6DCFXwARzVxA="
+          "hash": "p4yCsfMoxbIP39H2hrmSnCr1h2wf/vjwQEcUEV5+O0Q="
         }
       },
       "version": ""
@@ -772,7 +772,18 @@
       "output": {
         ".html": {
           "relative_path": "docs/handling-measurements.html",
-          "hash": "1TtIJgPFRkoRUw8uF0oEtHelQGTNkulIFP0tKw4i23I="
+          "hash": "ZdOaqOdqebbuKVypRbN603JDjdcGKPsB46SVnVyhRqI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/release-notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/release-notes.html",
+          "hash": "VCxKIS8mVI+I/SgBNN7qaBRX0I92L4ngCEfu/OHuKfw="
         }
       },
       "version": ""
@@ -783,11 +794,22 @@
       "output": {
         ".html": {
           "relative_path": "docs/toc.html",
-          "hash": "1CrbtHsIO6RhjZsEGj9jRBvlcyV+iOUq/xd9SHxSa2Q="
+          "hash": "+YU2i79WolAAWEUUibiib62PtK7nAhGwI++EmjKtlpg="
         },
         ".json": {
           "relative_path": "docs/toc.json",
-          "hash": "OgdbLWZ1KWGdntEZTe4/ttosgQ8dD4/oa+EeHXBOhD4="
+          "hash": "tQ/ggsHeNcRYN67QxVKaeRFAwctD7xPff2h0wBCxlEA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/wrapper.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/wrapper.html",
+          "hash": "khhSu5GQtoSB2nKkMaRsY3XxkbM1Wmqe2GhAcs0aKJY="
         }
       },
       "version": ""
@@ -833,12 +855,22 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/wrapper_build_settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/wrapper_build_settings.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "qZ6PyV9Al1auoTsXYaEQfyoqdKSAFKJ8CFkfsfP0hsI="
+          "hash": "gJnm2VX806OzaJhvbGQcfZr6JH+e0I6AN53hl0jofbs="
         }
       },
       "version": ""

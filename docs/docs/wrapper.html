@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Wrapper for Usage in C/C++ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Wrapper for Usage in C/C++ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/wrapper.md/#L1">
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="wrapper-for-usage-in-cc">Wrapper for Usage in C/C++</h1>
+
+<h2 id="overview">Overview</h2>
+<p>For Windows applications that are not .NET based, it may be possible to use <code>NixUniversalSDK</code> indirectly. For example, the SDK download provides a project <code>NixUniversalSDK.Wrapper</code> which allows for its usage in C/C++ applications.</p>
+<p>The <code>NixUniversalSDK.Wrapper</code> contains single <code>IDeviceScanner</code> and <code>IDeviceCompat</code> instances. It provides a static interface to access these instances and also provides callbacks for device and scanner events. The project contains a basic implementation, but can be modified or expanded to better suit your specific application.</p>
+<h3 id="known-limitations">Known limitations</h3>
+<ul>
+<li>The wrapper project is written in C#, but relies on <a href="https://sites.google.com/site/robertgiesecke/Home/uploads/unmanagedexports">Unmanaged Exports</a> by Robert Giesecke to export static functions so that they are accessible from C/C++. As such, the wrapper project is subject to the same <a href="https://sites.google.com/site/robertgiesecke/Home/uploads/unmanagedexports#TOC-Restrictions">restrictions</a> listed for this library.</li>
+<li>Unmanaged Exports no longer automatically generates an import <code>.lib</code> library file when building the wrapper <code>.dll</code> assembly. For linking in C/C++ applications, this import library file may need to be manually generated (see <a href="#generating-an-import-library">Generating an import library</a>).</li>
+<li>As of June 2023, the wrapper project has only been tested for x64 builds
+<ul>
+<li>x86 builds may function but are not tested.</li>
+<li>ARM/ARM64 builds are not possible at this time.</li>
+</ul>
+</li>
+</ul>
+<h2 id="building-the-wrapper-project">Building the wrapper project</h2>
+<ol>
+<li>Open the <code>NixUniversalSDK.Wrapper</code> project in Visual Studio 2022</li>
+<li>Make sure that the Configuration is set to 'Release' and that a single target platform ('x64') is selected.
+<ul>
+<li>As of June 2023, the wrapper project has only been tested for x64 builds
+<ul>
+<li>x86 builds may function but are not tested.</li>
+<li>ARM/ARM64 builds are not possible at this time.</li>
+</ul>
+</li>
+<li>The resulting DLL will <strong>not</strong> contain any exported symbols if 'Any CPU' is selected as the target</li>
+</ul>
+</li>
+</ol>
+<p><img src="../images/wrapper_build_settings.png" alt="Wrapper build settings"></p>
+<ol start="3">
+<li>Build the project by selecting 'Build -&gt; Rebuild NixUniversalSDK.Wrapper'. This will generate <code>NixUniversalSDK.Wrapper.dll</code> in the <code>bin/x64/Release</code> folder (for x64 builds). The build step will also and will copy other .NET assemblies that are runtime dependencies of <code>NixUniversalSDK.Wrapper.dll</code></li>
+</ol>
+<h2 id="using-the-wrapper-in-a-cc-project">Using the wrapper in a C/C++ project</h2>
+<p>After <a href="#building-the-wrapper-project">building</a> the project, the output folder will also contain <code>NixUniversalSDK.Wrapper.h</code>. This C/C++ header file contains macros and function declarations for the exported functions available in <code>NixUniversalSDK.Wrapper.dll</code>. This file can be can be included in your C/C++ code to provide function declarations for the wrapper functions.</p>
+<h3 id="generating-an-import-library">Generating an import library</h3>
+<p>Unmanaged Exports no longer automatically generates an import <code>.lib</code> library file when building the wrapper <code>.dll</code> assembly. This import library is necessary for linking against the wrapper assembly. However, it is possible to manually generate this file usign the <code>dumpbin</code> and <code>lib</code> utilities provided with Visual Studio.</p>
+<h4 id="create-an-exports-file">Create an exports file</h4>
+<ol>
+<li>Open a Developer Command Prompt for VS2022. For x64 builds, make sure to use x64 Native Tools command prompt.</li>
+<li>Use the <code>dumpbin</code> tool to generate a list of exported symbols in the <code>NixUniversalSDK.Wrapper.dll</code> assembly</li>
+</ol>
+<pre><code class="lang-shell">dumpbin /EXPORTS &lt;PATH_TO_DLL&gt;
+</code></pre>
+<ol start="3">
+<li>Create a new text file <code>NixUniversalSDK.Wrapper.exports</code> and add the text <code>EXPORTS</code> to the first line.</li>
+<li>Copy and paste the list of function names that were printed from the <code>dumpbin</code> tool. Keep only the function names.
+<ul>
+<li>The contents of the resulting <code>exports</code> file should be similar to the block shown below.</li>
+<li>For convenience, you can copy and paste the block below verbatim, provided that you have not modified the exported functions in <code>Exported.cs</code> in the wrapper project</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-shell">EXPORTS
+Device_Connect
+Device_Disconnect
+Device_GetBatteryLevel
+Device_GetExtPowerState
+Device_GetFieldCalibrationDue
+Device_GetFieldCalibrationEnabled
+Device_GetFirmwareVersion
+Device_GetHapticFeedbackEnabled
+Device_GetHardwareVersion
+Device_GetId
+Device_GetInterfaceType
+Device_GetLastCalibrationDebug
+Device_GetLastCalibrationStatus
+Device_GetName
+Device_GetNote
+Device_GetPowerState
+Device_GetProvidesDensity
+Device_GetProvidesSpectral
+Device_GetReferenceJavaTicks
+Device_GetReferenceTemperature
+Device_GetRgbFeedbackEnabled
+Device_GetScanCount
+Device_GetScanTemperature
+Device_GetSerialNumber
+Device_GetSoftwareVersion
+Device_GetState
+Device_GetSupportedModes
+Device_GetSupportedReferences
+Device_GetSupportsFieldCalibration
+Device_GetSupportsHapticFeedback
+Device_GetSupportsRgbFeedback
+Device_GetSupportsTemperatureCompensation
+Device_GetTemperatureCompensationEnabled
+Device_GetType
+Device_HasOptions
+Device_IsModeSupported
+Device_IsTileStringValid
+Device_LedTest
+Device_Measure
+Device_ProvidesColor
+Device_RegisterBatteryStateChanged
+Device_RegisterCommandCompleted
+Device_RegisterConnected
+Device_RegisterDisconnected
+Device_RegisterExtPowerStateChanged
+Device_RunFieldCalibration
+Device_SetFieldCalibrationEnabled
+Device_SetHapticFeedbackEnabled
+Device_SetRgbFeedbackEnabled
+Device_SetTemperatureCompensationEnabled
+GetSdkId
+Measurement_GetLastColorJson
+Measurement_GetLastDensityJson
+Measurement_GetLastHexCode
+Measurement_GetLastJavaTicks
+Measurement_GetLastMetadataJson
+Measurement_GetLastModesJson
+Measurement_GetLastSpectralJson
+Measurement_GetLastStatus
+Scanner_GetSortedResults
+Scanner_GetState
+Scanner_HasFoundDevice
+Scanner_ListUsbDevices
+Scanner_RegisterCreated
+Scanner_RegisterScanResult
+Scanner_RegisterStarted
+Scanner_RegisterStopped
+Scanner_Reset
+Scanner_SearchForId
+Scanner_Start
+Scanner_Stop
+</code></pre>
+<h4 id="create-an-import-library-file">Create an import library file</h4>
+<ol>
+<li>Open a Developer Command Prompt for VS2022. For x64 builds, make sure to use x64 Native Tools command prompt.</li>
+<li>Using the <code>lib</code> tool and the <code>NixUniversalSDK.Wrapper.exports</code> file from the previous step, generate an import library file. For an x64 build:</li>
+</ol>
+<pre><code class="lang-shell">lib /def:NixUniversalSDK.Wrapper.exports /machine:x64 /out:NixUniversalSDK.Wrapper.lib
+</code></pre>
+<ol start="3">
+<li>An import library <code>NixUniversalSDK.Wrapper.lib</code> will be generated in the current folder. This file can be used to link against the <code>NixUniversalSDK.Wrapper.dll</code> assembly</li>
+</ol>
+<h3 id="runtime-requirements">Runtime requirements</h3>
+<ul>
+<li>The <code>NixUniversalSDK.Wrapper.dll</code> wrapper assembly requires that the .NET Framework runtime (version 4.7.2 or higher) is present on the host system.</li>
+<li>The wrapper assembly will automatically load the <code>NixUniversalSDK.dll</code> assembly runtime, along with its dependencies. These dependencies are copied to the build output folder described in the <a href="#building-the-wrapper-project">build</a> instructions. These <code>.dll</code> files must be accessible to your application executable at runtime.
+<ul>
+<li>The full list of assemblies required at runtime are listed below:
+<ul>
+<li><code>NixUniversalSDK.Wrapper.dll</code></li>
+<li><code>NixUniversalSDK.dll</code></li>
+<li><code>Microsoft.Bcl.AsyncInterfaces.dll</code></li>
+<li><code>Microsoft.Build.Framework.dll</code></li>
+<li><code>Microsoft.Build.Utilities.Core.dll</code></li>
+<li><code>Microsoft.DotNet.PlatformAbstractions.dll</code></li>
+<li><code>Microsoft.VisualStudio.Setup.Configuration.Interop.dll</code></li>
+<li><code>RGiesecke.DllExport.Metadata.dll</code></li>
+<li><code>System.Buffers.dll</code></li>
+<li><code>System.Collections.Immutable.dll</code></li>
+<li><code>System.Configuration.ConfigurationManager.dll</code></li>
+<li><code>System.IO.Ports.dll</code></li>
+<li><code>System.Memory.dll</code></li>
+<li><code>System.Numerics.Vectors.dll</code></li>
+<li><code>System.Runtime.CompilerServices.Unsafe.dll</code></li>
+<li><code>System.Security.AccessControl.dll</code></li>
+<li><code>System.Security.Permissions.dll</code></li>
+<li><code>System.Security.Principal.Windows.dll</code></li>
+<li><code>System.Text.Encodings.Web.dll</code></li>
+<li><code>System.Text.Json.dll</code></li>
+<li><code>System.Threading.Tasks.Extensions.dll</code></li>
+<li><code>System.ValueTuple.dll</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="example-c-code">Example C code</h3>
+<p>The wrapper project includes <code>example.c</code> located in the <code>example-c</code> folder. This example file demonstrates the usage of the NixUniversalSDK wrapper in a C application.</p>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="../index.html#additional-support">Get additional support</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/wrapper/NixUniversalSDK.Docs/docs/wrapper.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
