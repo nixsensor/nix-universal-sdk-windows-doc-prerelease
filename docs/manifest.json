@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.DeviceCompat.html",
-          "hash": "jFK7E5bWI/uCiotg0XEMc0x41T2EcNySaNgFe6+lgkI="
+          "hash": "5IkrhYdoonkr93odxzbrOWMJfO5KiJSpLzmc5BJAdww="
         }
       },
       "version": ""
@@ -328,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.IDeviceCompat.html",
-          "hash": "QVs+glJv+G+hyIWQh1mvCumBrZg8GACWxD5iWJrbdRU="
+          "hash": "E89qRr353B6s2qSridUQP1KQnFuazzplezHJ08d7Acs="
         }
       },
       "version": ""
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NixUniversalSDK.Wrapper.Exported.html",
-          "hash": "IVb/FzJk9ft02OR1pcD2OErGmkogEK62ObflBvIkGo0="
+          "hash": "AAfAiEImlMmtCmbqObivQD1BSPyLVb4+SqIXQxrorC4="
         }
       },
       "version": ""
@@ -702,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "KUSKsyWAAUSfXIktnYDjocSnF7KdOyez3uFgW7d0tV4="
+          "hash": "43X3QR/AUYyHdesT13JattCG4XRS/wuFQjl5biDs7eY="
         }
       },
       "version": ""
@@ -728,7 +728,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/add-to-vs.html",
-          "hash": "D7U+3jodLEeFiebtSZ3dp4DZ8lBQJPQbY2A3HbTBaMk="
+          "hash": "SmOtNe2oDcLFdS/wXP6D6lvAZR3sU9dQr5rIWP8H6EM="
         }
       },
       "version": ""
@@ -739,7 +739,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/device-operations.html",
-          "hash": "9zsgursnvSGUusWWGwSijIhSf22RU9G0NtqS+BSydGQ="
+          "hash": "Cu/+gNJN1AUvj3+NLVb4Hj9rYtH+XBcf06R6iNvhZ/s="
         }
       },
       "version": ""
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/discovering-connecting.html",
-          "hash": "eCMOFHvPhYwO3PRuHMnn7pnPAS54CAvOe6AhZusutHs="
+          "hash": "RBmIevNZzVzOhtiR9d0J49C4t665KmqRMt0FtcKwPSE="
         }
       },
       "version": ""
@@ -761,7 +761,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/example-apps.html",
-          "hash": "p4yCsfMoxbIP39H2hrmSnCr1h2wf/vjwQEcUEV5+O0Q="
+          "hash": "vJn1W91+3E7Rn772NJ/TOrxC57BYk3jjdVKrNWQAMns="
         }
       },
       "version": ""
@@ -772,7 +772,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/handling-measurements.html",
-          "hash": "ZdOaqOdqebbuKVypRbN603JDjdcGKPsB46SVnVyhRqI="
+          "hash": "31LWwuc292jNcZBxiZ7d3NlkcpDfo643Y9Bn/O7FA0c="
         }
       },
       "version": ""
@@ -783,7 +783,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/release-notes.html",
-          "hash": "hoEAvMjgnDxRZWMkVJ684jE4evwxRGv5+UJw0vca/Nk="
+          "hash": "nlx4xztPBgvwBdIXe1aJMbqz6zEdBmErpgmvRuxA0a8="
         }
       },
       "version": ""
@@ -809,7 +809,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/wrapper.html",
-          "hash": "khhSu5GQtoSB2nKkMaRsY3XxkbM1Wmqe2GhAcs0aKJY="
+          "hash": "13hHtQ9OPuoKDCAIDFsn7mVceq9mAsJGp7uUPJM3K8E="
         }
       },
       "version": ""
@@ -870,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "gJnm2VX806OzaJhvbGQcfZr6JH+e0I6AN53hl0jofbs="
+          "hash": "IxUPBVcND9pHXZRu4kxp2YOVpcw0kk2i5c/Ku+AQPMc="
         }
       },
       "version": ""

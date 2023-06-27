@@ -322,6 +322,38 @@
 
 
 
+  <a id="NixUniversalSDK_Wrapper_Exported_Device_GetFieldCalibrationMaxDelta_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_GetFieldCalibrationMaxDelta" data-uid="NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta">
+  Device_GetFieldCalibrationMaxDelta()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current threshold/maximum Delta E threshold used when performing in-field calibration. Value is NaN if the device does not support field calibration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Device_GetFieldCalibrationMaxDelta()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="NixUniversalSDK_Wrapper_Exported_Device_GetFirmwareVersion_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_GetFirmwareVersion*"></a>
 
   <h3 id="NixUniversalSDK_Wrapper_Exported_Device_GetFirmwareVersion" data-uid="NixUniversalSDK.Wrapper.Exported.Device_GetFirmwareVersion">
@@ -1250,6 +1282,33 @@
 
 
 
+  <a id="NixUniversalSDK_Wrapper_Exported_Device_InvalidateFieldCalibration_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_InvalidateFieldCalibration" data-uid="NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration">
+  Device_InvalidateFieldCalibration()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_InvalidateFieldCalibrationAsync">InvalidateFieldCalibrationAsync()</a> on the current device. This is an async operation; it will invoke the <a class="xref" href="NixUniversalSDK.Wrapper.DeviceCompatModule.html#NixUniversalSDK_Wrapper_DeviceCompatModule_CommandCompletedDelegate">CommandCompletedDelegate</a> on completion with the <a class="xref" href="NixUniversalSDK.CommandStatus.html">CommandStatus</a> of the result passed as an integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Device_InvalidateFieldCalibration()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="NixUniversalSDK_Wrapper_Exported_Device_IsModeSupported_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsModeSupported*"></a>
 
   <h3 id="NixUniversalSDK_Wrapper_Exported_Device_IsModeSupported_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsModeSupported(System.String)">
@@ -1644,6 +1703,38 @@
     <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p>New state for this option</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_Device_SetFieldCalibrationMaxDelta_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_SetFieldCalibrationMaxDelta_System_Double_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta(System.Double)">
+  Device_SetFieldCalibrationMaxDelta(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the maximum Delta E threshold used when performing in-field calibration. This is ignored if the device does not support field calibration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Device_SetFieldCalibrationMaxDelta(double newValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
   </dl>
 
 

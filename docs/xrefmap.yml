@@ -1178,6 +1178,19 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.DeviceCompat.FieldCalibrationEnabled
   nameWithType: DeviceCompat.FieldCalibrationEnabled
+- uid: NixUniversalSDK.DeviceCompat.FieldCalibrationMaxDelta
+  name: FieldCalibrationMaxDelta
+  href: api/NixUniversalSDK.DeviceCompat.html#NixUniversalSDK_DeviceCompat_FieldCalibrationMaxDelta
+  commentId: P:NixUniversalSDK.DeviceCompat.FieldCalibrationMaxDelta
+  fullName: NixUniversalSDK.DeviceCompat.FieldCalibrationMaxDelta
+  nameWithType: DeviceCompat.FieldCalibrationMaxDelta
+- uid: NixUniversalSDK.DeviceCompat.FieldCalibrationMaxDelta*
+  name: FieldCalibrationMaxDelta
+  href: api/NixUniversalSDK.DeviceCompat.html#NixUniversalSDK_DeviceCompat_FieldCalibrationMaxDelta_
+  commentId: Overload:NixUniversalSDK.DeviceCompat.FieldCalibrationMaxDelta
+  isSpec: "True"
+  fullName: NixUniversalSDK.DeviceCompat.FieldCalibrationMaxDelta
+  nameWithType: DeviceCompat.FieldCalibrationMaxDelta
 - uid: NixUniversalSDK.DeviceCompat.FirmwareVersion
   name: FirmwareVersion
   href: api/NixUniversalSDK.DeviceCompat.html#NixUniversalSDK_DeviceCompat_FirmwareVersion
@@ -1243,6 +1256,19 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.DeviceCompat.InterfaceType
   nameWithType: DeviceCompat.InterfaceType
+- uid: NixUniversalSDK.DeviceCompat.InvalidateFieldCalibrationAsync
+  name: InvalidateFieldCalibrationAsync()
+  href: api/NixUniversalSDK.DeviceCompat.html#NixUniversalSDK_DeviceCompat_InvalidateFieldCalibrationAsync
+  commentId: M:NixUniversalSDK.DeviceCompat.InvalidateFieldCalibrationAsync
+  fullName: NixUniversalSDK.DeviceCompat.InvalidateFieldCalibrationAsync()
+  nameWithType: DeviceCompat.InvalidateFieldCalibrationAsync()
+- uid: NixUniversalSDK.DeviceCompat.InvalidateFieldCalibrationAsync*
+  name: InvalidateFieldCalibrationAsync
+  href: api/NixUniversalSDK.DeviceCompat.html#NixUniversalSDK_DeviceCompat_InvalidateFieldCalibrationAsync_
+  commentId: Overload:NixUniversalSDK.DeviceCompat.InvalidateFieldCalibrationAsync
+  isSpec: "True"
+  fullName: NixUniversalSDK.DeviceCompat.InvalidateFieldCalibrationAsync
+  nameWithType: DeviceCompat.InvalidateFieldCalibrationAsync
 - uid: NixUniversalSDK.DeviceCompat.IsTileStringValid(System.String)
   name: IsTileStringValid(string)
   href: api/NixUniversalSDK.DeviceCompat.html#NixUniversalSDK_DeviceCompat_IsTileStringValid_System_String_
@@ -2563,6 +2589,19 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.IDeviceCompat.FieldCalibrationEnabled
   nameWithType: IDeviceCompat.FieldCalibrationEnabled
+- uid: NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta
+  name: FieldCalibrationMaxDelta
+  href: api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationMaxDelta
+  commentId: P:NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta
+  fullName: NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta
+  nameWithType: IDeviceCompat.FieldCalibrationMaxDelta
+- uid: NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta*
+  name: FieldCalibrationMaxDelta
+  href: api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationMaxDelta_
+  commentId: Overload:NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta
+  isSpec: "True"
+  fullName: NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta
+  nameWithType: IDeviceCompat.FieldCalibrationMaxDelta
 - uid: NixUniversalSDK.IDeviceCompat.FirmwareVersion
   name: FirmwareVersion
   href: api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FirmwareVersion
@@ -2628,6 +2667,19 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.IDeviceCompat.InterfaceType
   nameWithType: IDeviceCompat.InterfaceType
+- uid: NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync
+  name: InvalidateFieldCalibrationAsync()
+  href: api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_InvalidateFieldCalibrationAsync
+  commentId: M:NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync
+  fullName: NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync()
+  nameWithType: IDeviceCompat.InvalidateFieldCalibrationAsync()
+- uid: NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync*
+  name: InvalidateFieldCalibrationAsync
+  href: api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_InvalidateFieldCalibrationAsync_
+  commentId: Overload:NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync
+  isSpec: "True"
+  fullName: NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync
+  nameWithType: IDeviceCompat.InvalidateFieldCalibrationAsync
 - uid: NixUniversalSDK.IDeviceCompat.IsTileStringValid(System.String)
   name: IsTileStringValid(string)
   href: api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_IsTileStringValid_System_String_
@@ -4837,6 +4889,18 @@ references:
   commentId: Overload:NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationEnabled
   fullName: NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationEnabled
   nameWithType: Exported.Device_GetFieldCalibrationEnabled
+- uid: NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta
+  name: Device_GetFieldCalibrationMaxDelta()
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_GetFieldCalibrationMaxDelta
+  commentId: M:NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta
+  fullName: NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta()
+  nameWithType: Exported.Device_GetFieldCalibrationMaxDelta()
+- uid: NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta*
+  name: Device_GetFieldCalibrationMaxDelta
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_GetFieldCalibrationMaxDelta_
+  commentId: Overload:NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta
+  fullName: NixUniversalSDK.Wrapper.Exported.Device_GetFieldCalibrationMaxDelta
+  nameWithType: Exported.Device_GetFieldCalibrationMaxDelta
 - uid: NixUniversalSDK.Wrapper.Exported.Device_GetFirmwareVersion
   name: Device_GetFirmwareVersion()
   href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_GetFirmwareVersion
@@ -5185,6 +5249,18 @@ references:
   commentId: Overload:NixUniversalSDK.Wrapper.Exported.Device_HasOptions
   fullName: NixUniversalSDK.Wrapper.Exported.Device_HasOptions
   nameWithType: Exported.Device_HasOptions
+- uid: NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration
+  name: Device_InvalidateFieldCalibration()
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_InvalidateFieldCalibration
+  commentId: M:NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration
+  fullName: NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration()
+  nameWithType: Exported.Device_InvalidateFieldCalibration()
+- uid: NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration*
+  name: Device_InvalidateFieldCalibration
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_InvalidateFieldCalibration_
+  commentId: Overload:NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration
+  fullName: NixUniversalSDK.Wrapper.Exported.Device_InvalidateFieldCalibration
+  nameWithType: Exported.Device_InvalidateFieldCalibration
 - uid: NixUniversalSDK.Wrapper.Exported.Device_IsModeSupported(System.String)
   name: Device_IsModeSupported(string)
   href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_IsModeSupported_System_String_
@@ -5347,6 +5423,21 @@ references:
   commentId: Overload:NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationEnabled
   fullName: NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationEnabled
   nameWithType: Exported.Device_SetFieldCalibrationEnabled
+- uid: NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta(System.Double)
+  name: Device_SetFieldCalibrationMaxDelta(double)
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_SetFieldCalibrationMaxDelta_System_Double_
+  commentId: M:NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta(System.Double)
+  name.vb: Device_SetFieldCalibrationMaxDelta(Double)
+  fullName: NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta(double)
+  fullName.vb: NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta(Double)
+  nameWithType: Exported.Device_SetFieldCalibrationMaxDelta(double)
+  nameWithType.vb: Exported.Device_SetFieldCalibrationMaxDelta(Double)
+- uid: NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta*
+  name: Device_SetFieldCalibrationMaxDelta
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_SetFieldCalibrationMaxDelta_
+  commentId: Overload:NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta
+  fullName: NixUniversalSDK.Wrapper.Exported.Device_SetFieldCalibrationMaxDelta
+  nameWithType: Exported.Device_SetFieldCalibrationMaxDelta
 - uid: NixUniversalSDK.Wrapper.Exported.Device_SetHapticFeedbackEnabled(System.Boolean)
   name: Device_SetHapticFeedbackEnabled(bool)
   href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Device_SetHapticFeedbackEnabled_System_Boolean_

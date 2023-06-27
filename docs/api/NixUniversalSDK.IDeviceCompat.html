@@ -265,6 +265,38 @@
 
 
 
+  <a id="NixUniversalSDK_IDeviceCompat_FieldCalibrationMaxDelta_" data-uid="NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_FieldCalibrationMaxDelta" data-uid="NixUniversalSDK.IDeviceCompat.FieldCalibrationMaxDelta">
+  FieldCalibrationMaxDelta
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum Delta E threshold used when performing in-field calibration (if supported), or NaN if the device does not support this operation. If a difference from the reference greater than this value is detected during <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_System_String_">RunFieldCalibrationAsync(string)</a>, the command will fail with status <a class="xref" href="NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorScanDelta">ErrorScanDelta</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double FieldCalibrationMaxDelta { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="NixUniversalSDK_IDeviceCompat_FirmwareVersion_" data-uid="NixUniversalSDK.IDeviceCompat.FirmwareVersion*"></a>
 
   <h3 id="NixUniversalSDK_IDeviceCompat_FirmwareVersion" data-uid="NixUniversalSDK.IDeviceCompat.FirmwareVersion">
@@ -1214,6 +1246,39 @@
   </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IDeviceCompat_InvalidateFieldCalibrationAsync_" data-uid="NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync*"></a>
+
+  <h3 id="NixUniversalSDK_IDeviceCompat_InvalidateFieldCalibrationAsync" data-uid="NixUniversalSDK.IDeviceCompat.InvalidateFieldCalibrationAsync">
+  InvalidateFieldCalibrationAsync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invalidates current field calibration date, so that <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationDue">FieldCalibrationDue</a> is reported as <code>true</code>, if supported by the device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeviceResult&gt; InvalidateFieldCalibrationAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a>&gt;</dt>
+    <dd><p><a class="xref" href="NixUniversalSDK.DeviceResult.html">DeviceResult</a> containing status code of the completed operation</p>
+</dd>
+  </dl>
 
 
 
