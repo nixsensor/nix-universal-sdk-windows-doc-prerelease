@@ -13,7 +13,7 @@
       <meta name="docfx:tocrel" content="toc.html">
       
       
-      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/wrapper.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/dev-spectro-l/NixUniversalSDK.Docs/docs/wrapper.md/#L1">
 
       <script type="text/javascript" src="../styles/docfx.min.js"></script>
       <script type="text/javascript" src="../styles/main.js"></script>
@@ -70,23 +70,21 @@
 <p>The <code>NixUniversalSDK.Wrapper</code> contains single <code>IDeviceScanner</code> and <code>IDeviceCompat</code> instances. It provides a static interface to access these instances and also provides callbacks for device and scanner events. The project contains a basic implementation, but can be modified or expanded to better suit your specific application.</p>
 <h3 id="known-limitations">Known limitations</h3>
 <ul>
-<li>The wrapper project is written in C#, but relies on <a href="https://sites.google.com/site/robertgiesecke/Home/uploads/unmanagedexports">Unmanaged Exports</a> by Robert Giesecke to export static functions so that they are accessible from C/C++. As such, the wrapper project is subject to the same <a href="https://sites.google.com/site/robertgiesecke/Home/uploads/unmanagedexports#TOC-Restrictions">restrictions</a> listed for this library.</li>
+<li>The wrapper project is written in C#, but relies on <a href="https://www.nuget.org/packages/UnmanagedExports">Unmanaged Exports</a> by Robert Giesecke to export static functions so that they are accessible from C/C++. As such, the wrapper project is subject to the same <a href="https://sites.google.com/site/robertgiesecke/Home/uploads/unmanagedexports#TOC-Restrictions">restrictions</a> listed for this library.</li>
 <li>Unmanaged Exports no longer automatically generates an import <code>.lib</code> library file when building the wrapper <code>.dll</code> assembly. For linking in C/C++ applications, this import library file may need to be manually generated (see <a href="#generating-an-import-library">Generating an import library</a>).</li>
-<li>As of June 2023, the wrapper project has only been tested for x64 builds
+<li>As of July 2023, the wrapper project only supports x64 and x86 builds. ARM/ARM64 builds are not possible at this time.
 <ul>
-<li>x86 builds may function but are not tested.</li>
-<li>ARM/ARM64 builds are not possible at this time.</li>
+<li>When using x86 builds, the calling convention is <code>cdecl</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="building-the-wrapper-project">Building the wrapper project</h2>
 <ol>
 <li>Open the <code>NixUniversalSDK.Wrapper</code> project in Visual Studio 2022</li>
-<li>Make sure that the Configuration is set to 'Release' and that a single target platform ('x64') is selected.
+<li>Make sure that the Configuration is set to 'Release' and that a single target platform ('x64' or 'x86') is selected.
 <ul>
-<li>As of June 2023, the wrapper project has only been tested for x64 builds
+<li>As of July 2023, the wrapper project only supports x64 and x86 builds.
 <ul>
-<li>x86 builds may function but are not tested.</li>
 <li>ARM/ARM64 builds are not possible at this time.</li>
 </ul>
 </li>
@@ -96,7 +94,7 @@
 </ol>
 <p><img src="../images/wrapper_build_settings.png" alt="Wrapper build settings"></p>
 <ol start="3">
-<li>Build the project by selecting 'Build -&gt; Rebuild NixUniversalSDK.Wrapper'. This will generate <code>NixUniversalSDK.Wrapper.dll</code> in the <code>bin/x64/Release</code> folder (for x64 builds). The build step will also and will copy other .NET assemblies that are runtime dependencies of <code>NixUniversalSDK.Wrapper.dll</code></li>
+<li>Build the project by selecting 'Build -&gt; Rebuild NixUniversalSDK.Wrapper'. This will generate <code>NixUniversalSDK.Wrapper.dll</code> in the <code>bin/x64/Release</code> folder (for x64 builds), or <code>bin/x86/Release</code> folder (for x86 builds). The build step will also and will copy other .NET assemblies that are runtime dependencies of <code>NixUniversalSDK.Wrapper.dll</code></li>
 </ol>
 <h2 id="using-the-wrapper-in-a-cc-project">Using the wrapper in a C/C++ project</h2>
 <p>After <a href="#building-the-wrapper-project">building</a> the project, the output folder will also contain <code>NixUniversalSDK.Wrapper.h</code>. This C/C++ header file contains macros and function declarations for the exported functions available in <code>NixUniversalSDK.Wrapper.dll</code>. This file can be can be included in your C/C++ code to provide function declarations for the wrapper functions.</p>
@@ -104,7 +102,12 @@
 <p>Unmanaged Exports no longer automatically generates an import <code>.lib</code> library file when building the wrapper <code>.dll</code> assembly. This import library is necessary for linking against the wrapper assembly. However, it is possible to manually generate this file usign the <code>dumpbin</code> and <code>lib</code> utilities provided with Visual Studio.</p>
 <h4 id="create-an-exports-file">Create an exports file</h4>
 <ol>
-<li>Open a Developer Command Prompt for VS2022. For x64 builds, make sure to use x64 Native Tools command prompt.</li>
+<li>Open a Developer Command Prompt for VS2022.
+<ul>
+<li>For x64 builds, make sure to use x64 Native Tools command prompt.</li>
+<li>For x86 builds, make sure to use x86 Native Tools command prompt.</li>
+</ul>
+</li>
 <li>Use the <code>dumpbin</code> tool to generate a list of exported symbols in the <code>NixUniversalSDK.Wrapper.dll</code> assembly</li>
 </ol>
 <pre><code class="lang-shell">dumpbin /EXPORTS &lt;PATH_TO_DLL&gt;
@@ -190,13 +193,23 @@ Scanner_Reset
 Scanner_SearchForId
 Scanner_Start
 Scanner_Stop
+SetupLoaderPath
 </code></pre>
 <h4 id="create-an-import-library-file">Create an import library file</h4>
 <ol>
-<li>Open a Developer Command Prompt for VS2022. For x64 builds, make sure to use x64 Native Tools command prompt.</li>
-<li>Using the <code>lib</code> tool and the <code>NixUniversalSDK.Wrapper.exports</code> file from the previous step, generate an import library file. For an x64 build:</li>
+<li>Open a Developer Command Prompt for VS2022.
+<ul>
+<li>For x64 builds, make sure to use x64 Native Tools command prompt.</li>
+<li>For x86 builds, make sure to use x86 Native Tools command prompt.</li>
+</ul>
+</li>
+<li>Using the <code>lib</code> tool and the <code>NixUniversalSDK.Wrapper.exports</code> file from the previous step, generate an import library file.</li>
 </ol>
+<p>For an x64 build:</p>
 <pre><code class="lang-shell">lib /def:NixUniversalSDK.Wrapper.exports /machine:x64 /out:NixUniversalSDK.Wrapper.lib
+</code></pre>
+<p>For an x86 build:</p>
+<pre><code class="lang-shell">lib /def:NixUniversalSDK.Wrapper.exports /machine:x86 /out:NixUniversalSDK.Wrapper.lib
 </code></pre>
 <ol start="3">
 <li>An import library <code>NixUniversalSDK.Wrapper.lib</code> will be generated in the current folder. This file can be used to link against the <code>NixUniversalSDK.Wrapper.dll</code> assembly</li>
@@ -244,7 +257,7 @@ Scanner_Stop
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/wrapper.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/dev-spectro-l/NixUniversalSDK.Docs/docs/wrapper.md/#L1" class="edit-link">Edit this page</a>
         </div>
       </div>
 

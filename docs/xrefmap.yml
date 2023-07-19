@@ -2125,6 +2125,12 @@ references:
   commentId: F:NixUniversalSDK.DeviceType.Spectro2
   fullName: NixUniversalSDK.DeviceType.Spectro2
   nameWithType: DeviceType.Spectro2
+- uid: NixUniversalSDK.DeviceType.SpectroL
+  name: SpectroL
+  href: api/NixUniversalSDK.DeviceType.html#NixUniversalSDK_DeviceType_SpectroL
+  commentId: F:NixUniversalSDK.DeviceType.SpectroL
+  fullName: NixUniversalSDK.DeviceType.SpectroL
+  nameWithType: DeviceType.SpectroL
 - uid: NixUniversalSDK.DeviceType.Unknown
   name: Unknown
   href: api/NixUniversalSDK.DeviceType.html#NixUniversalSDK_DeviceType_Unknown
@@ -5762,3 +5768,15 @@ references:
   commentId: Overload:NixUniversalSDK.Wrapper.Exported.Scanner_Stop
   fullName: NixUniversalSDK.Wrapper.Exported.Scanner_Stop
   nameWithType: Exported.Scanner_Stop
+- uid: NixUniversalSDK.Wrapper.Exported.SetupLoaderPath
+  name: SetupLoaderPath()
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_SetupLoaderPath
+  commentId: M:NixUniversalSDK.Wrapper.Exported.SetupLoaderPath
+  fullName: NixUniversalSDK.Wrapper.Exported.SetupLoaderPath()
+  nameWithType: Exported.SetupLoaderPath()
+- uid: NixUniversalSDK.Wrapper.Exported.SetupLoaderPath*
+  name: SetupLoaderPath
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_SetupLoaderPath_
+  commentId: Overload:NixUniversalSDK.Wrapper.Exported.SetupLoaderPath
+  fullName: NixUniversalSDK.Wrapper.Exported.SetupLoaderPath
+  nameWithType: Exported.SetupLoaderPath
