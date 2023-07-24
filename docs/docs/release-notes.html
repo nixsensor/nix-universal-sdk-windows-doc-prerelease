@@ -65,6 +65,35 @@
         <article data-uid="">
 <h1 id="release-notes">Release Notes</h1>
 
+<h2 id="version-410">Version 4.1.0</h2>
+<ul>
+<li>Added support for Nix Spectro L devices</li>
+<li>Added <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationMaxDelta">'FieldCalibrationMaxDelta`</a> property
+<ul>
+<li>Allows override of the maximum Delta E threshold used when performing in-field calibration</li>
+<li>Review the API reference linked above for additional details</li>
+</ul>
+</li>
+<li>Updated field calibration routine for Nix Spectro 2 devices
+<ul>
+<li>API calls to <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_"><code>RunFieldCalibrationAsync</code></a> function are unchanged</li>
+<li>Additional diagnostics are performed during the white tile scan on Spectro 2 type devices. As a result, the calibration command can now take 5 - 10 seconds to complete</li>
+<li>The operation can now fail with status <a class="xref" href="../api/NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorScanDelta"><code>ErrorScanDelta</code></a> if the tile measurement delta exceeds the allowable threshold</li>
+</ul>
+</li>
+<li>Added <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_InvalidateFieldCalibrationAsync"><code>InvalidateFieldCalibrationAsync</code></a> function
+<ul>
+<li>This function forces the field calibration record to expire on QC and Spectro 2 type devices</li>
+<li>Review the API reference linked above for additional details</li>
+</ul>
+</li>
+<li>Events from <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html"><code>IDeviceCompat</code></a> instances are now invoked on the same thread that called the initiating function
+<ul>
+<li>Previously, these events could be invoked from a background thread</li>
+<li>Events that are impacted are defined in <a class="xref" href="../api/NixUniversalSDK.IDeviceScannerEvents.html"><code>IDeviceScannerEvents</code></a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompatEvents.html"><code>IDeviceCompatEvents</code></a></li>
+</ul>
+</li>
+</ul>
 <h2 id="version-403">Version 4.0.3</h2>
 <ul>
 <li>Added <code>NixUniversalSDK.Wrapper</code> project.</li>
