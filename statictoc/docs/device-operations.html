@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Device Operations </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Device Operations ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc">
+      <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Docs">Docs</a>
+                      </li>
+                      <li>
+                          <a href="../api/NixUniversalSDK.html" title="API">API</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Getting Started</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="add-to-vs.html" title="Adding to Your Visual Studio Project" class="">Adding to Your Visual Studio Project</a>
+                          </li>
+                          <li class="">
+                            <a href="activating-license.html" title="Activating the SDK License" class="">Activating the SDK License</a>
+                          </li>
+                          <li class="">
+                            <a href="discovering-connecting.html" title="Discovering and Connecting to Nix Devices" class="">Discovering and Connecting to Nix Devices</a>
+                          </li>
+                          <li class="active">
+                            <a href="device-operations.html" title="Device Operations" class="active">Device Operations</a>
+                          </li>
+                          <li class="">
+                            <a href="handling-measurements.html" title="Handling Measurement Data" class="">Handling Measurement Data</a>
+                          </li>
+                          <li class="">
+                            <a href="example-apps.html" title="Example Applications" class="">Example Applications</a>
+                          </li>
+                          <li class="">
+                            <a href="wrapper.html" title="Wrapper for Usage in C/C++" class="">Wrapper for Usage in C/C++</a>
+                          </li>
+                        </ul>                    </li>
+                    <li class="">
+                      <a href="../api/NixUniversalSDK.html" title="API" class="">API</a>
+                    </li>
+                    <li class="">
+                      <a href="release-notes.html" title="Release Notes" class="">Release Notes</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="device-operations">Device Operations</h1>
+
+<h2 id="taking-measurements">Taking measurements</h2>
+<p>Once the device is connected and in an <code>Idle</code> state, it is possible to take measurements using <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_MeasureAsync_"><code>MeasureAsync()</code></a>:</p>
+<ul>
+<li>The variable number of arguments <code>modes</code> argument may be omitted to run measurements in all modes supported by the device. <em>This is the recommended option</em>.</li>
+<li>If <code>modes</code> arguments are supplied, measurements will be provided only for the specified scan modes. In most cases, this will not speed up the measurement cycle time, so this is not recommended.</li>
+<li>The measurement operation is asynchronous. While the measurement is in progress, no other commands can be sent to the Nix device.</li>
+<li>Results of the measurement operation are provided as a <a class="xref" href="../api/NixUniversalSDK.DeviceResult.html"><code>DeviceResult</code></a> containing two properties:
+<ul>
+<li>A <a class="xref" href="../api/NixUniversalSDK.CommandStatus.html"><code>CommandStatus</code></a> enum, which will be <code>Success</code> for a successful operation.</li>
+<li>A dictionary containing the measurement values as <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> instances. The keys of this dictionary correspond to the <a class="xref" href="../api/NixUniversalSDK.ScanMode.html"><code>ScanMode</code></a> for each measurement value.</li>
+<li>Refer to <a href="handling-measurements.html">Handling Measurement Data</a> for notes on interpreting the measurement data.</li>
+<li>The supported scan modes for a particular device are provided in the <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportedModes"><code>SupportedModes</code></a> list, or can be checked by calling <a class="xref" href="../api/NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_IsModeSupported_"><code>IsModeSupported()</code></a>. The expected results by device are shown below:</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device Type</th>
+<th style="text-align: center;"><a class="xref" href="../api/NixUniversalSDK.ScanMode.html#NixUniversalSDK_ScanMode_M0">M0</a></th>
+<th style="text-align: center;"><a class="xref" href="../api/NixUniversalSDK.ScanMode.html#NixUniversalSDK_ScanMode_M1">M1</a></th>
+<th style="text-align: center;"><a class="xref" href="../api/NixUniversalSDK.ScanMode.html#NixUniversalSDK_ScanMode_M2">M2</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mini</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 2</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 3</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro 2</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">QC</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro 2 (F1.0.0)</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro 2 (F2.0.0)</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro L</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="performing-in-field-profiling--calibration-with-reference-tile">Performing in-field profiling / calibration with reference tile</h2>
+<p>Certain device types support in-field profiling or calibration using a provided reference tile. This process requires first decoding a string from the QR code attached to the reference tile and then directing the user to measure the same tile. Any necessary adjustments/corrections are performed internally by the SDK and/or the Nix device firmware itself.</p>
+<ul>
+<li>The in-field calibration procedure may be performed as often or seldom as desired by the user. However, the <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationDue"><code>FieldCalibrationDue</code></a> flag indicates whether or not in-field calibration is recommended for the connected device.
+<ul>
+<li>This flag is updated after each regular measurement</li>
+<li>This flag is determined automatically by both elapsed time and ambient temperature change</li>
+</ul>
+</li>
+<li>The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportsFieldCalibration"><code>SupportsFieldCalibration</code></a> property indicates whether or not a connected device supports this feature. The expected result by device are shown below:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device Type</th>
+<th style="text-align: center;">Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mini</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 2</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 3</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro 2</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">QC</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro 2</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro L</td>
+<td style="text-align: center;">☑</td>
+</tr>
+</tbody>
+</table>
+<p>The steps to perform in-field profiling include:</p>
+<ol>
+<li>Decode the QR code printed on the device reference tile and interpret as a string. Do not parse this data further.
+<ul>
+<li><strong>Note</strong>: In addition to the string encoded in the tile QR code, Spectro 2 devices can also use the last five characters of the code printed inside the reference tile case as the <code>tileString</code>.</li>
+</ul>
+</li>
+<li>Check if the parsed data is valid using <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_IsTileStringValid_"><code>IsTileStringValid()</code></a>. If valid, continue to the next step.</li>
+<li>Instruct the user to place the device on the reference tile.</li>
+<li>Using the tile string, run the in-field calibration routine using <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_"><code>RunFieldCalibration()</code></a> and await task completion.</li>
+</ol>
+<ul>
+<li>While the operation is in progress, no other commands can be sent to the Nix device (wait for task to finish).</li>
+</ul>
+<pre><code class="lang-csharp">// Connected device instance
+IDeviceCompat Device;
+
+// String decoded from the reference tile. Note that Spectro 2 devices 
+// can also use the last 5 characters printed inside the tile case
+string tileString;
+
+if (Device.IsTileStringValid(tileString)
+{
+    // Tile string is valid, prompt user to place device on tile
+    // ...
+    
+    // Start operation
+    var calibrationTask = Device.RunFieldCalibrationAsync(tileString);
+
+    // Show progress indicator here if desired
+    // ...
+
+    // Wait for completion
+    var result = await calibrationTask;
+
+    // Handle status
+    switch (result.Status) 
+    {
+        case CommandStatus.Success:
+            // Successful operation
+            // ...
+            break;
+        case CommandStatus.ErrorScanDelta:
+            // Operation failed because the measured value of the 
+            // reference tile is too far from the expected value
+            // (high delta E)
+            // ...
+            break;
+        case CommandStatus.ErrorNotReady:
+            // Scan did not complete because the device was busy
+            // ...
+            break;
+        case CommandStatus.ErrorNotSupported:
+            // Scan did not complete because this device does not 
+            // support this command
+            // ...
+            break;
+        case CommandStatus.ErrorInvalidArgument:
+            // Scan did not complete because the tileString is 
+            // invalid
+            // ...
+            break;
+        case CommandStatus.ErrorLowPower:
+            // Scan did not complete because the battery level is
+            // too low
+            // ...
+            break;
+        case CommandStatus.ErrorTimeout:
+            // Timeout when waiting for result
+            // ...
+            break;
+        case CommandStatus.ErrorAmbientLight:
+            // Scan did not complete because ambient light leakage
+            // was detected
+            // ...
+            break;
+        case CommandStatus.ErrorLicense:
+            // Scan did not complete because of a license issue
+            // Check LicenseManager.State
+            // ...
+        default:
+            // Other internal error
+            // ...
+            break;
+    }
+}
+else
+{
+    // Tile string is not valid, try again
+    // ...
+}
+</code></pre>
+<h2 id="other-device-options">Other device options</h2>
+<p>Some Nix devices support certain <code>boolean</code> options. These options are set to be enabled by default (if supported) and do not usually need to be changed:</p>
+<ul>
+<li>Applying temperature compensation
+<ul>
+<li>Current state: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_TemperatureCompensationEnabled"><code>TemperatureCompensationEnabled</code></a></li>
+<li>Is supported?: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportsTemperatureCompensation_"><code>SupportsTemperatureCompensation</code></a></li>
+</ul>
+</li>
+<li>Applying in-field calibration
+<ul>
+<li>Current state: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationEnabled"><code>FieldCalibrationEnabled</code></a></li>
+<li>Is supported?: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportsFieldCalibration_"><code>SupportsFieldCalibration</code></a></li>
+</ul>
+</li>
+<li>Using on-device haptic feedback
+<ul>
+<li>Current state: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_HapticFeedbackEnabled"><code>HapticFeedbackEnabled</code></a></li>
+<li>Is supported?: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportsHapticFeedback_"><code>SupportsHapticFeedback</code></a></li>
+</ul>
+</li>
+<li>Using on-device RGB feedback
+<ul>
+<li>Current state: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RgbFeedbackEnabled"><code>RgbFeedbackEnabled</code></a></li>
+<li>Is supported?: <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportsRgbFeedback_"><code>SupportsRgbFeedback</code></a></li>
+</ul>
+</li>
+</ul>
+<p>A summary of device support is shown below, but can be checked at runtime (see notes above).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device type</th>
+<th style="text-align: center;">Temp comp.</th>
+<th style="text-align: center;">Field cal.</th>
+<th style="text-align: center;">Haptic</th>
+<th style="text-align: center;">RGB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mini</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 2</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mini 3</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pro 2</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">QC</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☐</td>
+<td style="text-align: center;">☐</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro 2</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spectro L</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+<td style="text-align: center;">☑</td>
+</tr>
+</tbody>
+</table>
+<p>Changing any of these options may require communication with the device itself and is an asynchronous operation, with the status of the operation provided via a <a class="xref" href="../api/NixUniversalSDK.DeviceResult.html"><code>DeviceResult</code></a>.</p>
+<ul>
+<li>To enable or bypass temperature compensation, see <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SetTemperatureCompensationEnabledAsync_"><code>SetTemperatureCompensationEnabledAsync</code></a></li>
+<li>To enable or bypass applying in-field calibration, see <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SetFieldCalibrationEnabledAsync_"><code>SetFieldCalibrationEnabledAsync</code></a></li>
+<li>To enable or disable haptic feedback, see <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SetHapticFeedbackEnabledAsync_"><code>SetHapticFeedbackEnabledAsync</code></a></li>
+<li>To enable or disable RGB feedback, see <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SetRgbFeedbackEnabledAsync_"><code>SetRgbFeedbackEnabledAsync</code></a></li>
+</ul>
+<h2 id="other-device-properties">Other device properties</h2>
+<p>The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html"><code>IDeviceCompat</code></a> interface defines other fixed properties that can be read once the device has connected and reached an idle state. These include, but are not limited to:</p>
+<ul>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ExtPowerState"><code>ExtPowerState</code></a>: status of external power connection / charging</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_BatteryLevel"><code>BatteryLevel</code></a>: current battery level, <code>null</code> is not available</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FirmwareVersion"><code>FirmwareVersion</code></a>: device firmware revision</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_HardwareVersion"><code>HardwareVersion</code></a>: device hardware revision</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SoftwareVersion"><code>SoftwareVersion</code></a>: device software revision</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SerialNumber"><code>SerialNumber</code></a>: device serial number</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Note"><code>Note</code></a>: device allocation / production code</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a>: indicates whether or not this device provides spectral data</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a>: indicates whether or not this device provides density data</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportedReferences"><code>SupportedReferences</code></a>: list of supported reference white values provided by the measurement data from this device</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a> properties indicate whether or not the hardware device is capable of providing these data types. However, these values will only be available if the enabled by the active license. See <a href="activating-license.html#other-license-properties">Other license properties</a> for more details.</p>
+</div>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="handling-measurements.html">Handling Measurement Data</a></li>
+</ul>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/device-operations.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

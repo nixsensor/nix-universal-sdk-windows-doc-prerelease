@@ -106,9 +106,6 @@
       <a class="xref" href="NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ToColorData_NixUniversalSDK_IMeasurementData_NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_NixUniversalSDK_ColorType_">IMeasurementDataExtensions.ToColorData(IMeasurementData, Illuminant, Observer, ColorType)</a>
   </div>
   <div>
-      <a class="xref" href="NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ToDensityData_NixUniversalSDK_IMeasurementData_NixUniversalSDK_DensityStatus_">IMeasurementDataExtensions.ToDensityData(IMeasurementData, DensityStatus)</a>
-  </div>
-  <div>
       <a class="xref" href="NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ToRgbValue_NixUniversalSDK_IMeasurementData_NixUniversalSDK_Illuminant_NixUniversalSDK_Observer_">IMeasurementDataExtensions.ToRgbValue(IMeasurementData, Illuminant, Observer)</a>
   </div>
   <div>
@@ -412,6 +409,38 @@
 
 
 
+  <a id="NixUniversalSDK_IMeasurementData_TileDelta_" data-uid="NixUniversalSDK.IMeasurementData.TileDelta*"></a>
+
+  <h3 id="NixUniversalSDK_IMeasurementData_TileDelta" data-uid="NixUniversalSDK.IMeasurementData.TileDelta">
+  TileDelta
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Delta E value between this measurement and factory reference. Value is non-null for measurement values from <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_RunFieldCalibrationAsync_System_String_">RunFieldCalibrationAsync(string)</a> and <code>null</code> in all other cases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double? TileDelta { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="NixUniversalSDK_IMeasurementData_TileEnabled_" data-uid="NixUniversalSDK.IMeasurementData.TileEnabled*"></a>
 
   <h3 id="NixUniversalSDK_IMeasurementData_TileEnabled" data-uid="NixUniversalSDK.IMeasurementData.TileEnabled">
@@ -573,6 +602,45 @@
   <dl class="parameters">
     <dt><a class="xref" href="NixUniversalSDK.IColorData.html">IColorData</a></dt>
     <dd><p>Color data, or <code>null</code> if the specified white point it not available for this measurement.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_IMeasurementData_ToDensityData_" data-uid="NixUniversalSDK.IMeasurementData.ToDensityData*"></a>
+
+  <h3 id="NixUniversalSDK_IMeasurementData_ToDensityData_NixUniversalSDK_DensityStatus_" data-uid="NixUniversalSDK.IMeasurementData.ToDensityData(NixUniversalSDK.DensityStatus)">
+  ToDensityData(DensityStatus)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides absolute density values for this measurement for the specified density status evaluated as per ISO 5-3:2009.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDensityData ToDensityData(DensityStatus status = DensityStatus.T)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="NixUniversalSDK.DensityStatus.html">DensityStatus</a></dt>
+    <dd><p>Density status (defaults to <a class="xref" href="NixUniversalSDK.DensityStatus.html#NixUniversalSDK_DensityStatus_T">T</a>)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="NixUniversalSDK.IDensityData.html">IDensityData</a></dt>
+    <dd><p>Density data, or <code>null</code> if density data is not supported</p>
 </dd>
   </dl>
 

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Adding to Your Visual Studio Project </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Adding to Your Visual Studio Project ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc">
+      <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Docs">Docs</a>
+                      </li>
+                      <li>
+                          <a href="../api/NixUniversalSDK.html" title="API">API</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Getting Started</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="active">
+                            <a href="add-to-vs.html" title="Adding to Your Visual Studio Project" class="active">Adding to Your Visual Studio Project</a>
+                          </li>
+                          <li class="">
+                            <a href="activating-license.html" title="Activating the SDK License" class="">Activating the SDK License</a>
+                          </li>
+                          <li class="">
+                            <a href="discovering-connecting.html" title="Discovering and Connecting to Nix Devices" class="">Discovering and Connecting to Nix Devices</a>
+                          </li>
+                          <li class="">
+                            <a href="device-operations.html" title="Device Operations" class="">Device Operations</a>
+                          </li>
+                          <li class="">
+                            <a href="handling-measurements.html" title="Handling Measurement Data" class="">Handling Measurement Data</a>
+                          </li>
+                          <li class="">
+                            <a href="example-apps.html" title="Example Applications" class="">Example Applications</a>
+                          </li>
+                          <li class="">
+                            <a href="wrapper.html" title="Wrapper for Usage in C/C++" class="">Wrapper for Usage in C/C++</a>
+                          </li>
+                        </ul>                    </li>
+                    <li class="">
+                      <a href="../api/NixUniversalSDK.html" title="API" class="">API</a>
+                    </li>
+                    <li class="">
+                      <a href="release-notes.html" title="Release Notes" class="">Release Notes</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="adding-to-your-visual-studio-project">Adding to Your Visual Studio Project</h1>
+
+<p>The Nix Universal SDK is provided as a NuGet package. The provided <code>nupkg</code> file can be added to a local NuGet feed, or you may install from the public nuget.org repository.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The latest stable version of the Nix Universal SDK is hosted on <a href="https://nuget.org/packages/NixUniversalSDK">nuget.org</a>. It is recommended to install from this source.</p>
+</div>
+<h2 id="adding-the-package-reference">Adding the package reference</h2>
+<ol>
+<li>In Visual Studio, right-click on your project and select 'Manage NuGet Packages'.</li>
+<li>Select the default feed ('nuget.org') as the 'Package source', located at the top right of the NuGet Package Manager.</li>
+<li>Select the 'Browse' tab in the NuGet Package Manager.</li>
+<li>Search for the <code>NixUniversalSDK</code> package. Select the package from the search results.</li>
+<li>Click on <code>Install</code> to add to your project.</li>
+</ol>
+<p><img src="../images/nuget_package_manager.png" alt="NuGet Package Manager"></p>
+<h2 id="updating-your-uwp-or-winui-manifest">Updating your UWP or WinUI manifest</h2>
+<p>If your Windows application is a packaged UWP or WinUI app, it is necessary to add Bluetooth and serial device capabilities to the App package manifest.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If your application already runs with 'full trust', or is unpackaged, you can skip this step.</p>
+</div>
+<ul>
+<li>An overview of declaring device capabilities in an app manifest is provided by Microsoft <a href="https://learn.microsoft.com/en-us/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest">here</a></li>
+<li>The specific capabilities required by the Nix Universal SDK are listed below:</li>
+</ul>
+<pre><code class="lang-xml">&lt;Capabilities&gt;
+  &lt;!-- Existing capabilities here --&gt;
+  &lt;!-- ... --&gt;
+  
+  &lt;!-- Nix required capabilities --&gt;
+  &lt;DeviceCapability Name=&quot;bluetooth.genericAttributeProfile&quot;&gt;
+    &lt;Device Id=&quot;any&quot;&gt;
+      &lt;Function Type=&quot;name:00001800-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:00001801-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:0000180a-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:0000180f-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:0000fe59-0000-1000-8000-00805f9b34fb&quot;/&gt;
+      &lt;Function Type=&quot;name:bebc4000-c4ba-e4a6-4422-dbb176d3a537&quot;/&gt;
+      &lt;Function Type=&quot;name:72d51000-b0da-4368-952f-dd2a64db5b61&quot;/&gt;        
+    &lt;/Device&gt;
+  &lt;/DeviceCapability&gt;
+  &lt;DeviceCapability Name=&quot;serialcommunication&quot;&gt;
+    &lt;Device Id=&quot;any&quot;&gt;
+      &lt;Function Type=&quot;name:serialPort&quot;/&gt;
+    &lt;/Device&gt;      
+  &lt;/DeviceCapability&gt;
+&lt;/Capabilities&gt;
+</code></pre>
+<h2 id="runtime-directives">Runtime directives</h2>
+<p>The SDK attempts to improve Bluetooth throughput by setting certain parameters on the <a href="https://learn.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.bluetoothledevice"><code>Windows.Devices.Bluetooth.BluetoothLEDevice</code></a> class via reflection. If your .NET project uses code trimming, it is recommended to include the following runtime directives enable this feature.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you are not using code-trimming, you can skip this step.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Failure to include these runtime directives may cause slower than expected Bluetooth performance when using code trimming.</p>
+</div>
+<ol>
+<li>Add an XML file <code>xml/rd.xml</code> to your project with the following contents</li>
+</ol>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;Directives xmlns=&quot;http://schemas.microsoft.com/netfx/2013/01/metadata&quot;&gt;
+  &lt;Library&gt;
+    &lt;Assembly Name=&quot;Microsoft.Windows.SDK.NET&quot;&gt;
+      &lt;!-- NixUniversalSDK requests higher throughput BLE modes on Windows 11 --&gt;
+      &lt;!-- This uses reflection at runtime on BluetoothLEDevice and BluetoothLEPreferredConnectionParameters --&gt;
+      &lt;!-- Include runtime directives to keep these classes to allow higher BLE performance on Windows 11 --&gt;
+      &lt;Type Name=&quot;Windows.Devices.Bluetooth.BluetoothLEDevice&quot; Dynamic=&quot;Required All&quot; /&gt;
+      &lt;Type Name=&quot;Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters&quot; Dynamic=&quot;Required All&quot; /&gt;
+    &lt;/Assembly&gt;
+  &lt;/Library&gt;
+&lt;/Directives&gt;
+</code></pre>
+<ol start="2">
+<li>Reference the runtime directives file from within your <code>.csproj</code> file:</li>
+</ol>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;!-- Existing file contents  --&gt;
+  &lt;!--  ...  --&gt;
+
+  &lt;!-- Runtime directives  --&gt;
+  &lt;!-- These define class metadata to keep after trimming, allowing for reflection --&gt;
+  &lt;ItemGroup&gt;
+    &lt;RdXmlFile Include=&quot;xml/rd.xml&quot; /&gt;
+  &lt;/ItemGroup&gt;
+  
+&lt;/Project&gt;
+</code></pre>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="activating-license.html">Activating the SDK License</a></li>
+</ul>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/add-to-vs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

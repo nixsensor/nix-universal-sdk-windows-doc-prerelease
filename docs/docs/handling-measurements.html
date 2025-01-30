@@ -77,16 +77,16 @@
 <li>To check if available, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ProvidesColor_"><code>ProvidesColor()</code></a></li>
 </ul>
 </li>
-<li>May provide spectral data as <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a>, depending on the device type
+<li>May provide spectral data as <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a>, depending on the device type and license capabilities
 <ul>
 <li>To check if available: check the property <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ProvidesSpectral"><code>ProvidesSpectral</code></a></li>
 <li>To get spectral data, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_SpectralData"><code>SpectralData</code></a></li>
 </ul>
 </li>
-<li>May provide density data as <a class="xref" href="../api/NixUniversalSDK.IDensityData.html"><code>IDensityData</code></a>, depending on the device type
+<li>May provide density data as <a class="xref" href="../api/NixUniversalSDK.IDensityData.html"><code>IDensityData</code></a>, depending on the device type and license capabilities
 <ul>
 <li>To check if available: check the property <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ProvidesDensity"><code>ProvidesDensity</code></a></li>
-<li>To get density data, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementDataExtensions.html#NixUniversalSDK_IMeasurementDataExtensions_ToDensityData_"><code>ToDensityData()</code></a></li>
+<li>To get density data, use <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ToDensityData_"><code>ToDensityData()</code></a></li>
 </ul>
 </li>
 <li>The measurement data contains all data and metadata to completely describe the measurement
@@ -364,9 +364,17 @@
 </tr>
 </tbody>
 </table>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The table above indicates whether or not the hardware device is capable of providing these data types. However, these values will only be available if the enabled by the active license. See <a href="activating-license.html#other-license-properties">Other license properties</a> for more details.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <code>IMeasurementData</code> flags <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ProvidesSpectral"><code>ProvidesSpectral</code></a> and <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_ProvidesSpectral"><code>ProvidesDensity</code></a> take into account both the device and license capabilities and can be used to determine if these data are currently available.</p>
+</div>
 <h2 id="icolordata"><a class="xref" href="../api/NixUniversalSDK.IColorData.html"><code>IColorData</code></a></h2>
 <ul>
-<li>Consists of colorimetry data for a single reference white point (eg - <a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_2">D50/2°</a>) and single measurement mode</li>
+<li>Consists of colorimetry data for a single reference white point (e.g. - <a class="xref" href="../api/NixUniversalSDK.ReferenceWhite.html#NixUniversalSDK_ReferenceWhite_D50_2">D50/2°</a>) and single measurement mode</li>
 <li>Can be obtained directly from an <a class="xref" href="../api/NixUniversalSDK.IMeasurementData.html"><code>IMeasurementData</code></a> object, or an <a class="xref" href="../api/NixUniversalSDK.ISpectralData.html"><code>ISpectralData</code></a> object</li>
 <li>Full description of a color consisting of:
 <ul>
@@ -450,8 +458,10 @@
 </ul>
 </li>
 </ul>
-<h2 id="other-utilities">Other utilities</h2>
-<p>The <a class="xref" href="../api/NixUniversalSDK.ColorUtils.html"><code>ColorUtils</code></a> class provides many helpful functions for manual colour conversions and delta E calculations.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <a class="xref" href="../api/NixUniversalSDK.ColorUtils.html"><code>ColorUtils</code></a> class also provides many helpful functions for manual colour conversions and delta E calculations.</p>
+</div>
 <h2 id="next-steps">Next steps</h2>
 <ul>
 <li>Review the <a href="example-apps.html">example applications</a></li>

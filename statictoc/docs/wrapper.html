@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Wrapper for Usage in C/C++ </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Wrapper for Usage in C/C++ ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc">
+      <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Docs">Docs</a>
+                      </li>
+                      <li>
+                          <a href="../api/NixUniversalSDK.html" title="API">API</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Getting Started</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="add-to-vs.html" title="Adding to Your Visual Studio Project" class="">Adding to Your Visual Studio Project</a>
+                          </li>
+                          <li class="">
+                            <a href="activating-license.html" title="Activating the SDK License" class="">Activating the SDK License</a>
+                          </li>
+                          <li class="">
+                            <a href="discovering-connecting.html" title="Discovering and Connecting to Nix Devices" class="">Discovering and Connecting to Nix Devices</a>
+                          </li>
+                          <li class="">
+                            <a href="device-operations.html" title="Device Operations" class="">Device Operations</a>
+                          </li>
+                          <li class="">
+                            <a href="handling-measurements.html" title="Handling Measurement Data" class="">Handling Measurement Data</a>
+                          </li>
+                          <li class="">
+                            <a href="example-apps.html" title="Example Applications" class="">Example Applications</a>
+                          </li>
+                          <li class="active">
+                            <a href="wrapper.html" title="Wrapper for Usage in C/C++" class="active">Wrapper for Usage in C/C++</a>
+                          </li>
+                        </ul>                    </li>
+                    <li class="">
+                      <a href="../api/NixUniversalSDK.html" title="API" class="">API</a>
+                    </li>
+                    <li class="">
+                      <a href="release-notes.html" title="Release Notes" class="">Release Notes</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="wrapper-for-usage-in-cc">Wrapper for Usage in C/C++</h1>
+
+<h2 id="overview">Overview</h2>
+<p>For Windows applications that are not .NET based, it may be possible to use <code>NixUniversalSDK</code> indirectly. For example, the SDK download provides a project <code>NixUniversalSDK.Wrapper</code> which allows for its usage in C/C++ applications.</p>
+<p>The <code>NixUniversalSDK.Wrapper</code> contains single <code>IDeviceScanner</code> and <code>IDeviceCompat</code> instances. It provides a static interface to access these instances and also provides callbacks for device and scanner events. The project contains a basic implementation, but can be modified or expanded to better suit your specific application.</p>
+<p>The wrapper project is part of the SDK examples which are available <a href="https://www.nixsensor.com/sdk-windows">online</a>.</p>
+<h3 id="known-limitations">Known limitations</h3>
+<ul>
+<li>The wrapper project is written in C# and is built to a self-contained native library using NativeAOT. NativeAOT builds use code-trimming and should specify runtime directives as described <a href="add-to-vs.html#runtime-directives">here</a>. Note that the provided wrapper project has already declared these runtime directives; no further configuration is necessary.</li>
+<li>If an import <code>.lib</code> library file is required for linking in C/C++ applications, this import library file will need to be manually generated (see <a href="#generating-an-import-library">Generating an import library</a>).</li>
+<li>As of February 2025, the wrapper project only supports x64, x86, and ARM64 builds
+<ul>
+<li>When using x86 builds, the calling convention is <code>cdecl</code></li>
+<li>The architecture limitations discussed <a href="discovering-connecting.html#bluetooth-compatibility-notes">here</a> apply when using the wrapper. 32-bit (x86) builds do not support Bluetooth functionality when running on 64-bit (x64) architecture.</li>
+</ul>
+</li>
+</ul>
+<h2 id="building-the-wrapper-project">Building the wrapper project</h2>
+<p>It is recommended to build the wrapper from the command-line using <code>dotnet publish</code>.</p>
+<ol>
+<li>Navigate to the <code>NixUniversalSDK.Wrapper</code> folder</li>
+<li>Run the <code>dotnet publish -r &lt;ARCH&gt; -c Release</code> command for the desired architecture(s). Valid options for <code>&lt;ARCH&gt;</code> include
+<ul>
+<li><code>win-x64</code></li>
+<li><code>win-x86</code></li>
+<li><code>win-arm64</code></li>
+</ul>
+</li>
+</ol>
+<p>For example, to build for <code>win-x64</code>:</p>
+<pre><code class="lang-shell">dotnet publish -r win-x64 -c Release
+</code></pre>
+<ol start="3">
+<li>The published files will be available under <code>bin/Release/net9.0-windows10.0.22621.0/&lt;ARCH&gt;/publish</code></li>
+</ol>
+<h2 id="using-the-wrapper-in-a-cc-project">Using the wrapper in a C/C++ project</h2>
+<p>After <a href="#building-the-wrapper-project">building</a> the project, the output folder will also contain <code>NixUniversalSDK.Wrapper.h</code>. This C/C++ header file contains macros and function declarations for the exported functions available in <code>NixUniversalSDK.Wrapper.dll</code>. This file can be can be included in your C/C++ code to provide function declarations for the wrapper functions.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The API reference for the exported functions is available <a class="xref" href="../api/NixUniversalSDK.Wrapper.Exported.html">online</a>.</p>
+</div>
+<h3 id="generating-an-import-library">Generating an import library</h3>
+<p>In some cases an import <code>.lib</code> file is necessary for linking against the wrapper assembly. It is possible to manually generate this file using the <code>dumpbin</code> and <code>lib</code> utilities provided with Visual Studio.</p>
+<h4 id="create-an-exports-file">Create an exports file</h4>
+<ol>
+<li>Open a Developer Command Prompt for VS2022.
+<ul>
+<li>For x64 builds, use x64 Native Tools command prompt.</li>
+<li>For x86 builds, use x86 Native Tools command prompt.</li>
+<li>For ARM64 builds, use the ARM64 Native Tools command prompt.</li>
+</ul>
+</li>
+<li>Use the <code>dumpbin</code> tool to generate a list of exported symbols in the <code>NixUniversalSDK.Wrapper.dll</code> assembly</li>
+</ol>
+<pre><code class="lang-shell">dumpbin /EXPORTS &lt;PATH_TO_DLL&gt;
+</code></pre>
+<ol start="3">
+<li>Create a new text file <code>NixUniversalSDK.Wrapper.exports</code> and add the text <code>EXPORTS</code> to the first line.</li>
+<li>Copy and paste the list of function names that were printed from the <code>dumpbin</code> tool. Keep only the function names.
+<ul>
+<li>The contents of the resulting <code>exports</code> file should be similar to the block shown below.</li>
+<li>For convenience, you can copy and paste the block below verbatim, provided that you have not modified the exported functions in <code>Exported.cs</code> in the wrapper project.</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-shell">EXPORTS
+Device_Connect
+Device_Disconnect
+Device_GetBatteryLevel
+Device_GetExtPowerState
+Device_GetFieldCalibrationDue
+Device_GetFieldCalibrationEnabled
+Device_GetFieldCalibrationMaxDelta
+Device_GetFirmwareVersion
+Device_GetHapticFeedbackEnabled
+Device_GetHardwareVersion
+Device_GetId
+Device_GetInterfaceType
+Device_GetLastCalibrationDebug
+Device_GetLastCalibrationStatus
+Device_GetName
+Device_GetNote
+Device_GetPowerState
+Device_GetProvidesDensity
+Device_GetProvidesSpectral
+Device_GetReferenceJavaTicks
+Device_GetReferenceTemperature
+Device_GetRgbFeedbackEnabled
+Device_GetScanCount
+Device_GetScanTemperature
+Device_GetSerialNumber
+Device_GetSoftwareVersion
+Device_GetState
+Device_GetSupportedModes
+Device_GetSupportedReferences
+Device_GetSupportsFieldCalibration
+Device_GetSupportsHapticFeedback
+Device_GetSupportsRgbFeedback
+Device_GetSupportsTemperatureCompensation
+Device_GetTemperatureCompensationEnabled
+Device_GetType
+Device_HasOptions
+Device_InvalidateFieldCalibration
+Device_IsModeSupported
+Device_IsTileStringValid
+Device_LedTest
+Device_Measure
+Device_ProvidesColor
+Device_RegisterBatteryStateChanged
+Device_RegisterCommandCompleted
+Device_RegisterConnected
+Device_RegisterDisconnected
+Device_RegisterExtPowerStateChanged
+Device_RunFieldCalibration
+Device_SetFieldCalibrationEnabled
+Device_SetFieldCalibrationMaxDelta
+Device_SetHapticFeedbackEnabled
+Device_SetRgbFeedbackEnabled
+Device_SetTemperatureCompensationEnabled
+GetSdkId
+License_Activate
+License_Deactivate
+License_GetAllocations
+License_GetAllowedDeviceTypes
+License_GetExpiryJavaTicks
+License_GetFeatures
+License_GetLibraryVersion
+License_GetLibraryWrapperVersion
+License_GetState
+License_GetUuid
+License_IsDeviceTypeSupported
+License_IsFeatureEnabled
+Measurement_GetLastColorJson
+Measurement_GetLastDensityJson
+Measurement_GetLastHexCode
+Measurement_GetLastJavaTicks
+Measurement_GetLastMetadataJson
+Measurement_GetLastModesJson
+Measurement_GetLastSpectralJson
+Measurement_GetLastStatus
+Scanner_GetSortedResults
+Scanner_GetState
+Scanner_HasFoundDevice
+Scanner_ListUsbDevices
+Scanner_RegisterCreated
+Scanner_RegisterScanResult
+Scanner_RegisterStarted
+Scanner_RegisterStopped
+Scanner_Reset
+Scanner_SearchForId
+Scanner_Start
+Scanner_Stop
+</code></pre>
+<h4 id="create-an-import-library-file">Create an import library file</h4>
+<ol>
+<li>Open a Developer Command Prompt for VS2022.
+<ul>
+<li>For x64 builds, use x64 Native Tools command prompt.</li>
+<li>For x86 builds, use x86 Native Tools command prompt.</li>
+<li>For ARM64 builds, use the ARM64 Native Tools command prompt.</li>
+</ul>
+</li>
+<li>Using the <code>lib</code> tool and the <code>NixUniversalSDK.Wrapper.exports</code> file from the previous step, generate an import library file.</li>
+</ol>
+<p>For an x64 build:</p>
+<pre><code class="lang-shell">lib /def:NixUniversalSDK.Wrapper.exports /machine:x64 /out:NixUniversalSDK.Wrapper.lib
+</code></pre>
+<p>For an x86 build:</p>
+<pre><code class="lang-shell">lib /def:NixUniversalSDK.Wrapper.exports /machine:x86 /out:NixUniversalSDK.Wrapper.lib
+</code></pre>
+<p>For an ARM64 build:</p>
+<pre><code class="lang-shell">lib /def:NixUniversalSDK.Wrapper.exports /machine:ARM64 /out:NixUniversalSDK.Wrapper.lib
+</code></pre>
+<ol start="3">
+<li>An import library <code>NixUniversalSDK.Wrapper.lib</code> will be generated in the current folder. This file can be used to link against the <code>NixUniversalSDK.Wrapper.dll</code> assembly</li>
+</ol>
+<h3 id="example-c-code">Example C code</h3>
+<p>The wrapper project includes <code>example.c</code> located in the <code>example-c</code> folder. This example file demonstrates the usage of the NixUniversalSDK wrapper in a C application.</p>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="../index.html#additional-support">Get additional support</a></li>
+</ul>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/wrapper.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

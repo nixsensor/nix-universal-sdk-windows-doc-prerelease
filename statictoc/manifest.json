@@ -1,0 +1,890 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/james/GitHub/nix-universal-sdk-windows/NixUniversalSDK.Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.BatteryStateEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.BatteryStateEventArgs.html",
+          "hash": "PgO9yC8NWSlMJ5F90UuN/QVu7MWOC0ixrL/ZFq7V4/I="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ColorData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ColorData.html",
+          "hash": "z06JwBXvaDVX/DLWF3WOUEDvmwu+nt34wwLdCI0iIeU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ColorDifferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ColorDifferenceType.html",
+          "hash": "1Td+ndeSfqPGn2jREWTFpfmmQnSjPEd65i2vJNqTVN8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ColorDifferenceTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ColorDifferenceTypeExtensions.html",
+          "hash": "pRALk52AZT2vxcjhomouTXW+DvaCQDup6+XPm93CQx8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ColorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ColorType.html",
+          "hash": "DKzvXcevMGC7TSr4i8IVsx231nn/6+sr5r99Rn6+5v4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ColorTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ColorTypeExtensions.html",
+          "hash": "pCldqYIvUyvWJjYGf3aUSDmWwkHWviufXCoPEj9ZR6E="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ColorUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ColorUtils.html",
+          "hash": "QT+XFh2gV9ko80/ejxuNQDen4cVwAnA34Jjpp2DYLZo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.CommandStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.CommandStatus.html",
+          "hash": "zyJIPKo0MMHKV9Y5F/KemHzWfRsRRxsAMpgeL6B2h9M="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.CommandStatusExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.CommandStatusExtensions.html",
+          "hash": "JfK030XFvfdoGFArymKJqlTlakjCUMbVNoa79QWsJ34="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DensityData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DensityData.html",
+          "hash": "HYgz+Qoalr9dGROOeaPAH+iwDZeYipsXbjzcH/lmPoQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DensityStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DensityStatus.html",
+          "hash": "m8YvQ9xbXnSRwqWYjaGykZCnFOwILlyU9LDFffrWoVc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DensityStatusExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DensityStatusExtensions.html",
+          "hash": "5LcEEifGQlo5aDjWmSpefaHP12gP9PLQna4/8DXhKiM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceCompat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceCompat.html",
+          "hash": "kwmx5rlTAOOKzwwP1Vd9t/fDzwkqnExkYvrPkaGKs2I="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceResult.html",
+          "hash": "APEizIrqZC4Khw/aHwJ/xKCPxGNTGDzuPN4tKejKifE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceScanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceScanner.html",
+          "hash": "JOf4gBHAbz3ba+uFIDzqEg6ST+1u4IcW+hytudC2hwM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceScannerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceScannerState.html",
+          "hash": "bz7zlnuYZmLGd81rNl7wzWMoUShxvbjN9VLFs5dhikY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceScannerStateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceScannerStateExtensions.html",
+          "hash": "dBCmZPpRMDu+B/WekgeImcnumcjIbgNPWNew0A3LW/s="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceState.html",
+          "hash": "NjwrpPMOoWDtwoNUWEtokOZFAV++xueBZtSxMsLwd3s="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceStateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceStateExtensions.html",
+          "hash": "2ns4MLFmVXGuJdVP2YbhgtBsQjCju0FK5NBdEP+2nDI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceStatus.html",
+          "hash": "pRznCueAQxGZdHgjsHXJYOo5tf762wF1fQ4YqZhEM3k="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceStatusArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceStatusArgs.html",
+          "hash": "aovzFvYEAUDaccdxwEpeXfcoIfSwFFoK/2D33OHJNjk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceStatusExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceStatusExtensions.html",
+          "hash": "krRJNrluZAI89IwZAw3eCE5RqSTJlkt57FDwZrlyaYU="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceType.html",
+          "hash": "i47FwZQRmxR48RhP9TT5WN/WMmh4lXlqvVrqOIKZcg0="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceTypeExtensions.html",
+          "hash": "oDVk6VBsmpTLOfZJfZ6/XmJPpOk1KvfrO+rk/qeiTl4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.DeviceVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.DeviceVersion.html",
+          "hash": "jd13TSs4wTUurb8wL+gJuWbj/YBbIzh/V40g4TtWSbo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ExtPowerStateEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ExtPowerStateEventArgs.html",
+          "hash": "p82yDwVkTxR1+SHT7kQntotHl+HDbbSWzxbVrApRYz4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IColorData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IColorData.html",
+          "hash": "7ac6XJ990eQgtsV8PUEq3NtbTXapLTUK7bs42EJyZCA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IColorDataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IColorDataExtensions.html",
+          "hash": "ii7IA/E2/G6z7nT/Z00yYdbcBnUJMRsn9itH7ZMz3EM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IDensityData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IDensityData.html",
+          "hash": "KAk5/p1hk5ldqwk3wy7JHMVjNmmTA1/A9MsI21HokBc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IDeviceCompat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IDeviceCompat.html",
+          "hash": "DP231FXsLapfhU5wxKma9DxJUEWcGsPhVnOH0TzX21o="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IDeviceCompatEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IDeviceCompatEvents.html",
+          "hash": "XjJH67q4ProMKhiy27x7T9rre/rT6hm+EJRWsna+JuE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IDeviceCompatExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IDeviceCompatExtensions.html",
+          "hash": "0834PaOjVN2Hq3Fu9PWPzUDEk9BK5QjRWr+mXm/dDd4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IDeviceScanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IDeviceScanner.html",
+          "hash": "sXTWYmNBGkmUwQ1cBhFMlfMLBE8dqPs1en0PhNp8j+g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IDeviceScannerEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IDeviceScannerEvents.html",
+          "hash": "ZUILfEUy0sJDUfr8fkbwuTCpHDGr6ICYgWWpSOiDTrg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IMeasurementData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IMeasurementData.html",
+          "hash": "IPHB6PAk8unwUfOCyU15w0V/WSKSrYZNmR5Uqy+3EZ4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IMeasurementDataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IMeasurementDataExtensions.html",
+          "hash": "lz3oLZWjVNM6sMvmPrQkJF+NZhs9XlFB82FzJQSP0iA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ISpectralData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ISpectralData.html",
+          "hash": "Ge4k0zIIBDfEk+Nfpc5g6dDPEWIdQ21CEQZaGQcfMoI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ISpectralDataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ISpectralDataExtensions.html",
+          "hash": "OYx3OqDeozcC27G/5Ekk+PbFFWJ4BasQptLiMz4Nvxw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Illuminant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Illuminant.html",
+          "hash": "gNe7J9y0yg+eNJv38kbIE3aNvk1E2Dt/nmaTMa1PMTI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.IlluminantExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.IlluminantExtensions.html",
+          "hash": "Y3ifCdi3GCGH03wPdfubRJK8KTdxsvTiHFEJp8Xp9Kw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.InterfaceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.InterfaceType.html",
+          "hash": "b15p20BpNbrlgPOPEwgJsSZtnk/STt9vQWIiFuLdVWc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.InterfaceTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.InterfaceTypeExtensions.html",
+          "hash": "jPV0g4RfNzUgjGIrGTyC3W4/vbLySrXdXKecPuLV5dw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.LicenseFeature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.LicenseFeature.html",
+          "hash": "fn8yUVIb0spcVm1KNtWZhZ+Isuuj03/SHukuDQjDssI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.LicenseFeatureExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.LicenseFeatureExtensions.html",
+          "hash": "xjHf4t6ni7eqC9tBombc3t4HRz9SlBryXjboctuFt1E="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.LicenseManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.LicenseManager.html",
+          "hash": "dGQV9F0jc8kZrLjr8+pblwSPolOk/f+q5uRkYNqvjMQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.LicenseManagerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.LicenseManagerState.html",
+          "hash": "IOZRVelW5D/9jMwVYqjUxiAVEpmwBhBq3/f8nBSyBQg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.MeasurementData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.MeasurementData.html",
+          "hash": "bY22WjSftLzaBlFDn6rKzQy/wfpvJmeu7ugDcHETQ2g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Observer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Observer.html",
+          "hash": "2KxSBNYF7u1kl3hSgiHFHstY9ELt6uXsjOjtk7o2Kmc="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ObserverExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ObserverExtensions.html",
+          "hash": "CGyf0RagVEP518fZCLAiV0qSbuJ6eR8k6S63CHSVTLM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ReferenceWhite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ReferenceWhite.html",
+          "hash": "0PJaqI9oIn3xBfy1mLToMhPDWIuciAqJUEnC6VrI9/4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ReferenceWhiteExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ReferenceWhiteExtensions.html",
+          "hash": "15GBdye8ypCeQbT9FZOO6ianyh2LktXR5Ye0IkltIkQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ScanMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ScanMode.html",
+          "hash": "FDkYKf0HTD9N1YnQYUCq/lZYpXesoOMxIBZXWOw5O4s="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ScanModeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ScanModeExtensions.html",
+          "hash": "8zEakWN9Trmc+34ErfhYiZARC7TGvNEwN5AmDlharH8="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ScanResultEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ScanResultEventArgs.html",
+          "hash": "RWAyBq9obAMa8wbIKRWTDAAkw/ChFuTJIV49++f6nDY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.ScannerCreatedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.ScannerCreatedEventArgs.html",
+          "hash": "Nvx6kS0Dgbpn73d0QHaIGKihf9QvNPUlwcRYLAuaupg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.SpectralData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.SpectralData.html",
+          "hash": "vsNazOEORxEuODUPMLeHTw05rWsRzrkfds6j5y6SBgg="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Constants.html",
+          "hash": "sxg0aCS3kH9mEauK8AEkb43/HoFb5MX9afX1MrUmO5Q="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Delegates.BoolValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.BoolValue.html",
+          "hash": "+tcJFJJ4BrAwXV8HKXd9Rkc8Cdgysxu6wXvBcfAKOdw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Delegates.Empty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.Empty.html",
+          "hash": "ePxb2MTZU5+R81fhFGQM6e8Uti+B3nHmgGASF5F3/OE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Delegates.IntValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.IntValue.html",
+          "hash": "cHi/L6QUFh0FotFCVKVFm8L1+5s9Jvl4qpEWCSu2f3U="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Delegates.StringValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.StringValue.html",
+          "hash": "efSHdDAsO0I9vMzslnLfhyMM/y1/tzBamodZQRJ+08w="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Delegates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Delegates.html",
+          "hash": "HXODMXwXhhnitzfggLRtKLNZsk3YgGafCavONz2f4jQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.DeviceCompatModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.DeviceCompatModule.html",
+          "hash": "bGviCigbLdWyXul2dyp7S1YUVLzhyY+/GXnW/42I+Xw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.DeviceScannerModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.DeviceScannerModule.html",
+          "hash": "yiOCDrbnmGWjlIyuWYf8WwKfsS29LkW9yRcmuUddwgs="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.Exported.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.Exported.html",
+          "hash": "Mmh6M+DWcQR8jR50K2blWFbyhZGqSp1/8vUFPad6oFs="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.Wrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.Wrapper.html",
+          "hash": "SshUOA5B0ZBWN9ZNth045v1M5FpdQ1zxhI3tSBnRo4c="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NixUniversalSDK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NixUniversalSDK.html",
+          "hash": "Mk0Dr1eO5wQXYyBYI0TUWcVB1Bml11FDS1JsR2VQLrE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "1Ud8mYbWJmKenQmQSM+rJS3tf+mAMU0QCH7MdvdvZyw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/activating-license.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/activating-license.html",
+          "hash": "DWibiV2LGWjHODP0FtGuy2MlkcIFDlOTdSx+x/PnTQo="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/add-to-vs.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/add-to-vs.html",
+          "hash": "e8ZGou8MJ9mla7guYSZptts6xqJlhRGanahzT8SBy3g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/device-operations.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/device-operations.html",
+          "hash": "ts+3FIqH4nG7HyvjARUIAyZZP35fKTDe9YWs24rfTjM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/discovering-connecting.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/discovering-connecting.html",
+          "hash": "zoNmJJl2k/1r08JVQXQwlC0cxa/jXBtzYLipGYOtZHA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/example-apps.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/example-apps.html",
+          "hash": "HpOtjzkXYIqp+gg5OVUfkdJ5oCqjsaGOa/Ia4XEsD0Y="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/handling-measurements.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/handling-measurements.html",
+          "hash": "beIg+0TF1yjq0tRcD2+v02XUFW0YnZt/uA9wofaAeQw="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/release-notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/release-notes.html",
+          "hash": "1fLkTXd3r7snyIYmWyk5nmsq6bLufpUPXVQYntpmpnk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/wrapper.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/wrapper.html",
+          "hash": "Z0f7qE4LbiynD6MC1VX98UlvVUXj0sr0b1agC7KNOyY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/console_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/console_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nuget_package_manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nuget_package_manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/winui_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/winui_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "1pGARYJ5h977imlbfD1iEXU0B0DDunVtfGD5TA+XOsw="
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

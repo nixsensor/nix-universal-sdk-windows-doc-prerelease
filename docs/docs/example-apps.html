@@ -65,9 +65,10 @@
         <article data-uid="">
 <h1 id="example-applications">Example Applications</h1>
 
-<p>Two example applications and their complete source code are provided with the <code>NixUniversalSDK</code> download. To review the examples, use Visual Studio 2022 to open the <code>nix-universal-sdk-windows-example.sln</code> solution file located in the <code>example-windows</code> folder. The solution contains two projects, one for each example application.</p>
+<p>Two example applications and their complete source code are provided with the <code>NixUniversalSDK</code> download, available <a href="https://www.nixsensor.com/sdk-windows">online</a>. To review the examples, use Visual Studio 2022 to open the <code>nix-universal-sdk-windows-example.sln</code> solution file located in the <code>example-windows</code> folder. The solution contains multiple projects, one for each example application.</p>
 <p>Both applications demonstrate:</p>
 <ul>
+<li>Activating and displaying license information</li>
 <li>Device discovery on Bluetooth and USB interfaces</li>
 <li>Opening and closing a connection to a device</li>
 <li>Displaying additional device info (serial number, battery level, etc.)</li>
@@ -77,11 +78,27 @@
 <li>Performing in-field calibration on the provided reference tile</li>
 <li>Displaying additional measurement information (temperature, scan settings, etc.)</li>
 </ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The example applications will activate the SDK license using values entered in <code>LicenseKey.cs</code> at launch. Both examples also allow entry of different license codes at runtime.</p>
+</div>
 <h2 id="console-demo">Console Demo</h2>
-<p>The <code>NixExampleConsole</code> project contains a basic console application, targeting .NET Framework 4.7.2. To run this example, set <code>NixExampleConsole</code> as the 'Startup Project', build, and run.</p>
+<p>The <code>NixExampleConsole</code> project contains a basic console application, targeting .NET Framework 4.7.2. To run this example:</p>
+<ul>
+<li>Open the <code>nix-universal-sdk-windows-example.sln</code> solution file</li>
+<li>Update the license information in <code>NixExampleConsole/LicenseKey.cs</code></li>
+<li>Set <code>NixExampleConsole</code> as the 'Startup Project'</li>
+<li>Build and run</li>
+</ul>
 <p><img src="../images/console_example.png" alt="Console Demo Screenshot"></p>
 <h2 id="winui3-demo">WinUI3 Demo</h2>
-<p>The <code>NixExampleWinUI</code> project contains a WinUI3 based application, targeting .NET 7.0. To run this example, set <code>NixExampleWinUI</code> as the 'Startup Project', build, and run.</p>
+<p>The <code>NixExampleWinUI</code> project contains a WinUI3 based application, targeting .NET 8.0. To run this example:</p>
+<ul>
+<li>Open the <code>nix-universal-sdk-windows-example.sln</code> solution file</li>
+<li>Update the license information in <code>NixExampleWinUI/LicenseKey.cs</code></li>
+<li>Set <code>NixExampleWinUI</code> as the 'Startup Project'</li>
+<li>Build and run</li>
+</ul>
 <p><img src="../images/winui_example.png" alt="WinUI3 Demo Screenshot"></p>
 <h2 id="next-steps">Next steps</h2>
 <ul>

@@ -65,52 +65,30 @@
         <article data-uid="">
 <h1 id="adding-to-your-visual-studio-project">Adding to Your Visual Studio Project</h1>
 
-<p>The Nix Universal SDK is provided as a NuGet package, which allows for easier dependency resolution. This example outlines how to install the package in a local NuGet feed.</p>
-<h2 id="creating-a-local-nuget-feed">Creating a local NuGet feed</h2>
+<p>The Nix Universal SDK is provided as a NuGet package. The provided <code>nupkg</code> file can be added to a local NuGet feed, or you may install from the public nuget.org repository.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The latest stable version of the Nix Universal SDK is hosted on <a href="https://nuget.org/packages/NixUniversalSDK">nuget.org</a>. It is recommended to install from this source.</p>
+</div>
+<h2 id="adding-the-package-reference">Adding the package reference</h2>
 <ol>
-<li>Download the NuGet executable <a href="https://www.nuget.org/downloads">here</a>.</li>
-<li>Create a local folder on your PC, for example <code>C:\NuGetLocal</code></li>
-<li>Add the <code>NixUniversalSDK</code> NuGet package file to the local feed from the command line using the <code>nuget add</code> command:</li>
-</ol>
-<pre><code class="lang-shell">nuget add &lt;PATH_TO_NUPKG&gt; -Source &lt;PATH_TO_LOCAL_FEED&gt;
-</code></pre>
-<p>For example, using <code>nuget.exe</code>, <code>NixUniversalSDK.4.1.1.nupkg</code> in the local folder, and <code>C:\NuGetLocal</code> as the local feed path:</p>
-<pre><code class="lang-shell">./nuget add NixUniversalSDK.4.1.1.nupkg -Source C:\NuGetLocal
-</code></pre>
-<ol start="4">
-<li>If successful, the NuGet executable will display a message indicating the same. For example:</li>
-</ol>
-<pre><code class="lang-shell">Installed NixUniversalSDK 4.1.1 from &lt;SOURCE&gt; with content hash &lt;HASH&gt; 
-Successfully added package '.\NixUniversalSDK.4.1.1.nupkg' to feed 'C:\NuGetLocal'.
-</code></pre>
-<h2 id="adding-the-local-nuget-feed-to-visual-studio">Adding the local NuGet feed to Visual Studio</h2>
-<ol>
-<li>In Visual Studio, navigate to <code>Tools</code> -&gt; <code>NuGet Package Manager</code> -&gt; <code>Package Manager Settings</code>.</li>
-<li>Select <code>Package Sources</code> in the menu on the left hand side.</li>
-<li>Add a new source by clicking on the <code>+</code> icon at the top right.</li>
-<li>Enter a name for your local feed (e.g. <code>Local</code>), and enter the path selected in step 2 above (e.g. <code>C:\NuGetLocal</code>).</li>
-<li>Click <code>OK</code> to add the local feed to your package sources list.</li>
-</ol>
-<p><img src="../images/nuget_package_sources.png" alt="Package Sources"></p>
-<h3 id="updating-the-local-nuget-feed">Updating the local NuGet feed</h3>
-<p>New versions of the Nix Universal SDK will be delivered as new <code>nupkg</code> downloads. To use the updated packages, install the new package version from the command line using the <code>nuget add</code> command as outlined in step 3 above.</p>
-<h2 id="adding-to-your-visual-studio-project-1">Adding to your Visual Studio project</h2>
-<ol>
-<li>In Visual Studio, right-click on your project and select <code>Manage NuGet Packages</code>.</li>
-<li>Select your local feed (e.g. <code>Local</code>) as the <code>Package source</code>, located at the top right of the NuGet Package Manager.</li>
-<li>Select the <code>Browse</code> tab in the NuGet Package Manager. The <code>NixUniversalSDK</code> package will show up in the list of available packages.</li>
+<li>In Visual Studio, right-click on your project and select 'Manage NuGet Packages'.</li>
+<li>Select the default feed ('nuget.org') as the 'Package source', located at the top right of the NuGet Package Manager.</li>
+<li>Select the 'Browse' tab in the NuGet Package Manager.</li>
+<li>Search for the <code>NixUniversalSDK</code> package. Select the package from the search results.</li>
 <li>Click on <code>Install</code> to add to your project.</li>
 </ol>
 <p><img src="../images/nuget_package_manager.png" alt="NuGet Package Manager"></p>
-<ol start="5">
-<li>If your Windows application is a packaged UWP or WinUI app, it is necessary to add Bluetooth and serial device capabilities to the App package manifest.
+<h2 id="updating-your-uwp-or-winui-manifest">Updating your UWP or WinUI manifest</h2>
+<p>If your Windows application is a packaged UWP or WinUI app, it is necessary to add Bluetooth and serial device capabilities to the App package manifest.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If your application already runs with 'full trust', or is unpackaged, you can skip this step.</p>
+</div>
 <ul>
-<li>If your application already runs with 'full trust', or is unpackaged, this step is not necessary</li>
 <li>An overview of declaring device capabilities in an app manifest is provided by Microsoft <a href="https://learn.microsoft.com/en-us/uwp/schemas/appxpackage/how-to-specify-device-capabilities-in-a-package-manifest">here</a></li>
-<li>The specific capabilities required by the Nix Universal SDK are listed below</li>
+<li>The specific capabilities required by the Nix Universal SDK are listed below:</li>
 </ul>
-</li>
-</ol>
 <pre><code class="lang-xml">&lt;Capabilities&gt;
   &lt;!-- Existing capabilities here --&gt;
   &lt;!-- ... --&gt;
@@ -134,11 +112,51 @@ Successfully added package '.\NixUniversalSDK.4.1.1.nupkg' to feed 'C:\NuGetLoca
   &lt;/DeviceCapability&gt;
 &lt;/Capabilities&gt;
 </code></pre>
-<h2 id="advanced-options">Advanced options</h2>
-<p>The SDK package could also be hosted on a private networked NuGet feed, though this is beyond the scope of this example. For further examples, refer to online documentation <a href="https://learn.microsoft.com/en-us/nuget/hosting-packages/overview">here</a>.</p>
+<h2 id="runtime-directives">Runtime directives</h2>
+<p>The SDK attempts to improve Bluetooth throughput by setting certain parameters on the <a href="https://learn.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.bluetoothledevice"><code>Windows.Devices.Bluetooth.BluetoothLEDevice</code></a> class via reflection. If your .NET project uses code trimming, it is recommended to include the following runtime directives enable this feature.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you are not using code-trimming, you can skip this step.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>Failure to include these runtime directives may cause slower than expected Bluetooth performance when using code trimming.</p>
+</div>
+<ol>
+<li>Add an XML file <code>xml/rd.xml</code> to your project with the following contents</li>
+</ol>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;Directives xmlns=&quot;http://schemas.microsoft.com/netfx/2013/01/metadata&quot;&gt;
+  &lt;Library&gt;
+    &lt;Assembly Name=&quot;Microsoft.Windows.SDK.NET&quot;&gt;
+      &lt;!-- NixUniversalSDK requests higher throughput BLE modes on Windows 11 --&gt;
+      &lt;!-- This uses reflection at runtime on BluetoothLEDevice and BluetoothLEPreferredConnectionParameters --&gt;
+      &lt;!-- Include runtime directives to keep these classes to allow higher BLE performance on Windows 11 --&gt;
+      &lt;Type Name=&quot;Windows.Devices.Bluetooth.BluetoothLEDevice&quot; Dynamic=&quot;Required All&quot; /&gt;
+      &lt;Type Name=&quot;Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters&quot; Dynamic=&quot;Required All&quot; /&gt;
+    &lt;/Assembly&gt;
+  &lt;/Library&gt;
+&lt;/Directives&gt;
+</code></pre>
+<ol start="2">
+<li>Reference the runtime directives file from within your <code>.csproj</code> file:</li>
+</ol>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;!-- Existing file contents  --&gt;
+  &lt;!--  ...  --&gt;
+
+  &lt;!-- Runtime directives  --&gt;
+  &lt;!-- These define class metadata to keep after trimming, allowing for reflection --&gt;
+  &lt;ItemGroup&gt;
+    &lt;RdXmlFile Include=&quot;xml/rd.xml&quot; /&gt;
+  &lt;/ItemGroup&gt;
+  
+&lt;/Project&gt;
+</code></pre>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><a href="discovering-connecting.html">Discovering and Connecting to Nix Devices</a></li>
+<li><a href="activating-license.html">Activating the SDK License</a></li>
 </ul>
 </article>
 

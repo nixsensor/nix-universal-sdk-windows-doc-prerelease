@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Activating the SDK License </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Activating the SDK License ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc">
+      <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Docs">Docs</a>
+                      </li>
+                      <li>
+                          <a href="../api/NixUniversalSDK.html" title="API">API</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Getting Started</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="add-to-vs.html" title="Adding to Your Visual Studio Project" class="">Adding to Your Visual Studio Project</a>
+                          </li>
+                          <li class="active">
+                            <a href="activating-license.html" title="Activating the SDK License" class="active">Activating the SDK License</a>
+                          </li>
+                          <li class="">
+                            <a href="discovering-connecting.html" title="Discovering and Connecting to Nix Devices" class="">Discovering and Connecting to Nix Devices</a>
+                          </li>
+                          <li class="">
+                            <a href="device-operations.html" title="Device Operations" class="">Device Operations</a>
+                          </li>
+                          <li class="">
+                            <a href="handling-measurements.html" title="Handling Measurement Data" class="">Handling Measurement Data</a>
+                          </li>
+                          <li class="">
+                            <a href="example-apps.html" title="Example Applications" class="">Example Applications</a>
+                          </li>
+                          <li class="">
+                            <a href="wrapper.html" title="Wrapper for Usage in C/C++" class="">Wrapper for Usage in C/C++</a>
+                          </li>
+                        </ul>                    </li>
+                    <li class="">
+                      <a href="../api/NixUniversalSDK.html" title="API" class="">API</a>
+                    </li>
+                    <li class="">
+                      <a href="release-notes.html" title="Release Notes" class="">Release Notes</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="activating-the-sdk-license">Activating the SDK License</h1>
+
+<p>An activation code is required to use the Nix Universal SDK. The license determines:</p>
+<ul>
+<li>Which device types are available for discovery and connection.</li>
+<li>Which features and data types are available for connected devices.</li>
+</ul>
+<p>By default, all Nix device operations are disabled. It is necessary to activate the license before these are made available to the host application.</p>
+<h2 id="obtaining-a-license-key">Obtaining a license key</h2>
+<p>Free evaluation codes are available for non-commercial use. To obtain an activation code, visit to the <a href="https://www.nixsensor.com/nix-sdk-license">SDK license</a> page.</p>
+<h2 id="using-the-license-manager">Using the License Manager</h2>
+<p>License operations are handled via a static instance of the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>.</p>
+<h3 id="activating-the-license">Activating the license</h3>
+<p>A license is activated by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_">LicenseManager.Activate</a>. This method takes the license options and signature strings as arguments and returns the activation result as a <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> value.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>License activations do not persist across different application launches, but remain valid within a single session. Therefore, it is required to call <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> at least once per session.</p>
+</div>
+<pre><code class="lang-csharp">// Update these string values to match your provided license
+string Options = &quot;REPLACE_WITH_LICENSE_OPTIONS&quot;;
+string Signature = &quot;REPLACE_WITH_LICENSE_SIGNATURE&quot;;
+
+// Result is returned as a `LicenseManagerState` enum
+var activationState = LicenseManager.Activate(options, signature);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The license manager state can also be checked at any time via <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_State"><code>LicenseManager.State</code></a>.</p>
+</div>
+<p>Device operations are only available if the resulting state is equal to <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html#NixUniversalSDK_LicenseManagerState_Active"><code>LicenseManagerState.Active</code></a>. All other values indicate an error state. Refer to the <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> API documentation for further details.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Your can switch licenses by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> repeated times within a single session. Doing so will invalidate any open device connections. Any connected Nix devices will need to be disconnected and discovered again using an <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> after switching licenses.</p>
+</div>
+<h3 id="other-license-properties">Other license properties</h3>
+<p>Additional license properties can be queried on the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>. Note that some properties may be blank or empty depending on your license capabilities.</p>
+<ul>
+<li>UUID
+<ul>
+<li>Unique ID for your SDK license</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Uuid"><code>LicenseManager.Uuid</code></a></li>
+</ul>
+</li>
+<li>Expiry date
+<ul>
+<li>Indicates when the current license ceases to be valid</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Expiry"><code>LicenseManager.Expiry</code></a></li>
+</ul>
+</li>
+<li>Allocation codes
+<ul>
+<li>List of pre-authorized device allocation codes, used when accessing private labelled Nix devices</li>
+<li>May be empty for general use cases</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Allocations"><code>LicenseManager.Allocations</code></a></li>
+</ul>
+</li>
+<li>Allowed device types
+<ul>
+<li>List of Nix <a class="xref" href="../api/NixUniversalSDK.DeviceType.html">device types</a> that are supported by the current license</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_AllowedDeviceTypes"><code>LicenseManager.AllowedDeviceTypes</code></a> and <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsDeviceTypeSupported_"><code>LicenseManager.IsDeviceTypeSupported()</code></a></li>
+</ul>
+</li>
+<li>Enabled features
+<ul>
+<li>List of SDK <a class="xref" href="../api/NixUniversalSDK.LicenseFeature.html">features</a> enabled by the current license.</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Features"><code>LicenseManager.Features</code></a> and <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsFeatureEnabled_"><code>LicenseManager.IsFeatureEnabled()</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="discovering-connecting.html">Discovering and Connecting to Nix Devices</a></li>
+</ul>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/activating-license.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -111,6 +111,9 @@
     <dt id="NixUniversalSDK_DeviceStatus_ErrorInternal"><code>ErrorInternal = 6</code></dt>
     <dd><p>The device has disconnected for an unknown reason (internal SDK error).</p>
 </dd>
+    <dt id="NixUniversalSDK_DeviceStatus_ErrorLicense"><code>ErrorLicense = 7</code></dt>
+    <dd><p>The device disconnected due to a problem with the <a class="xref" href="NixUniversalSDK.LicenseManager.html">LicenseManager</a>. Check that the license is active via <a class="xref" href="NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_State">State</a> and that the device type is supported via <a class="xref" href="NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsDeviceTypeSupported_NixUniversalSDK_DeviceType_">IsDeviceTypeSupported(DeviceType)</a>.</p>
+</dd>
     <dt id="NixUniversalSDK_DeviceStatus_ErrorMaxAttempts"><code>ErrorMaxAttempts = 1</code></dt>
     <dd><p>The device connection attempt was cancelled because the maximum number of attempts was reached.</p>
 </dd>

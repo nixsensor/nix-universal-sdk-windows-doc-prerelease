@@ -140,6 +140,9 @@
       <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_HasOptions_NixUniversalSDK_IDeviceCompat_">IDeviceCompatExtensions.HasOptions(IDeviceCompat)</a>
   </div>
   <div>
+      <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_IsFeatureSupported_NixUniversalSDK_IDeviceCompat_NixUniversalSDK_LicenseFeature_">IDeviceCompatExtensions.IsFeatureSupported(IDeviceCompat, LicenseFeature)</a>
+  </div>
+  <div>
       <a class="xref" href="NixUniversalSDK.IDeviceCompatExtensions.html#NixUniversalSDK_IDeviceCompatExtensions_IsModeSupported_NixUniversalSDK_IDeviceCompat_NixUniversalSDK_ScanMode_">IDeviceCompatExtensions.IsModeSupported(IDeviceCompat, ScanMode)</a>
   </div>
   <div>
@@ -169,7 +172,8 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string BuildUuid = &quot;00000000000000000000000000000000&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use LicenseManager.Uuid instead&quot;, false)]
+public readonly string BuildUuid</code></pre>
   </div>
 
 
@@ -1501,7 +1505,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Start field calibration using provided reference tile, if supported. Upon executing this command, the scan of the reference tile will begin immediately.The user MUST be prompted to place the device onto the reference tile BEFORE this method is executed.This method is asynchronous and will return immediately.This command requires data from the reference tile QR code.As the format varies between different device types, the string data should be provided exactly as decoded from the QR code.</p>
+  <div class="markdown level1 summary"><p>Start field calibration using provided reference tile, if supported. Upon executing this command, the scan of the reference tile will begin immediately. The user MUST be prompted to place the device onto the reference tile BEFORE this method is executed. This method is asynchronous and will return immediately. This command requires data from the reference tile QR code. As the format varies between different device types, the string data should be provided exactly as decoded from the QR code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

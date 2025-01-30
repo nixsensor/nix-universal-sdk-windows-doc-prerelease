@@ -103,6 +103,12 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -117,12 +123,6 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
   </dd></dl>
 
 
@@ -136,8 +136,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_Connect_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_Connect*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_Connect_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_Connect(System.String)">
-  Device_Connect(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_Connect_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_Connect(System.IntPtr)">
+  Device_Connect(nint)
   
   </h3>
 
@@ -146,13 +146,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_Connect(string id)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_Connect(nint idPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Identifer for the target device. This should match the <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a> of a device found by the <a class="xref" href="NixUniversalSDK.DeviceScanner.html">DeviceScanner</a> in this app session. If this device has not already been found, a search will automatically be started before starting the connection process.</p>
+    <dt><code>idPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to device ID string. This should match the <a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a> of a device found by the <a class="xref" href="NixUniversalSDK.DeviceScanner.html">DeviceScanner</a> in this app session. If this device has not already been found, a search will automatically be started before starting the connection process.</p>
 </dd>
   </dl>
 
@@ -174,7 +174,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Closes the current device connection or cancels a connection operation in progress.</p>
+  <div class="markdown level1 summary"><p>Closes the current device connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -361,18 +361,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FirmwareVersion">FirmwareVersion</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FirmwareVersion">FirmwareVersion</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetFirmwareVersion()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetFirmwareVersion()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -425,18 +425,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_HardwareVersion">HardwareVersion</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_HardwareVersion">HardwareVersion</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetHardwareVersion()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetHardwareVersion()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -457,18 +457,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, or empty if no device is selected.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, or empty if no device is selected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetId()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetId()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -521,18 +521,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets debug information for the last field calibration performed in this application session, formatted as a JSON string.</p>
+  <div class="markdown level1 summary"><p>Gets debug information for the last field calibration performed in this application session, formatted as a JSON string</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetLastCalibrationDebug()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetLastCalibrationDebug()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -585,18 +585,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Name">Name</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, or empty if no device is selected.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Name">Name</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, or empty if no device is selected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetName()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetName()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -617,18 +617,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Note">Note</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Note">Note</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetNote()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetNote()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -841,7 +841,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ScanCount">ScanCount</a> for the current device as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a>, or 0 if not supported. This value is valid only if a device is connected.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ScanCount">ScanCount</a> for the current device as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a>, or 0 if not supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -905,18 +905,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SerialNumber">SerialNumber</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SerialNumber">SerialNumber</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetSerialNumber()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetSerialNumber()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -937,18 +937,18 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SoftwareVersion">SoftwareVersion</a> for the current device as a UTF8 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
+  <div class="markdown level1 summary"><p><a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SoftwareVersion">SoftwareVersion</a> for the current device as an ANSI <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. This value is valid only after a connection been opened.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetSoftwareVersion()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetSoftwareVersion()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -1006,13 +1006,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetSupportedModes()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetSupportedModes()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -1038,13 +1038,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Device_GetSupportedReferences()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Device_GetSupportedReferences()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -1311,8 +1311,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_IsModeSupported_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsModeSupported*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_IsModeSupported_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsModeSupported(System.String)">
-  Device_IsModeSupported(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_IsModeSupported_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsModeSupported(System.IntPtr)">
+  Device_IsModeSupported(nint)
   
   </h3>
 
@@ -1321,13 +1321,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Device_IsModeSupported(string scanModeName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Device_IsModeSupported(nint scanModeNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scanModeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Scan mode name to query. Must match names defined in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to scan mode string to query. Must match names defined in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
 </dd>
   </dl>
 
@@ -1350,8 +1350,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_IsTileStringValid_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsTileStringValid*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_IsTileStringValid_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsTileStringValid(System.String)">
-  Device_IsTileStringValid(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_IsTileStringValid_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_IsTileStringValid(System.IntPtr)">
+  Device_IsTileStringValid(nint)
   
   </h3>
 
@@ -1360,13 +1360,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Device_IsTileStringValid(string tileString)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Device_IsTileStringValid(nint tileStringPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>tileString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>String value decoded from the reference tile QR code</p>
+    <dt><code>tileStringPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to string value decoded from the reference tile QR code</p>
 </dd>
   </dl>
 
@@ -1415,8 +1415,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_Measure_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_Measure*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_Measure_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_Measure(System.String)">
-  Device_Measure(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_Measure_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_Measure(System.IntPtr)">
+  Device_Measure(nint)
   
   </h3>
 
@@ -1425,13 +1425,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_Measure(string modesJson)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_Measure(nint modesJsonPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>modesJson</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Scan mode(s) to select, formatted as a JSON array, or empty string to select all supported modes. Scan mode names must match the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum.</p>
+    <dt><code>modesJsonPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to string with scan mode(s) to select, formatted as a JSON array, or empty string to select all supported modes. Scan mode names must match the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum.</p>
 </dd>
   </dl>
 
@@ -1448,8 +1448,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_ProvidesColor_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_ProvidesColor*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_ProvidesColor_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_ProvidesColor(System.String)">
-  Device_ProvidesColor(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_ProvidesColor_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_ProvidesColor(System.IntPtr)">
+  Device_ProvidesColor(nint)
   
   </h3>
 
@@ -1458,13 +1458,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Device_ProvidesColor(string referenceName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Device_ProvidesColor(nint referenceNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>referenceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Reference white, by its name defined in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;) to query D50 illuminant, 2 degree observer</p>
+    <dt><code>referenceNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to reference white string, by its name defined in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;) to query</p>
 </dd>
   </dl>
 
@@ -1487,8 +1487,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_RegisterBatteryStateChanged_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterBatteryStateChanged*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterBatteryStateChanged_NixUniversalSDK_Wrapper_Delegates_IntValue_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterBatteryStateChanged(NixUniversalSDK.Wrapper.Delegates.IntValue)">
-  Device_RegisterBatteryStateChanged(IntValue)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterBatteryStateChanged_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterBatteryStateChanged(System.IntPtr)">
+  Device_RegisterBatteryStateChanged(nint)
   
   </h3>
 
@@ -1497,13 +1497,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_RegisterBatteryStateChanged(Delegates.IntValue handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_RegisterBatteryStateChanged(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.IntValue.html">IntValue</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -1520,8 +1520,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_RegisterCommandCompleted_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterCommandCompleted*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterCommandCompleted_NixUniversalSDK_Wrapper_Delegates_IntValue_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterCommandCompleted(NixUniversalSDK.Wrapper.Delegates.IntValue)">
-  Device_RegisterCommandCompleted(IntValue)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterCommandCompleted_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterCommandCompleted(System.IntPtr)">
+  Device_RegisterCommandCompleted(nint)
   
   </h3>
 
@@ -1530,13 +1530,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_RegisterCommandCompleted(Delegates.IntValue handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_RegisterCommandCompleted(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.IntValue.html">IntValue</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -1553,8 +1553,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_RegisterConnected_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterConnected*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterConnected_NixUniversalSDK_Wrapper_Delegates_Empty_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterConnected(NixUniversalSDK.Wrapper.Delegates.Empty)">
-  Device_RegisterConnected(Empty)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterConnected_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterConnected(System.IntPtr)">
+  Device_RegisterConnected(nint)
   
   </h3>
 
@@ -1563,13 +1563,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_RegisterConnected(Delegates.Empty handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_RegisterConnected(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.Empty.html">Empty</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -1586,8 +1586,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_RegisterDisconnected_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterDisconnected*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterDisconnected_NixUniversalSDK_Wrapper_Delegates_IntValue_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterDisconnected(NixUniversalSDK.Wrapper.Delegates.IntValue)">
-  Device_RegisterDisconnected(IntValue)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterDisconnected_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterDisconnected(System.IntPtr)">
+  Device_RegisterDisconnected(nint)
   
   </h3>
 
@@ -1596,13 +1596,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_RegisterDisconnected(Delegates.IntValue handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_RegisterDisconnected(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.IntValue.html">IntValue</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -1619,8 +1619,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_RegisterExtPowerStateChanged_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterExtPowerStateChanged*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterExtPowerStateChanged_NixUniversalSDK_Wrapper_Delegates_BoolValue_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterExtPowerStateChanged(NixUniversalSDK.Wrapper.Delegates.BoolValue)">
-  Device_RegisterExtPowerStateChanged(BoolValue)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RegisterExtPowerStateChanged_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RegisterExtPowerStateChanged(System.IntPtr)">
+  Device_RegisterExtPowerStateChanged(nint)
   
   </h3>
 
@@ -1629,13 +1629,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_RegisterExtPowerStateChanged(Delegates.BoolValue handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_RegisterExtPowerStateChanged(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.BoolValue.html">BoolValue</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -1652,8 +1652,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Device_RunFieldCalibration_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RunFieldCalibration*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RunFieldCalibration_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RunFieldCalibration(System.String)">
-  Device_RunFieldCalibration(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Device_RunFieldCalibration_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Device_RunFieldCalibration(System.IntPtr)">
+  Device_RunFieldCalibration(nint)
   
   </h3>
 
@@ -1662,13 +1662,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Device_RunFieldCalibration(string tileString)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Device_RunFieldCalibration(nint tileStringPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>tileString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>String value decoded from the reference tile QR code. For <a class="xref" href="NixUniversalSDK.DeviceType.html#NixUniversalSDK_DeviceType_Spectro2">Spectro2</a> devices, the 5 digit code printed on the reference tile case is also accepted</p>
+    <dt><code>tileStringPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to string value decoded from the reference tile QR code. For <a class="xref" href="NixUniversalSDK.DeviceType.html#NixUniversalSDK_DeviceType_Spectro2">Spectro2</a> devices, the 5 digit code printed on the reference tile case is also accepted</p>
 </dd>
   </dl>
 
@@ -1854,18 +1854,418 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Build ID for this <code>NixUniversalSDK</code> binary</p>
+  <div class="markdown level1 summary"><p>Gets the vendor identifier for the current license.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetSdkId()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use License_GetUuid() instead&quot;, false)]
+public static nint GetSdkId()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_Activate_" data-uid="NixUniversalSDK.Wrapper.Exported.License_Activate*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_Activate_System_IntPtr_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.License_Activate(System.IntPtr,System.IntPtr)">
+  License_Activate(nint, nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activates a license. The options and signature parameters must exactly match the values provided in the SDK license. Calling this function invalidates any currently active license. Any connected device will be disconnected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int License_Activate(nint optionsPtr, nint signaturePtr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>optionsPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to license options string.</p>
+</dd>
+    <dt><code>signaturePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to license signature, used to validate the license options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>License manager state after activation as an integer. See <a class="xref" href="NixUniversalSDK.LicenseManagerState.html">LicenseManagerState</a> for possible values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_Deactivate_" data-uid="NixUniversalSDK.Wrapper.Exported.License_Deactivate*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_Deactivate" data-uid="NixUniversalSDK.Wrapper.Exported.License_Deactivate">
+  License_Deactivate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deactivates the current license. Any connected device will be disconnected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void License_Deactivate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetAllocations_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetAllocations*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetAllocations" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetAllocations">
+  License_GetAllocations()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of Nix device allocation codes associated with the current license formatted as a JSON array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint License_GetAllocations()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetAllowedDeviceTypes_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetAllowedDeviceTypes*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetAllowedDeviceTypes" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetAllowedDeviceTypes">
+  License_GetAllowedDeviceTypes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of device types supported by the current license, formatted as a JSON array of integer values. See <a class="xref" href="NixUniversalSDK.DeviceType.html">DeviceType</a> for possible integer values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint License_GetAllowedDeviceTypes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetExpiryJavaTicks_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetExpiryJavaTicks*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetExpiryJavaTicks" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetExpiryJavaTicks">
+  License_GetExpiryJavaTicks()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the expiry time for the current license represented as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>. This corresponds to the milliseconds since the Unix epoch (January 1, 1970 00:00 UTC).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ulong License_GetExpiryJavaTicks()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetFeatures_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetFeatures*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetFeatures" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetFeatures">
+  License_GetFeatures()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of supported features for the current license, formatted as a JSON array of integer values. See <a class="xref" href="NixUniversalSDK.LicenseFeature.html">LicenseFeature</a> for possible integer values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint License_GetFeatures()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetLibraryVersion_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetLibraryVersion*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetLibraryVersion" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetLibraryVersion">
+  License_GetLibraryVersion()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current version of the <code>NixUniversalSDK</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint License_GetLibraryVersion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetLibraryWrapperVersion_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetLibraryWrapperVersion*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetLibraryWrapperVersion" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetLibraryWrapperVersion">
+  License_GetLibraryWrapperVersion()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current version of the wrapper library for the <code>NixUniversalSDK</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint License_GetLibraryWrapperVersion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetState_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetState*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetState" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetState">
+  License_GetState()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current <a class="xref" href="NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_State">State</a> as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>. See <a class="xref" href="NixUniversalSDK.LicenseManagerState.html">LicenseManagerState</a> for possible values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int License_GetState()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_GetUuid_" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetUuid*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_GetUuid" data-uid="NixUniversalSDK.Wrapper.Exported.License_GetUuid">
+  License_GetUuid()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the vendor identifier for the current license.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint License_GetUuid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_IsDeviceTypeSupported_" data-uid="NixUniversalSDK.Wrapper.Exported.License_IsDeviceTypeSupported*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_IsDeviceTypeSupported_System_Int32_" data-uid="NixUniversalSDK.Wrapper.Exported.License_IsDeviceTypeSupported(System.Int32)">
+  License_IsDeviceTypeSupported(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the current license supports the specified device type. See <a class="xref" href="NixUniversalSDK.DeviceType.html">DeviceType</a> for valid device type values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool License_IsDeviceTypeSupported(int typeInt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>typeInt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="NixUniversalSDK_Wrapper_Exported_License_IsFeatureEnabled_" data-uid="NixUniversalSDK.Wrapper.Exported.License_IsFeatureEnabled*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_License_IsFeatureEnabled_System_Int32_" data-uid="NixUniversalSDK.Wrapper.Exported.License_IsFeatureEnabled(System.Int32)">
+  License_IsFeatureEnabled(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the current license supports the specified feature. See <a class="xref" href="NixUniversalSDK.LicenseFeature.html">LicenseFeature</a> for valid feature values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool License_IsFeatureEnabled(int featureInt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>featureInt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -1881,8 +2281,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastColorJson*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_System_String_System_String_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastColorJson(System.String,System.String,System.String)">
-  Measurement_GetLastColorJson(string, string, string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_System_IntPtr_System_IntPtr_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastColorJson(System.IntPtr,System.IntPtr,System.IntPtr)">
+  Measurement_GetLastColorJson(nint, nint, nint)
   
   </h3>
 
@@ -1891,25 +2291,25 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Measurement_GetLastColorJson(string scanModeName, string referenceName, string typeName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastColorJson(nint scanModeNamePtr, nint referenceNamePtr, nint typeNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scanModeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to scan mode name to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
 </dd>
-    <dt><code>referenceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Reference white to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;)</p>
+    <dt><code>referenceNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to reference white to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;)</p>
 </dd>
-    <dt><code>typeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Color type to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ColorType.html">ColorType</a> enum (e.g. - &quot;CIEXYZ&quot;, &quot;CIELAB&quot;, &quot;CIELCH&quot;, &quot;CIELUV&quot;)</p>
+    <dt><code>typeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to color type to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ColorType.html">ColorType</a> enum (e.g. - &quot;CIEXYZ&quot;, &quot;CIELAB&quot;, &quot;CIELCH&quot;, &quot;CIELUV&quot;)</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd><p>Colorimetry data formatted as JSON</p>
 </dd>
   </dl>
@@ -1919,9 +2319,9 @@
 
 
 
-  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_System_String_System_String_System_String__examples">Examples</h4>
-  <p>An example of calling this function from C is shown below:</p>
-<pre><code>const char* color = Measurement_GetLastColorJson(&quot;M2&quot;, &quot;D50_2&quot;, &quot;CIEXYZ&quot;);</code></pre>
+  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_System_IntPtr_System_IntPtr_System_IntPtr__examples">Examples</h4>
+  <p>An example of calling this function is shown below:</p>
+<pre><code>string color = Measurement_GetLastColorJson(&quot;M2&quot;, &quot;D50_2&quot;, &quot;CIEXYZ&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;mode&quot;: &quot;M2&quot;,
@@ -1941,8 +2341,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastDensityJson*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_System_String_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastDensityJson(System.String,System.String)">
-  Measurement_GetLastDensityJson(string, string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_System_IntPtr_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastDensityJson(System.IntPtr,System.IntPtr)">
+  Measurement_GetLastDensityJson(nint, nint)
   
   </h3>
 
@@ -1951,22 +2351,22 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Measurement_GetLastDensityJson(string scanModeName, string densityStatusName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastDensityJson(nint scanModeNamePtr, nint densityStatusNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scanModeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
 </dd>
-    <dt><code>densityStatusName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Name of the ISO density setting to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.DensityStatus.html">DensityStatus</a> enum (e.g. - &quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;T&quot;)</p>
+    <dt><code>densityStatusNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to name of the ISO density setting to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.DensityStatus.html">DensityStatus</a> enum (e.g. - &quot;A&quot;, &quot;E&quot;, &quot;I&quot;, &quot;T&quot;)</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd><p>Density data formatted as JSON</p>
 </dd>
   </dl>
@@ -1976,9 +2376,9 @@
 
 
 
-  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_System_String_System_String__examples">Examples</h4>
-  <p>An example of calling this function from C is shown below:</p>
-<pre><code>const char* density = Measurement_GetLastDensityJson(&quot;M2&quot;, &quot;T&quot;);</code></pre>
+  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_System_IntPtr_System_IntPtr__examples">Examples</h4>
+  <p>An example of calling this function is shown below:</p>
+<pre><code>string density = Measurement_GetLastDensityJson(&quot;M2&quot;, &quot;T&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;mode&quot;: &quot;M2&quot;,
@@ -1999,8 +2399,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastHexCode*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_System_String_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastHexCode(System.String,System.String)">
-  Measurement_GetLastHexCode(string, string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_System_IntPtr_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastHexCode(System.IntPtr,System.IntPtr)">
+  Measurement_GetLastHexCode(nint, nint)
   
   </h3>
 
@@ -2009,22 +2409,22 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Measurement_GetLastHexCode(string scanModeName, string referenceName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastHexCode(nint scanModeNamePtr, nint referenceNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scanModeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to scan mode name to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
 </dd>
-    <dt><code>referenceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Reference white to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;)</p>
+    <dt><code>referenceNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to reference white to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">ReferenceWhite</a> enum (e.g. - &quot;D50_2&quot;)</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd><p>sRGB value as a HEX triplet (e.g. &quot;#RRGGBB&quot;), or empty string (&quot;&quot;) on error</p>
 </dd>
   </dl>
@@ -2034,9 +2434,9 @@
 
 
 
-  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_System_String_System_String__examples">Examples</h4>
-  <p>An example of calling this function from C is shown below:</p>
-<pre><code>const char* hexCode = Measurement_GetLastHexCode(&quot;M2&quot;, &quot;D50_2&quot;);</code></pre>
+  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_System_IntPtr_System_IntPtr__examples">Examples</h4>
+  <p>An example of calling this function is shown below:</p>
+<pre><code>string hexCode = Measurement_GetLastHexCode(&quot;M2&quot;, &quot;D50_2&quot;);</code></pre>
 <p>Example output:</p>
 <pre><code>#DB267C</code></pre>
 
@@ -2079,8 +2479,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastMetadataJson*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastMetadataJson(System.String)">
-  Measurement_GetLastMetadataJson(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastMetadataJson(System.IntPtr)">
+  Measurement_GetLastMetadataJson(nint)
   
   </h3>
 
@@ -2089,19 +2489,19 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Measurement_GetLastMetadataJson(string scanModeName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastMetadataJson(nint scanModeNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scanModeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd><p>Measurement metadata formatted as JSON</p>
 </dd>
   </dl>
@@ -2111,9 +2511,9 @@
 
 
 
-  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_System_String__examples">Examples</h4>
-  <p>An example of calling this function from C is shown below:</p>
-<pre><code>const char* metadata = Measurement_GetLastMetadataJson(&quot;M2&quot;);</code></pre>
+  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_System_IntPtr__examples">Examples</h4>
+  <p>An example of calling this function is shown below:</p>
+<pre><code>string metadata = Measurement_GetLastMetadataJson(&quot;M2&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;dateMs&quot;: 1682005505841,
@@ -2145,13 +2545,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Measurement_GetLastModesJson()</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastModesJson()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd></dd>
   </dl>
 
@@ -2171,8 +2571,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastSpectralJson*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastSpectralJson(System.String)">
-  Measurement_GetLastSpectralJson(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastSpectralJson(System.IntPtr)">
+  Measurement_GetLastSpectralJson(nint)
   
   </h3>
 
@@ -2181,19 +2581,19 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Measurement_GetLastSpectralJson(string scanModeName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastSpectralJson(nint scanModeNamePtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scanModeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to name of the scan mode to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd><p>Spectral data formatted as JSON</p>
 </dd>
   </dl>
@@ -2203,9 +2603,9 @@
 
 
 
-  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_String__examples">Examples</h4>
-  <p>An example of calling this function from C is shown below:</p>
-<pre><code>const char* spectral = Measurement_GetLastSpectralJson(&quot;M2&quot;);</code></pre>
+  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_IntPtr__examples">Examples</h4>
+  <p>An example of calling this function is shown below:</p>
+<pre><code>string spectral = Measurement_GetLastSpectralJson(&quot;M2&quot;);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>{
     &quot;mode&quot;: &quot;M2&quot;,
@@ -2290,12 +2690,12 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets a snapshot of the nearby devices list, sorted by signal strength and serialized as a JSON string. This command only provides a snapshot of the list, but does not update it. The list is updated while the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> is running; to update the list, call <a class="xref" href="NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Scanner_Start_System_Int32_System_Int32_System_Int32_">Scanner_Start(int, int, int)</a> or <a class="xref" href="NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Scanner_SearchForId_System_String_System_Int32_">Scanner_SearchForId(string, int)</a>.</p>
+  <div class="markdown level1 summary"><p>Gets a snapshot of the nearby devices list, sorted by signal strength and serialized as a JSON string. This command only provides a snapshot of the list, but does not update it. The list is updated while the <a class="xref" href="NixUniversalSDK.IDeviceScanner.html">IDeviceScanner</a> is running; to update the list, call <a class="xref" href="NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Scanner_Start_System_Int32_System_Int32_System_Int32_">Scanner_Start(int, int, int)</a> or <a class="xref" href="NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Scanner_SearchForId_System_IntPtr_System_Int32_">Scanner_SearchForId(nint, int)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string Scanner_GetSortedResults(int maxCount)</code></pre>
+    <pre><code class="lang-csharp hljs">public static nint Scanner_GetSortedResults(int maxCount = -1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2307,7 +2707,7 @@
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
     <dd><p>List of nearby devices serialized as JSON string</p>
 </dd>
   </dl>
@@ -2318,8 +2718,8 @@
 
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Scanner_GetSortedResults_System_Int32__examples">Examples</h4>
-  <p>An example of calling this function from C is shown below:</p>
-<pre><code>const char* list = Scanner_GetSortedResults(5);</code></pre>
+  <p>An example of calling this function is shown below:</p>
+<pre><code>string list = Scanner_GetSortedResults(5);</code></pre>
 <p>Example JSON output:</p>
 <pre><code>[
     {
@@ -2398,8 +2798,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Scanner_HasFoundDevice_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_HasFoundDevice*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_HasFoundDevice_System_String_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_HasFoundDevice(System.String)">
-  Scanner_HasFoundDevice(string)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_HasFoundDevice_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_HasFoundDevice(System.IntPtr)">
+  Scanner_HasFoundDevice(nint)
   
   </h3>
 
@@ -2408,13 +2808,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Scanner_HasFoundDevice(string id)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool Scanner_HasFoundDevice(nint idPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>ID value to query, corresponding to (<a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a>)</p>
+    <dt><code>idPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to ID string, corresponding to (<a class="xref" href="NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">Id</a>)</p>
 </dd>
   </dl>
 
@@ -2464,8 +2864,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterCreated_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterCreated*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterCreated_NixUniversalSDK_Wrapper_Delegates_IntValue_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterCreated(NixUniversalSDK.Wrapper.Delegates.IntValue)">
-  Scanner_RegisterCreated(IntValue)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterCreated_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterCreated(System.IntPtr)">
+  Scanner_RegisterCreated(nint)
   
   </h3>
 
@@ -2474,13 +2874,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterCreated(Delegates.IntValue handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterCreated(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.IntValue.html">IntValue</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -2497,8 +2897,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterScanResult_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterScanResult*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterScanResult_NixUniversalSDK_Wrapper_Delegates_StringValue_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterScanResult(NixUniversalSDK.Wrapper.Delegates.StringValue)">
-  Scanner_RegisterScanResult(StringValue)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterScanResult_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterScanResult(System.IntPtr)">
+  Scanner_RegisterScanResult(nint)
   
   </h3>
 
@@ -2507,13 +2907,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterScanResult(Delegates.StringValue handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterScanResult(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.StringValue.html">StringValue</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -2530,8 +2930,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterStarted_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterStarted*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterStarted_NixUniversalSDK_Wrapper_Delegates_Empty_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterStarted(NixUniversalSDK.Wrapper.Delegates.Empty)">
-  Scanner_RegisterStarted(Empty)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterStarted_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterStarted(System.IntPtr)">
+  Scanner_RegisterStarted(nint)
   
   </h3>
 
@@ -2540,13 +2940,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterStarted(Delegates.Empty handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterStarted(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.Empty.html">Empty</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -2563,8 +2963,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterStopped_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterStopped*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterStopped_NixUniversalSDK_Wrapper_Delegates_Empty_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterStopped(NixUniversalSDK.Wrapper.Delegates.Empty)">
-  Scanner_RegisterStopped(Empty)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_RegisterStopped_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_RegisterStopped(System.IntPtr)">
+  Scanner_RegisterStopped(nint)
   
   </h3>
 
@@ -2573,13 +2973,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterStopped(Delegates.Empty handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Scanner_RegisterStopped(nint handlerPtr)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="NixUniversalSDK.Wrapper.Delegates.html">Delegates</a>.<a class="xref" href="NixUniversalSDK.Wrapper.Delegates.Empty.html">Empty</a></dt>
-    <dd><p>Delegate to invoke on callback</p>
+    <dt><code>handlerPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to callback function</p>
 </dd>
   </dl>
 
@@ -2623,8 +3023,8 @@
 
   <a id="NixUniversalSDK_Wrapper_Exported_Scanner_SearchForId_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_SearchForId*"></a>
 
-  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_SearchForId_System_String_System_Int32_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_SearchForId(System.String,System.Int32)">
-  Scanner_SearchForId(string, int)
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Scanner_SearchForId_System_IntPtr_System_Int32_" data-uid="NixUniversalSDK.Wrapper.Exported.Scanner_SearchForId(System.IntPtr,System.Int32)">
+  Scanner_SearchForId(nint, int)
   
   </h3>
 
@@ -2633,13 +3033,13 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Scanner_SearchForId(string id, int scanPeriodMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Scanner_SearchForId(nint idPtr, int scanPeriodMs = 10000)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Specific device ID to find</p>
+    <dt><code>idPtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to specific device ID to find</p>
 </dd>
     <dt><code>scanPeriodMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>Maximum time period in milliseconds to run the search, as an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
@@ -2669,7 +3069,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Scanner_Start(int scanPeriodMs, int maxReportIntervalMs, int maxReportCount)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Scanner_Start(int scanPeriodMs = 20000, int maxReportIntervalMs = 250, int maxReportCount = 25)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2709,33 +3109,6 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Scanner_Stop()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="NixUniversalSDK_Wrapper_Exported_SetupLoaderPath_" data-uid="NixUniversalSDK.Wrapper.Exported.SetupLoaderPath*"></a>
-
-  <h3 id="NixUniversalSDK_Wrapper_Exported_SetupLoaderPath" data-uid="NixUniversalSDK.Wrapper.Exported.SetupLoaderPath">
-  SetupLoaderPath()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Function to setup assembly path re-direct so that dependent DLLs can be placed where <code>NixUniversalSDK.Wrapper</code> is placed</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetupLoaderPath()</code></pre>
   </div>
 
 

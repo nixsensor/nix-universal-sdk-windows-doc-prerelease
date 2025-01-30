@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Activating the SDK License </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Activating the SDK License ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/activating-license.md/#L1">
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="activating-the-sdk-license">Activating the SDK License</h1>
+
+<p>An activation code is required to use the Nix Universal SDK. The license determines:</p>
+<ul>
+<li>Which device types are available for discovery and connection.</li>
+<li>Which features and data types are available for connected devices.</li>
+</ul>
+<p>By default, all Nix device operations are disabled. It is necessary to activate the license before these are made available to the host application.</p>
+<h2 id="obtaining-a-license-key">Obtaining a license key</h2>
+<p>Free evaluation codes are available for non-commercial use. To obtain an activation code, visit to the <a href="https://www.nixsensor.com/nix-sdk-license">SDK license</a> page.</p>
+<h2 id="using-the-license-manager">Using the License Manager</h2>
+<p>License operations are handled via a static instance of the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>.</p>
+<h3 id="activating-the-license">Activating the license</h3>
+<p>A license is activated by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_">LicenseManager.Activate</a>. This method takes the license options and signature strings as arguments and returns the activation result as a <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> value.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>License activations do not persist across different application launches, but remain valid within a single session. Therefore, it is required to call <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> at least once per session.</p>
+</div>
+<pre><code class="lang-csharp">// Update these string values to match your provided license
+string Options = &quot;REPLACE_WITH_LICENSE_OPTIONS&quot;;
+string Signature = &quot;REPLACE_WITH_LICENSE_SIGNATURE&quot;;
+
+// Result is returned as a `LicenseManagerState` enum
+var activationState = LicenseManager.Activate(options, signature);
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The license manager state can also be checked at any time via <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_State"><code>LicenseManager.State</code></a>.</p>
+</div>
+<p>Device operations are only available if the resulting state is equal to <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html#NixUniversalSDK_LicenseManagerState_Active"><code>LicenseManagerState.Active</code></a>. All other values indicate an error state. Refer to the <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> API documentation for further details.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Your can switch licenses by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> repeated times within a single session. Doing so will invalidate any open device connections. Any connected Nix devices will need to be disconnected and discovered again using an <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> after switching licenses.</p>
+</div>
+<h3 id="other-license-properties">Other license properties</h3>
+<p>Additional license properties can be queried on the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>. Note that some properties may be blank or empty depending on your license capabilities.</p>
+<ul>
+<li>UUID
+<ul>
+<li>Unique ID for your SDK license</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Uuid"><code>LicenseManager.Uuid</code></a></li>
+</ul>
+</li>
+<li>Expiry date
+<ul>
+<li>Indicates when the current license ceases to be valid</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Expiry"><code>LicenseManager.Expiry</code></a></li>
+</ul>
+</li>
+<li>Allocation codes
+<ul>
+<li>List of pre-authorized device allocation codes, used when accessing private labelled Nix devices</li>
+<li>May be empty for general use cases</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Allocations"><code>LicenseManager.Allocations</code></a></li>
+</ul>
+</li>
+<li>Allowed device types
+<ul>
+<li>List of Nix <a class="xref" href="../api/NixUniversalSDK.DeviceType.html">device types</a> that are supported by the current license</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_AllowedDeviceTypes"><code>LicenseManager.AllowedDeviceTypes</code></a> and <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsDeviceTypeSupported_"><code>LicenseManager.IsDeviceTypeSupported()</code></a></li>
+</ul>
+</li>
+<li>Enabled features
+<ul>
+<li>List of SDK <a class="xref" href="../api/NixUniversalSDK.LicenseFeature.html">features</a> enabled by the current license.</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Features"><code>LicenseManager.Features</code></a> and <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsFeatureEnabled_"><code>LicenseManager.IsFeatureEnabled()</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li><a href="discovering-connecting.html">Discovering and Connecting to Nix Devices</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/activating-license.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

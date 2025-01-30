@@ -65,12 +65,56 @@
         <article data-uid="">
 <h1 id="release-notes">Release Notes</h1>
 
+<h2 id="version-420">Version 4.2.0</h2>
+<ul>
+<li>Released on February 1, 2025</li>
+<li>Nix Universal SDK functions must now be enabled with a license key using the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>. For further details, refer to <a href="activating-license.html">'Activating the SDK License'</a>.</li>
+<li>Existing <code>enum</code> types have added cases related to <code>LicenseManager</code> errors. Refer to the API documentation linked below for additional details.
+<ul>
+<li><a class="xref" href="../api/NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorLicense">CommandStatus.ErrorLicense</a></li>
+<li><a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html#NixUniversalSDK_DeviceScannerState_ErrorLicense">DeviceScannerState.ErrorLicense</a></li>
+<li><a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html#NixUniversalSDK_DeviceStatus_ErrorLicense">DeviceStatus.ErrorLicense</a></li>
+</ul>
+</li>
+<li>Removed a dependency on <code>Microsoft.WindowsAppSDK</code></li>
+<li>Updated dependency versions
+<ul>
+<li><code>Microsoft.Windows.SDK.Contracts</code> to <code>10.0.26100.1</code> from <code>10.0.22621.755</code></li>
+<li><code>System.IO.Ports</code> to <code>8.0.0</code> from <code>7.0.0</code></li>
+<li><code>System.Text.Json</code> to <code>8.0.5</code> from <code>7.0.0</code></li>
+</ul>
+</li>
+<li>The <code>NixUniversalSDK.Wrapper</code> project has been re-structured to use NativeAOT.
+<ul>
+<li>A single self-contained native binary will be created when building the wrapper for C/C++ usage.</li>
+<li>ARM64 builds are now supported by the <code>NixUniversalSDK.Wrapper</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="version-414">Version 4.1.4</h2>
+<ul>
+<li>Internal development version</li>
+<li>Handled an exception that could occur when listing USB connected devices due to a serial port conflict</li>
+</ul>
+<h2 id="version-413">Version 4.1.3</h2>
+<ul>
+<li>Released on May 31, 2024</li>
+<li>Fixed a NuGet packaging issue that could prevent .NET 6.0+ applications from building.</li>
+</ul>
+<h2 id="version-412">Version 4.1.2</h2>
+<ul>
+<li>Released on September 7, 2023</li>
+<li>Handled a exception that could occur during <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> initialization when running 32-bit application builds on 64-bit architecture.</li>
+<li>Added <a href="discovering-connecting.html#bluetooth-compatibility-notes">Bluetooth compatibility notes</a> related to computer architecture.</li>
+</ul>
 <h2 id="version-411">Version 4.1.1</h2>
 <ul>
+<li>Released on July 28, 2023</li>
 <li>Fixed a bug that could cause <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ConnectAsync_"><code>ConnectAsync</code></a> to crash or hang when connecting to Bluetooth devices on Windows 10</li>
 </ul>
 <h2 id="version-410">Version 4.1.0</h2>
 <ul>
+<li>Internal development version</li>
 <li>Added support for Nix Spectro L devices</li>
 <li>Added <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_FieldCalibrationMaxDelta"><code>FieldCalibrationMaxDelta</code></a> property
 <ul>
@@ -100,17 +144,20 @@
 </ul>
 <h2 id="version-403">Version 4.0.3</h2>
 <ul>
+<li>Released on June 7, 2023</li>
 <li>Added <code>NixUniversalSDK.Wrapper</code> project.</li>
 <li>Changed <code>System.Text.Json</code> dependency from <code>7.0.2</code> to <code>7.0.0</code> to resolve a compatibility issue with the wrapper project.</li>
 </ul>
 <h2 id="version-402">Version 4.0.2</h2>
 <ul>
+<li>Internal development version</li>
 <li>Fixed MAC address parsing to accept upper or lower case HEX digits.</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_SearchForIdAsync_"><code>SearchForIdAsync</code></a> is now case insensitive.</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_SearchForIdAsync_"><code>SearchForIdAsync</code></a> now only runs BLE search if a valid MAC address is provided.</li>
 </ul>
 <h2 id="version-400">Version 4.0.0</h2>
 <ul>
+<li>Released on April 3, 2023</li>
 <li>Initial release for <code>NixUniversalSDK</code>, replacing the older <code>NixLibrary</code> project.</li>
 </ul>
 </article>

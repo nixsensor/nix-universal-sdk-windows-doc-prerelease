@@ -66,9 +66,9 @@
 <h1 id="device-operations">Device Operations</h1>
 
 <h2 id="taking-measurements">Taking measurements</h2>
-<p>Once the device is connected and in an idle state, it is possible to take measurements using <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_MeasureAsync_"><code>MeasureAsync()</code></a>:</p>
+<p>Once the device is connected and in an <code>Idle</code> state, it is possible to take measurements using <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_MeasureAsync_"><code>MeasureAsync()</code></a>:</p>
 <ul>
-<li>The variable number of arguments <code>modes</code> argument may be omitted to run measurements in all modes supported by the device. This is the recommended option.</li>
+<li>The variable number of arguments <code>modes</code> argument may be omitted to run measurements in all modes supported by the device. <em>This is the recommended option</em>.</li>
 <li>If <code>modes</code> arguments are supplied, measurements will be provided only for the specified scan modes. In most cases, this will not speed up the measurement cycle time, so this is not recommended.</li>
 <li>The measurement operation is asynchronous. While the measurement is in progress, no other commands can be sent to the Nix device.</li>
 <li>Results of the measurement operation are provided as a <a class="xref" href="../api/NixUniversalSDK.DeviceResult.html"><code>DeviceResult</code></a> containing two properties:
@@ -275,6 +275,10 @@ if (Device.IsTileStringValid(tileString)
             // was detected
             // ...
             break;
+        case CommandStatus.ErrorLicense:
+            // Scan did not complete because of a license issue
+            // Check LicenseManager.State
+            // ...
         default:
             // Other internal error
             // ...
@@ -403,9 +407,13 @@ else
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SerialNumber"><code>SerialNumber</code></a>: device serial number</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Note"><code>Note</code></a>: device allocation / production code</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a>: indicates whether or not this device provides spectral data</li>
-<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a>: inidcates whether or not this device provides density data</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a>: indicates whether or not this device provides density data</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportedReferences"><code>SupportedReferences</code></a>: list of supported reference white values provided by the measurement data from this device</li>
 </ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a> properties indicate whether or not the hardware device is capable of providing these data types. However, these values will only be available if the enabled by the active license. See <a href="activating-license.html#other-license-properties">Other license properties</a> for more details.</p>
+</div>
 <h2 id="next-steps">Next steps</h2>
 <ul>
 <li><a href="handling-measurements.html">Handling Measurement Data</a></li>
