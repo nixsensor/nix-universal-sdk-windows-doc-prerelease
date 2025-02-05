@@ -97,7 +97,7 @@
 <p>A license is activated by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_">LicenseManager.Activate</a>. This method takes the license options and signature strings as arguments and returns the activation result as a <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> value.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>License activations do not persist across different application launches, but remain valid within a single session. Therefore, it is required to call <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> at least once per session.</p>
+<p>License activations remain valid within a single session, but do not persist across different application launches. Therefore, it is required to call <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> at least once per session.</p>
 </div>
 <pre><code class="lang-csharp">// Update these string values to match your provided license
 string Options = &quot;REPLACE_WITH_LICENSE_OPTIONS&quot;;
@@ -113,33 +113,33 @@ var activationState = LicenseManager.Activate(options, signature);
 <p>Device operations are only available if the resulting state is equal to <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html#NixUniversalSDK_LicenseManagerState_Active"><code>LicenseManagerState.Active</code></a>. All other values indicate an error state. Refer to the <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> API documentation for further details.</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Your can switch licenses by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> repeated times within a single session. Doing so will invalidate any open device connections. Any connected Nix devices will need to be disconnected and discovered again using an <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> after switching licenses.</p>
+<p>You can switch licenses by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> repeated times within a single session. Doing so will invalidate any open device connections. Any connected Nix devices will need to be disconnected and discovered again using an <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>IDeviceScanner</code></a> after switching licenses.</p>
 </div>
 <h3 id="other-license-properties">Other license properties</h3>
 <p>Additional license properties can be queried on the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>. Note that some properties may be blank or empty depending on your license capabilities.</p>
 <ul>
 <li>UUID
 <ul>
-<li>Unique ID for your SDK license</li>
+<li>Unique ID for your SDK license.</li>
 <li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Uuid"><code>LicenseManager.Uuid</code></a></li>
 </ul>
 </li>
 <li>Expiry date
 <ul>
-<li>Indicates when the current license ceases to be valid</li>
+<li>Indicates when the current license ceases to be valid.</li>
 <li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Expiry"><code>LicenseManager.Expiry</code></a></li>
 </ul>
 </li>
 <li>Allocation codes
 <ul>
-<li>List of pre-authorized device allocation codes, used when accessing private labelled Nix devices</li>
-<li>May be empty for general use cases</li>
+<li>List of pre-authorized device allocation codes, used when accessing private labelled Nix devices.</li>
+<li>May be empty for general use cases.</li>
 <li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Allocations"><code>LicenseManager.Allocations</code></a></li>
 </ul>
 </li>
 <li>Allowed device types
 <ul>
-<li>List of Nix <a class="xref" href="../api/NixUniversalSDK.DeviceType.html">device types</a> that are supported by the current license</li>
+<li>List of Nix <a class="xref" href="../api/NixUniversalSDK.DeviceType.html">device types</a> that are supported by the current license.</li>
 <li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_AllowedDeviceTypes"><code>LicenseManager.AllowedDeviceTypes</code></a> and <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsDeviceTypeSupported_"><code>LicenseManager.IsDeviceTypeSupported()</code></a></li>
 </ul>
 </li>
@@ -147,6 +147,12 @@ var activationState = LicenseManager.Activate(options, signature);
 <ul>
 <li>List of SDK <a class="xref" href="../api/NixUniversalSDK.LicenseFeature.html">features</a> enabled by the current license.</li>
 <li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Features"><code>LicenseManager.Features</code></a> and <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_IsFeatureEnabled_"><code>LicenseManager.IsFeatureEnabled()</code></a></li>
+</ul>
+</li>
+<li>SDK version
+<ul>
+<li>Indicates the current version of the Nix Universal SDK.</li>
+<li>Refer to <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_LibraryVersion"><code>LicenseManager.LibraryVersion</code></a></li>
 </ul>
 </li>
 </ul>

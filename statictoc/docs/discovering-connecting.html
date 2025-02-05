@@ -162,9 +162,9 @@
 </div>
 <p>To use the <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a>:</p>
 <ul>
-<li>Create a new scanner instance and define event handlers</li>
-<li>Call <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_InitializeAsync_"><code>InitializeAsync()</code></a> and await its completion</li>
-<li>Check the scanner <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_State"><code>State</code></a>, which will be <code>Idle</code> if the Bluetooth radio is available.
+<li>Create a new scanner instance and define event handlers.</li>
+<li>Call <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_InitializeAsync_"><code>InitializeAsync()</code></a> and await its completion.</li>
+<li>Check the scanner <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_State"><code>State</code></a>, which will be <code>Idle</code> if properly initialized.
 <ul>
 <li>See a list possible states <a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html">here</a>.</li>
 <li>If the state is <code>ErrorLicense</code>, check the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_State"><code>LicenseManager.State</code></a> for further details.</li>
@@ -340,7 +340,7 @@ void OnDisconnected(
     RemoveDeviceEvents();
 
     // Handle status codes here, if desired in your application
-    // At minimum, should check for ErrorUnauthorized and ErrorLicense status
+    // At minimum, should check for ErrorUnauthorized and ErrorLicense cases
     switch (status)
     {
         case DeviceStatus.ErrorUnauthorized:
