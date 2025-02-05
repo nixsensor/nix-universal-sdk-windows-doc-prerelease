@@ -1,42 +1,58 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Exported
- </title>
+      <title>Class Exported </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Exported
- ">
+      <meta name="title" content="Class Exported ">
       
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.min.css">
-      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="description" content="Exported static functions">
+      <link rel="icon" href="../images/ic_nix_swatches.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
       <meta name="docfx:navrel" content="../toc.html">
       <meta name="docfx:tocrel" content="toc.html">
       
       
       
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="text/javascript" src="../styles/docfx.min.js"></script>
-      <script type="text/javascript" src="../styles/main.js"></script>
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
 
-  <body data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="">
+            <img id="logo" class="svg" src="../images/nix_logo_grey.svg" alt="">
             
           </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbar">
-            <form class="d-flex ms-auto" role="search" id="search">
-              <i class="bi bi-search"></i>
-              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
-            </form>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
           </div>
         </div>
       </nav>
@@ -57,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -69,13 +85,12 @@
 
 
   <h1 id="NixUniversalSDK_Wrapper_Exported" data-uid="NixUniversalSDK.Wrapper.Exported" class="text-break">
-    Class Exported
-  
+Class Exported  
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a>.<a class="xref" href="NixUniversalSDK.Wrapper.html">Wrapper</a></dd></dl>
-    <dl><dt>Assembly</dt><dd>NixUniversalSDK.Wrapper.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>NixUniversalSDK.Wrapper.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Exported static functions</p>
@@ -99,7 +114,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -2321,13 +2336,13 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastColorJson_System_IntPtr_System_IntPtr_System_IntPtr__examples">Examples</h4>
   <p>An example of calling this function is shown below:</p>
-<pre><code>string color = Measurement_GetLastColorJson(&quot;M2&quot;, &quot;D50_2&quot;, &quot;CIEXYZ&quot;);</code></pre>
+<pre><code class="lang-csharp">string color = Measurement_GetLastColorJson("M2", "D50_2", "CIEXYZ");</code></pre>
 <p>Example JSON output:</p>
-<pre><code>{
-    &quot;mode&quot;: &quot;M2&quot;,
-    &quot;reference&quot;: &quot;D50_2&quot;,
-    &quot;type&quot;: &quot;CIEXYZ&quot;,
-    &quot;value&quot;: [
+<pre><code class="lang-csharp">{
+    "mode": "M2",
+    "reference": "D50_2",
+    "type": "CIEXYZ",
+    "value": [
         0.3444101768980547,
         0.18339852869976314,
         0.15600230435248466
@@ -2378,13 +2393,13 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastDensityJson_System_IntPtr_System_IntPtr__examples">Examples</h4>
   <p>An example of calling this function is shown below:</p>
-<pre><code>string density = Measurement_GetLastDensityJson(&quot;M2&quot;, &quot;T&quot;);</code></pre>
+<pre><code class="lang-csharp">string density = Measurement_GetLastDensityJson("M2", "T");</code></pre>
 <p>Example JSON output:</p>
-<pre><code>{
-    &quot;mode&quot;: &quot;M2&quot;,
-    &quot;isoStatus&quot;: &quot;T&quot;,
-    &quot;autoIndex&quot;: 1,
-    &quot;value&quot;: [
+<pre><code class="lang-csharp">{
+    "mode": "M2",
+    "isoStatus": "T",
+    "autoIndex": 1,
+    "value": [
         0.2709233297197278,
         1.2105773026488242,
         0.7482882315988111,
@@ -2436,9 +2451,9 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastHexCode_System_IntPtr_System_IntPtr__examples">Examples</h4>
   <p>An example of calling this function is shown below:</p>
-<pre><code>string hexCode = Measurement_GetLastHexCode(&quot;M2&quot;, &quot;D50_2&quot;);</code></pre>
+<pre><code class="lang-csharp">string hexCode = Measurement_GetLastHexCode("M2", "D50_2");</code></pre>
 <p>Example output:</p>
-<pre><code>#DB267C</code></pre>
+<pre><code class="lang-csharp">#DB267C</code></pre>
 
 
 
@@ -2513,19 +2528,19 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastMetadataJson_System_IntPtr__examples">Examples</h4>
   <p>An example of calling this function is shown below:</p>
-<pre><code>string metadata = Measurement_GetLastMetadataJson(&quot;M2&quot;);</code></pre>
+<pre><code class="lang-csharp">string metadata = Measurement_GetLastMetadataJson("M2");</code></pre>
 <p>Example JSON output:</p>
-<pre><code>{
-    &quot;dateMs&quot;: 1682005505841,
-    &quot;status&quot;: 1,
-    &quot;deviceName&quot;: &quot;Nix Spectro 2&quot;,
-    &quot;deviceType&quot;: 5,
-    &quot;mode&quot;: &quot;M2&quot;,
-    &quot;tRef&quot;: 24.25,
-    &quot;tScan&quot;: 24.5625,
-    &quot;tReal&quot;: true,
-    &quot;tCompEnabled&quot;: true,
-    &quot;tileEnabled&quot;: true
+<pre><code class="lang-csharp">{
+    "dateMs": 1682005505841,
+    "status": 1,
+    "deviceName": "Nix Spectro 2",
+    "deviceType": 5,
+    "mode": "M2",
+    "tRef": 24.25,
+    "tScan": 24.5625,
+    "tReal": true,
+    "tCompEnabled": true,
+    "tileEnabled": true
 }</code></pre>
 
 
@@ -2562,7 +2577,7 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastModesJson_examples">Examples</h4>
   <p>Example JSON output:</p>
-<pre><code>[&quot;M0&quot;,&quot;M1&quot;,&quot;M2&quot;]</code></pre>
+<pre><code class="lang-csharp">["M0","M1","M2"]</code></pre>
 
 
 
@@ -2605,13 +2620,13 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_IntPtr__examples">Examples</h4>
   <p>An example of calling this function is shown below:</p>
-<pre><code>string spectral = Measurement_GetLastSpectralJson(&quot;M2&quot;);</code></pre>
+<pre><code class="lang-csharp">string spectral = Measurement_GetLastSpectralJson("M2");</code></pre>
 <p>Example JSON output:</p>
-<pre><code>{
-    &quot;mode&quot;: &quot;M2&quot;,
-    &quot;lambdaMin&quot;: 400,
-    &quot;lambdaInterval&quot;: 10,
-    &quot;value&quot;: [
+<pre><code class="lang-csharp">{
+    "mode": "M2",
+    "lambdaMin": 400,
+    "lambdaInterval": 10,
+    "value": [
         0.09571632,
         0.143246919,
         0.201270252,
@@ -2719,43 +2734,43 @@ public static nint GetSdkId()</code></pre>
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Scanner_GetSortedResults_System_Int32__examples">Examples</h4>
   <p>An example of calling this function is shown below:</p>
-<pre><code>string list = Scanner_GetSortedResults(5);</code></pre>
+<pre><code class="lang-csharp">string list = Scanner_GetSortedResults(5);</code></pre>
 <p>Example JSON output:</p>
-<pre><code>[
+<pre><code class="lang-csharp">[
     {
-        &quot;id&quot;: &quot;COM3&quot;,
-        &quot;interfaceType&quot;: 2,
-        &quot;name&quot;: &quot;Nix Spectro 2&quot;,
-        &quot;rssi&quot;: 0,
-        &quot;type&quot;: 5
+        "id": "COM3",
+        "interfaceType": 2,
+        "name": "Nix Spectro 2",
+        "rssi": 0,
+        "type": 5
     },
     {
-        &quot;id&quot;: &quot;D2:4F:5C:5C:54:40&quot;,
-        &quot;interfaceType&quot;: 1,
-        &quot;name&quot;: &quot;Nix Mini 3&quot;,
-        &quot;rssi&quot;: -50,
-        &quot;type&quot;: 6
+        "id": "D2:4F:5C:5C:54:40",
+        "interfaceType": 1,
+        "name": "Nix Mini 3",
+        "rssi": -50,
+        "type": 6
     },
     {
-        &quot;id&quot;: &quot;F8:CA:CF:4A:3C:03&quot;,
-        &quot;interfaceType&quot;: 1,
-        &quot;name&quot;: &quot;Nix Spectro 2&quot;,
-        &quot;rssi&quot;: -53,
-        &quot;type&quot;: 5
+        "id": "F8:CA:CF:4A:3C:03",
+        "interfaceType": 1,
+        "name": "Nix Spectro 2",
+        "rssi": -53,
+        "type": 5
     },
     {
-        &quot;id&quot;: &quot;D0:92:BA:D3:13:3A&quot;,
-        &quot;interfaceType&quot;: 1,
-        &quot;name&quot;: &quot;Nix Spectro 2&quot;,
-        &quot;rssi&quot;: -54,
-        &quot;type&quot;: 5
+        "id": "D0:92:BA:D3:13:3A",
+        "interfaceType": 1,
+        "name": "Nix Spectro 2",
+        "rssi": -54,
+        "type": 5
     },
     {
-        &quot;id&quot;: &quot;CB:80:63:06:CD:9F&quot;,
-        &quot;interfaceType&quot;: 1,
-        &quot;name&quot;: &quot;Nix Spectro 2&quot;,
-        &quot;rssi&quot;: -55,
-        &quot;type&quot;: 5
+        "id": "CB:80:63:06:CD:9F",
+        "interfaceType": 1,
+        "name": "Nix Spectro 2",
+        "rssi": -55,
+        "type": 5
     }
 ]</code></pre>
 
@@ -3128,6 +3143,8 @@ public static nint GetSdkId()</code></pre>
 
         <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
       <div class="affix">
@@ -3136,7 +3153,7 @@ public static nint GetSdkId()</code></pre>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

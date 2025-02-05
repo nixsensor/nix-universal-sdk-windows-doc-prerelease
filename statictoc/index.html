@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
@@ -9,12 +9,13 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Nix Universal SDK ">
     
-      <link rel="shortcut icon" href="favicon.ico">
+    
+      <link rel="shortcut icon" href="images/ic_nix_swatches.png">
       <link rel="stylesheet" href="styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="styles/docfx.css">
       <link rel="stylesheet" href="styles/main.css">
-      <meta property="docfx:navrel" content="toc">
-      <meta property="docfx:tocrel" content="docs/toc">
+      <meta property="docfx:navrel" content="toc.json">
+      <meta property="docfx:tocrel" content="docs/toc.json">
     
     
     
@@ -34,7 +35,7 @@
               </button>
 
               <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="logo.svg" alt="">
+                <img id="logo" class="svg" src="images/nix_logo_grey.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +52,8 @@
                       <li>
                           <a href="api/NixUniversalSDK.html" title="API">API</a>
                       </li>
-                </ul>            </div>
+                </ul>
+            </div>
           </div>
         </nav>
 
@@ -107,14 +109,16 @@
                           <li class="">
                             <a href="docs/wrapper.html" title="Wrapper for Usage in C/C++" class="">Wrapper for Usage in C/C++</a>
                           </li>
-                        </ul>                    </li>
+                        </ul>
+                    </li>
                     <li class="">
                       <a href="docs/../api/NixUniversalSDK.html" title="API" class="">API</a>
                     </li>
                     <li class="">
                       <a href="docs/release-notes.html" title="Release Notes" class="">Release Notes</a>
                     </li>
-                  </ul>                </div>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -176,7 +180,7 @@
 <li>An activation code is required to use the Nix Universal SDK. Free evaluation codes are available for non-commercial use. To obtain an activation code, visit to the <a href="https://www.nixsensor.com/nix-sdk-license">SDK license</a> page.</li>
 <li>The Nix Universal SDK is provided as a NuGet package and is available via <a href="https://nuget.org/packages/NixUniversalSDK">nuget.org</a>. See <a href="docs/add-to-vs.html">Adding to Your Visual Studio Project</a> for instructions.</li>
 <li>Once added to your Visual Studio project, the <a class="xref" href="api/NixUniversalSDK.LicenseManager.html">LicenseManager</a> can be used to enable the SDK functions included in your license. See <a href="docs/activating-license.html">Activating the SDK License</a> for more details.</li>
-<li>Once the license has been successfully activated, the <a class="xref" href="api/NixUniversalSDK.DeviceScanner.html">DeviceScanner</a> class can be used to discover nearby and attached Nix devices as <a class="xref" href="api/NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instances. These objects can be used to open a connection to the device. See <a href="docs/discovering-connecting.html">Discovering and Connecting to Nix Devices</a> for more details.</li>
+<li>Once the license is active, the <a class="xref" href="api/NixUniversalSDK.DeviceScanner.html">DeviceScanner</a> class can be used to discover nearby and attached Nix devices as <a class="xref" href="api/NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instances. These objects can be used to open a connection to the device. See <a href="docs/discovering-connecting.html">Discovering and Connecting to Nix Devices</a> for more details.</li>
 <li>Once connected, measurements and other device operations can be performed using the <a class="xref" href="api/NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instance. Device parameters can also be queried. See <a href="docs/device-operations.html">Device Operations</a> for more details.</li>
 <li>Once a measurement has been completed, results are provided as <a class="xref" href="api/NixUniversalSDK.IMeasurementData.html">IMeasurementData</a> instances. These objects provide colorimetry data, density, and spectral measurements (if supported by the device and active license). See <a href="docs/handling-measurements.html">Handling Measurement Data</a> for more details.</li>
 <li>Several additional utility functions are provided by the <a class="xref" href="api/NixUniversalSDK.ColorUtils.html">ColorUtils</a> class. These include functions for manual colour conversions, delta E calculations, and more.</li>
@@ -215,6 +219,7 @@
 </ul>
 </li>
 </ul>
+
 </article>
           </div>
 
@@ -223,12 +228,12 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/index.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
