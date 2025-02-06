@@ -209,6 +209,59 @@
 </tr>
 </tbody>
 </table>
+<pre><code class="lang-csharp">// Connected device instance
+IDeviceCompat Device;
+
+// Start the measurement
+var measureTask = Device.MeasureAsync();
+
+// Show progress indicator here if desired
+// ...
+
+// Wait for completion
+var result = await measureTask;
+
+// Handle status
+switch (result.Status) 
+{
+    case CommandStatus.Success:
+        // Successful operation, handle measurement data here
+        // Measurements are available via result.Measurements
+        // ...
+        break;
+    case CommandStatus.ErrorNotReady:
+        // Scan did not complete because the device was busy
+        // ...
+        break;
+    case CommandStatus.ErrorNotSupported:
+        // Scan did not complete because this device does not 
+        // support this command
+        // ...
+        break;
+    case CommandStatus.ErrorLowPower:
+        // Scan did not complete because the battery level is
+        // too low
+        // ...
+        break;
+    case CommandStatus.ErrorTimeout:
+        // Timeout when waiting for result
+        // ...
+        break;
+    case CommandStatus.ErrorAmbientLight:
+        // Scan did not complete because ambient light leakage
+        // was detected
+        // ...
+        break;
+    case CommandStatus.ErrorLicense:
+        // Scan did not complete because of a license issue
+        // Check LicenseManager.State
+        // ...
+    default:
+        // Did not complete because of other internal error
+        // ...
+        break;
+}
+</code></pre>
 <h2 id="performing-in-field-profiling--calibration-with-reference-tile">Performing in-field profiling / calibration with reference tile</h2>
 <p>Certain device types support in-field profiling or calibration using a provided reference tile. This process requires first decoding a string from the QR code attached to the reference tile and then directing the user to measure the same tile. Any necessary adjustments/corrections are performed internally by the SDK and/or the Nix device firmware itself.</p>
 <ul>
@@ -471,6 +524,7 @@ else
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Note"><code>Note</code></a>: device allocation / production code</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a>: indicates whether or not this device provides spectral data</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a>: indicates whether or not this device provides density data</li>
+<li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportedModes"><code>SupportedModes</code></a>: list of supported measurement modes for this device</li>
 <li><a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SupportedReferences"><code>SupportedReferences</code></a>: list of supported reference white values provided by the measurement data from this device</li>
 </ul>
 <div class="IMPORTANT">
