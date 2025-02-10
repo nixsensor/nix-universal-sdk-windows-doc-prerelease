@@ -312,6 +312,11 @@ if (Device.IsTileStringValid(tileString)
             // Successful operation
             // ...
             break;
+        case CommandStatus.WarningTemperature:
+            // Completed successfully, but ambient temperature is outside
+            // of the recommended range
+            // ...
+            break;
         case CommandStatus.ErrorScanDelta:
             // Operation failed because the measured value of the 
             // reference tile is too far from the expected value
@@ -484,7 +489,7 @@ else
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a> properties indicate whether or not the hardware device is capable of providing these data types. However, these values will only be available if these features are enabled by the current license. See <a href="activating-license.html#other-license-properties">Other license properties</a> for more details.</p>
+<p>The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesDensity"><code>ProvidesDensity</code></a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_ProvidesSpectral"><code>ProvidesSpectral</code></a> properties indicate whether or not the hardware device is capable of providing these data types. However, these measurements will only be available if these features are enabled by the current license. See <a href="activating-license.html#other-license-properties">Other license properties</a> for more details.</p>
 </div>
 <h2 id="next-steps">Next steps</h2>
 <ul>

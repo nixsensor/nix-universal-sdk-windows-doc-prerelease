@@ -85,13 +85,18 @@
 
 <h2 id="version-420">Version 4.2.0</h2>
 <ul>
-<li>Released on February 1, 2025</li>
+<li>Released on February 14, 2025</li>
 <li>Nix Universal SDK functions must now be enabled with a license key using the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>. For further details, refer to <a href="activating-license.html">Activating the SDK License</a>.</li>
 <li>Existing <code>enum</code> types have added cases related to <code>LicenseManager</code> errors. Refer to the API documentation linked below for additional details.
 <ul>
 <li><a class="xref" href="../api/NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorLicense">CommandStatus.ErrorLicense</a></li>
 <li><a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html#NixUniversalSDK_DeviceScannerState_ErrorLicense">DeviceScannerState.ErrorLicense</a></li>
 <li><a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html#NixUniversalSDK_DeviceStatus_ErrorLicense">DeviceStatus.ErrorLicense</a></li>
+</ul>
+</li>
+<li><a class="xref" href="../api/NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToDensityData_"><code>ISpectralData.ToDensityData()</code></a> can now return <code>null</code>.
+<ul>
+<li>The result is <code>null</code> when <a class="xref" href="../api/NixUniversalSDK.LicenseFeature.html#NixUniversalSDK_LicenseFeature_DensityData">LicenseFeature.DensityData</a> is not provided by the active license.</li>
 </ul>
 </li>
 <li>Removed a dependency on <code>Microsoft.WindowsAppSDK</code></li>
