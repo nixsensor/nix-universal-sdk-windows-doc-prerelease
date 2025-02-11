@@ -1,45 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DeviceCompatModule </title>
+      <title>Class DeviceCompatModule
+ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DeviceCompatModule ">
+      <meta name="title" content="Class DeviceCompatModule
+ ">
       
-      <meta name="description" content="Wrapper around a single  instance">
       <link rel="icon" href="../images/ic_nix_swatches.png">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
       <meta name="docfx:navrel" content="../toc.html">
       <meta name="docfx:tocrel" content="toc.html">
       
       
       
-      
-      
-      <meta name="loc:inThisArticle" content="In this article">
-      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
-      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
-      <meta name="loc:tocFilter" content="Filter by title">
-      <meta name="loc:nextArticle" content="Next">
-      <meta name="loc:prevArticle" content="Previous">
-      <meta name="loc:themeLight" content="Light">
-      <meta name="loc:themeDark" content="Dark">
-      <meta name="loc:themeAuto" content="Auto">
-      <meta name="loc:changeTheme" content="Change theme">
-      <meta name="loc:copy" content="Copy">
-      <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../public/docfx.min.js"></script>
-
-      <script>
-        const theme = localStorage.getItem('theme') || 'auto'
-        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-      </script>
-
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -47,12 +29,14 @@
             <img id="logo" class="svg" src="../images/nix_logo_grey.svg" alt="">
             
           </a>
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-            </div>
+          <div class="collapse navbar-collapse" id="navbar">
+            <form class="d-flex ms-auto" role="search" id="search">
+              <i class="bi bi-search"></i>
+              <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+            </form>
           </div>
         </div>
       </nav>
@@ -73,7 +57,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,12 +69,13 @@
 
 
   <h1 id="NixUniversalSDK_Wrapper_DeviceCompatModule" data-uid="NixUniversalSDK.Wrapper.DeviceCompatModule" class="text-break">
-Class DeviceCompatModule  
+    Class DeviceCompatModule
+  
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="NixUniversalSDK.html">NixUniversalSDK</a>.<a class="xref" href="NixUniversalSDK.Wrapper.html">Wrapper</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>NixUniversalSDK.Wrapper.dll</dd></dl>
+    <dl><dt>Assembly</dt><dd>NixUniversalSDK.Wrapper.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Wrapper around a single <a class="xref" href="NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instance</p>
@@ -114,7 +99,7 @@ Class DeviceCompatModule
 
 
 
-  <dl class="typelist inheritedMembers">
+  <dl class="typelist derived">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -178,9 +163,9 @@ Class DeviceCompatModule
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_DeviceCompatModule_BatteryStateChangedDelegate_examples">Examples</h4>
   <p>An example handler is shown below:</p>
-<pre><code class="lang-csharp">void OnBatteryStateChanged(string senderName, int newState)
+<pre><code>void OnBatteryStateChanged(string senderName, int newState)
 {
-    // - `senderName` is "BatteryStateChanged"
+    // - `senderName` is &quot;BatteryStateChanged&quot;
     // - `newState` is the updated battery level (0 - 100)
     // ...
 }</code></pre>
@@ -219,56 +204,56 @@ Class DeviceCompatModule
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_DeviceCompatModule_CommandCompletedDelegate_examples">Examples</h4>
   <p>An example handler is shown below:</p>
-<pre><code class="lang-csharp">void OnCommandCompletedDelegate(string senderName, int commandStatus)
+<pre><code>void OnCommandCompletedDelegate(string senderName, int commandStatus)
 {
     // - `senderName` is the async task / function name from 
     //   `IDeviceCompat` that invoked this handler.
     // - `commandStatus` is one of the `CommandStatus` values
 
     if (senderName.Equals(
-        "MeasureAsync", 
+        &quot;MeasureAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `MeasureAsync`
         // ...
     }
     else if (senderName.Equals(
-        "RunFieldCalibrationAsync", 
+        &quot;RunFieldCalibrationAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `RunFieldCalibrationAsync`
         // ...
     }
     else if (senderName.Equals(
-        "SetFieldCalibrationEnabledAsync", 
+        &quot;SetFieldCalibrationEnabledAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `SetFieldCalibrationEnabledAsync`
         // ...
     }
     else if (senderName.Equals(
-        "SetTemperatureCompensationEnabledAsync", 
+        &quot;SetTemperatureCompensationEnabledAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `SetTemperatureCompensationEnabledAsync`
         // ...
     }
     else if (senderName.Equals(
-        "SetHapticFeedbackEnabledAsync", 
+        &quot;SetHapticFeedbackEnabledAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `SetHapticFeedbackEnabledAsync`
         // ...
     }
     else if (senderName.Equals(
-        "SetRgbFeedbackEnabledAsync", 
+        &quot;SetRgbFeedbackEnabledAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `SetRgbFeedbackEnabledAsync`
         // ...
     }
     else if (senderName.Equals(
-        "LedTestAsync", 
+        &quot;LedTestAsync&quot;, 
         StringComparison.OrdinalIgnoreCase))
     {
         // Callback from `LedTestAsync`
@@ -310,9 +295,9 @@ Class DeviceCompatModule
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_DeviceCompatModule_ConnectedDelegate_examples">Examples</h4>
   <p>An example handler is shown below:</p>
-<pre><code class="lang-csharp">void OnConnected(string senderName)
+<pre><code>void OnConnected(string senderName)
 {
-    // - `senderName` is "Connected"
+    // - `senderName` is &quot;Connected&quot;
     // ...
 }</code></pre>
 
@@ -350,9 +335,9 @@ Class DeviceCompatModule
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_DeviceCompatModule_DisconnectedDelegate_examples">Examples</h4>
   <p>An example handler is shown below:</p>
-<pre><code class="lang-csharp">void OnDisconnected(string senderName, int deviceStatus)
+<pre><code>void OnDisconnected(string senderName, int deviceStatus)
 {
-    // - `senderName` is "Disconnected"
+    // - `senderName` is &quot;Disconnected&quot;
     // - `deviceStatus` is one of the `DeviceStatus` values
 
     // Handle status codes here, if desired in your application
@@ -422,9 +407,9 @@ Class DeviceCompatModule
 
   <h4 class="section" id="NixUniversalSDK_Wrapper_DeviceCompatModule_ExtPowerStageChangedDelegate_examples">Examples</h4>
   <p>An example handler is shown below:</p>
-<pre><code class="lang-csharp">void OnBatteryStateChanged(string senderName, bool newState)
+<pre><code>void OnBatteryStateChanged(string senderName, bool newState)
 {
-    // - `senderName` is "ExtPowerStateChanged"
+    // - `senderName` is &quot;ExtPowerStateChanged&quot;
     // - `newState` is the updated external power state: 
     //   `true` when power is connected, `false` when disconnected
     // ...
@@ -440,8 +425,6 @@ Class DeviceCompatModule
 
         <div class="contribution d-print-none">
         </div>
-
-
       </div>
 
       <div class="affix">
@@ -450,7 +433,7 @@ Class DeviceCompatModule
     </main>
 
 
-    <footer class="border-top text-secondary">
+    <footer class="border-top">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

@@ -290,15 +290,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ColorUtils.ClipXyz
   nameWithType: ColorUtils.ClipXyz
-- uid: NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean)
-  name: CmykToXyz(double[], double[], bool)
-  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_CmykToXyz_System_Double___System_Double___System_Boolean_
-  commentId: M:NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean)
-  name.vb: CmykToXyz(Double(), Double(), Boolean)
-  fullName: NixUniversalSDK.ColorUtils.CmykToXyz(double[], double[], bool)
-  fullName.vb: NixUniversalSDK.ColorUtils.CmykToXyz(Double(), Double(), Boolean)
-  nameWithType: ColorUtils.CmykToXyz(double[], double[], bool)
-  nameWithType.vb: ColorUtils.CmykToXyz(Double(), Double(), Boolean)
 - uid: NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean,System.Double[][],System.Int32[][],System.Int32[][],System.Int32[][])
   name: CmykToXyz(double[], double[], bool, double[][], int[][], int[][], int[][])
   href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_CmykToXyz_System_Double___System_Double___System_Boolean_System_Double_____System_Int32_____System_Int32_____System_Int32_____
@@ -308,6 +299,15 @@ references:
   fullName.vb: NixUniversalSDK.ColorUtils.CmykToXyz(Double(), Double(), Boolean, Double()(), Integer()(), Integer()(), Integer()())
   nameWithType: ColorUtils.CmykToXyz(double[], double[], bool, double[][], int[][], int[][], int[][])
   nameWithType.vb: ColorUtils.CmykToXyz(Double(), Double(), Boolean, Double()(), Integer()(), Integer()(), Integer()())
+- uid: NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean)
+  name: CmykToXyz(double[], double[], bool)
+  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_CmykToXyz_System_Double___System_Double___System_Boolean_
+  commentId: M:NixUniversalSDK.ColorUtils.CmykToXyz(System.Double[],System.Double[],System.Boolean)
+  name.vb: CmykToXyz(Double(), Double(), Boolean)
+  fullName: NixUniversalSDK.ColorUtils.CmykToXyz(double[], double[], bool)
+  fullName.vb: NixUniversalSDK.ColorUtils.CmykToXyz(Double(), Double(), Boolean)
+  nameWithType: ColorUtils.CmykToXyz(double[], double[], bool)
+  nameWithType.vb: ColorUtils.CmykToXyz(Double(), Double(), Boolean)
 - uid: NixUniversalSDK.ColorUtils.CmykToXyz*
   name: CmykToXyz
   href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_CmykToXyz_
@@ -589,22 +589,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ColorUtils.RgbTripletToHexString
   nameWithType: ColorUtils.RgbTripletToHexString
-- uid: NixUniversalSDK.ColorUtils.SRgbToXyz(System.Byte[],System.Double[])
-  name: SRgbToXyz(byte[], double[])
-  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_SRgbToXyz_System_Byte___System_Double___
-  commentId: M:NixUniversalSDK.ColorUtils.SRgbToXyz(System.Byte[],System.Double[])
-  name.vb: SRgbToXyz(Byte(), Double())
-  fullName: NixUniversalSDK.ColorUtils.SRgbToXyz(byte[], double[])
-  fullName.vb: NixUniversalSDK.ColorUtils.SRgbToXyz(Byte(), Double())
-  nameWithType: ColorUtils.SRgbToXyz(byte[], double[])
-  nameWithType.vb: ColorUtils.SRgbToXyz(Byte(), Double())
-- uid: NixUniversalSDK.ColorUtils.SRgbToXyz*
-  name: SRgbToXyz
-  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_SRgbToXyz_
-  commentId: Overload:NixUniversalSDK.ColorUtils.SRgbToXyz
-  isSpec: "True"
-  fullName: NixUniversalSDK.ColorUtils.SRgbToXyz
-  nameWithType: ColorUtils.SRgbToXyz
 - uid: NixUniversalSDK.ColorUtils.Spectral10ToDensity(System.Int32[],System.Single[],NixUniversalSDK.DensityStatus)
   name: Spectral10ToDensity(int[], float[], DensityStatus)
   href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_Spectral10ToDensity_System_Int32___System_Single___NixUniversalSDK_DensityStatus_
@@ -646,6 +630,22 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ColorUtils.Spectral10ToXyz
   nameWithType: ColorUtils.Spectral10ToXyz
+- uid: NixUniversalSDK.ColorUtils.SRgbToXyz(System.Byte[],System.Double[])
+  name: SRgbToXyz(byte[], double[])
+  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_SRgbToXyz_System_Byte___System_Double___
+  commentId: M:NixUniversalSDK.ColorUtils.SRgbToXyz(System.Byte[],System.Double[])
+  name.vb: SRgbToXyz(Byte(), Double())
+  fullName: NixUniversalSDK.ColorUtils.SRgbToXyz(byte[], double[])
+  fullName.vb: NixUniversalSDK.ColorUtils.SRgbToXyz(Byte(), Double())
+  nameWithType: ColorUtils.SRgbToXyz(byte[], double[])
+  nameWithType.vb: ColorUtils.SRgbToXyz(Byte(), Double())
+- uid: NixUniversalSDK.ColorUtils.SRgbToXyz*
+  name: SRgbToXyz
+  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_SRgbToXyz_
+  commentId: Overload:NixUniversalSDK.ColorUtils.SRgbToXyz
+  isSpec: "True"
+  fullName: NixUniversalSDK.ColorUtils.SRgbToXyz
+  nameWithType: ColorUtils.SRgbToXyz
 - uid: NixUniversalSDK.ColorUtils.XyzChromaticity(System.Double[])
   name: XyzChromaticity(double[])
   href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_XyzChromaticity_System_Double___
@@ -662,15 +662,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ColorUtils.XyzChromaticity
   nameWithType: ColorUtils.XyzChromaticity
-- uid: NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean)
-  name: XyzToCmyk(double[], double[], bool)
-  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_XyzToCmyk_System_Double___System_Double___System_Boolean_
-  commentId: M:NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean)
-  name.vb: XyzToCmyk(Double(), Double(), Boolean)
-  fullName: NixUniversalSDK.ColorUtils.XyzToCmyk(double[], double[], bool)
-  fullName.vb: NixUniversalSDK.ColorUtils.XyzToCmyk(Double(), Double(), Boolean)
-  nameWithType: ColorUtils.XyzToCmyk(double[], double[], bool)
-  nameWithType.vb: ColorUtils.XyzToCmyk(Double(), Double(), Boolean)
 - uid: NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean,System.Double[][],System.Int32[][],System.Int32[][],System.Int32[][])
   name: XyzToCmyk(double[], double[], bool, double[][], int[][], int[][], int[][])
   href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_XyzToCmyk_System_Double___System_Double___System_Boolean_System_Double_____System_Int32_____System_Int32_____System_Int32_____
@@ -680,6 +671,15 @@ references:
   fullName.vb: NixUniversalSDK.ColorUtils.XyzToCmyk(Double(), Double(), Boolean, Double()(), Integer()(), Integer()(), Integer()())
   nameWithType: ColorUtils.XyzToCmyk(double[], double[], bool, double[][], int[][], int[][], int[][])
   nameWithType.vb: ColorUtils.XyzToCmyk(Double(), Double(), Boolean, Double()(), Integer()(), Integer()(), Integer()())
+- uid: NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean)
+  name: XyzToCmyk(double[], double[], bool)
+  href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_XyzToCmyk_System_Double___System_Double___System_Boolean_
+  commentId: M:NixUniversalSDK.ColorUtils.XyzToCmyk(System.Double[],System.Double[],System.Boolean)
+  name.vb: XyzToCmyk(Double(), Double(), Boolean)
+  fullName: NixUniversalSDK.ColorUtils.XyzToCmyk(double[], double[], bool)
+  fullName.vb: NixUniversalSDK.ColorUtils.XyzToCmyk(Double(), Double(), Boolean)
+  nameWithType: ColorUtils.XyzToCmyk(double[], double[], bool)
+  nameWithType.vb: ColorUtils.XyzToCmyk(Double(), Double(), Boolean)
 - uid: NixUniversalSDK.ColorUtils.XyzToCmyk*
   name: XyzToCmyk
   href: api/NixUniversalSDK.ColorUtils.html#NixUniversalSDK_ColorUtils_XyzToCmyk_
@@ -1775,12 +1775,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.DeviceScanner.ListUsbDevicesAsync
   nameWithType: DeviceScanner.ListUsbDevicesAsync
-- uid: NixUniversalSDK.DeviceScanner.ScanResult
-  name: ScanResult
-  href: api/NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_ScanResult
-  commentId: E:NixUniversalSDK.DeviceScanner.ScanResult
-  fullName: NixUniversalSDK.DeviceScanner.ScanResult
-  nameWithType: DeviceScanner.ScanResult
 - uid: NixUniversalSDK.DeviceScanner.ScannerCreated
   name: ScannerCreated
   href: api/NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_ScannerCreated
@@ -1799,6 +1793,12 @@ references:
   commentId: E:NixUniversalSDK.DeviceScanner.ScannerStopped
   fullName: NixUniversalSDK.DeviceScanner.ScannerStopped
   nameWithType: DeviceScanner.ScannerStopped
+- uid: NixUniversalSDK.DeviceScanner.ScanResult
+  name: ScanResult
+  href: api/NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_ScanResult
+  commentId: E:NixUniversalSDK.DeviceScanner.ScanResult
+  fullName: NixUniversalSDK.DeviceScanner.ScanResult
+  nameWithType: DeviceScanner.ScanResult
 - uid: NixUniversalSDK.DeviceScanner.SearchForIdAsync(System.String,System.Int64)
   name: SearchForIdAsync(string, long)
   href: api/NixUniversalSDK.DeviceScanner.html#NixUniversalSDK_DeviceScanner_SearchForIdAsync_System_String_System_Int64_
@@ -3331,12 +3331,6 @@ references:
   commentId: T:NixUniversalSDK.IDeviceScannerEvents
   fullName: NixUniversalSDK.IDeviceScannerEvents
   nameWithType: IDeviceScannerEvents
-- uid: NixUniversalSDK.IDeviceScannerEvents.ScanResult
-  name: ScanResult
-  href: api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScanResult
-  commentId: E:NixUniversalSDK.IDeviceScannerEvents.ScanResult
-  fullName: NixUniversalSDK.IDeviceScannerEvents.ScanResult
-  nameWithType: IDeviceScannerEvents.ScanResult
 - uid: NixUniversalSDK.IDeviceScannerEvents.ScannerCreated
   name: ScannerCreated
   href: api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScannerCreated
@@ -3355,6 +3349,122 @@ references:
   commentId: E:NixUniversalSDK.IDeviceScannerEvents.ScannerStopped
   fullName: NixUniversalSDK.IDeviceScannerEvents.ScannerStopped
   nameWithType: IDeviceScannerEvents.ScannerStopped
+- uid: NixUniversalSDK.IDeviceScannerEvents.ScanResult
+  name: ScanResult
+  href: api/NixUniversalSDK.IDeviceScannerEvents.html#NixUniversalSDK_IDeviceScannerEvents_ScanResult
+  commentId: E:NixUniversalSDK.IDeviceScannerEvents.ScanResult
+  fullName: NixUniversalSDK.IDeviceScannerEvents.ScanResult
+  nameWithType: IDeviceScannerEvents.ScanResult
+- uid: NixUniversalSDK.Illuminant
+  name: Illuminant
+  href: api/NixUniversalSDK.Illuminant.html
+  commentId: T:NixUniversalSDK.Illuminant
+  fullName: NixUniversalSDK.Illuminant
+  nameWithType: Illuminant
+- uid: NixUniversalSDK.Illuminant.A
+  name: A
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_A
+  commentId: F:NixUniversalSDK.Illuminant.A
+  fullName: NixUniversalSDK.Illuminant.A
+  nameWithType: Illuminant.A
+- uid: NixUniversalSDK.Illuminant.C
+  name: C
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_C
+  commentId: F:NixUniversalSDK.Illuminant.C
+  fullName: NixUniversalSDK.Illuminant.C
+  nameWithType: Illuminant.C
+- uid: NixUniversalSDK.Illuminant.D50
+  name: D50
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D50
+  commentId: F:NixUniversalSDK.Illuminant.D50
+  fullName: NixUniversalSDK.Illuminant.D50
+  nameWithType: Illuminant.D50
+- uid: NixUniversalSDK.Illuminant.D55
+  name: D55
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D55
+  commentId: F:NixUniversalSDK.Illuminant.D55
+  fullName: NixUniversalSDK.Illuminant.D55
+  nameWithType: Illuminant.D55
+- uid: NixUniversalSDK.Illuminant.D65
+  name: D65
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D65
+  commentId: F:NixUniversalSDK.Illuminant.D65
+  fullName: NixUniversalSDK.Illuminant.D65
+  nameWithType: Illuminant.D65
+- uid: NixUniversalSDK.Illuminant.D75
+  name: D75
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D75
+  commentId: F:NixUniversalSDK.Illuminant.D75
+  fullName: NixUniversalSDK.Illuminant.D75
+  nameWithType: Illuminant.D75
+- uid: NixUniversalSDK.Illuminant.F11
+  name: F11
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_F11
+  commentId: F:NixUniversalSDK.Illuminant.F11
+  fullName: NixUniversalSDK.Illuminant.F11
+  nameWithType: Illuminant.F11
+- uid: NixUniversalSDK.Illuminant.F2
+  name: F2
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_F2
+  commentId: F:NixUniversalSDK.Illuminant.F2
+  fullName: NixUniversalSDK.Illuminant.F2
+  nameWithType: Illuminant.F2
+- uid: NixUniversalSDK.Illuminant.F7
+  name: F7
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_F7
+  commentId: F:NixUniversalSDK.Illuminant.F7
+  fullName: NixUniversalSDK.Illuminant.F7
+  nameWithType: Illuminant.F7
+- uid: NixUniversalSDK.Illuminant.None
+  name: None
+  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_None
+  commentId: F:NixUniversalSDK.Illuminant.None
+  fullName: NixUniversalSDK.Illuminant.None
+  nameWithType: Illuminant.None
+- uid: NixUniversalSDK.IlluminantExtensions
+  name: IlluminantExtensions
+  href: api/NixUniversalSDK.IlluminantExtensions.html
+  commentId: T:NixUniversalSDK.IlluminantExtensions
+  fullName: NixUniversalSDK.IlluminantExtensions
+  nameWithType: IlluminantExtensions
+- uid: NixUniversalSDK.IlluminantExtensions.GetFullName(NixUniversalSDK.Illuminant)
+  name: GetFullName(Illuminant)
+  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetFullName_NixUniversalSDK_Illuminant_
+  commentId: M:NixUniversalSDK.IlluminantExtensions.GetFullName(NixUniversalSDK.Illuminant)
+  fullName: NixUniversalSDK.IlluminantExtensions.GetFullName(NixUniversalSDK.Illuminant)
+  nameWithType: IlluminantExtensions.GetFullName(Illuminant)
+- uid: NixUniversalSDK.IlluminantExtensions.GetFullName*
+  name: GetFullName
+  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetFullName_
+  commentId: Overload:NixUniversalSDK.IlluminantExtensions.GetFullName
+  isSpec: "True"
+  fullName: NixUniversalSDK.IlluminantExtensions.GetFullName
+  nameWithType: IlluminantExtensions.GetFullName
+- uid: NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.Byte)
+  name: GetIlluminant(byte)
+  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetIlluminant_System_Byte_
+  commentId: M:NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.Byte)
+  name.vb: GetIlluminant(Byte)
+  fullName: NixUniversalSDK.IlluminantExtensions.GetIlluminant(byte)
+  fullName.vb: NixUniversalSDK.IlluminantExtensions.GetIlluminant(Byte)
+  nameWithType: IlluminantExtensions.GetIlluminant(byte)
+  nameWithType.vb: IlluminantExtensions.GetIlluminant(Byte)
+- uid: NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.String)
+  name: GetIlluminant(string)
+  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetIlluminant_System_String_
+  commentId: M:NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.String)
+  name.vb: GetIlluminant(String)
+  fullName: NixUniversalSDK.IlluminantExtensions.GetIlluminant(string)
+  fullName.vb: NixUniversalSDK.IlluminantExtensions.GetIlluminant(String)
+  nameWithType: IlluminantExtensions.GetIlluminant(string)
+  nameWithType.vb: IlluminantExtensions.GetIlluminant(String)
+- uid: NixUniversalSDK.IlluminantExtensions.GetIlluminant*
+  name: GetIlluminant
+  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetIlluminant_
+  commentId: Overload:NixUniversalSDK.IlluminantExtensions.GetIlluminant
+  isSpec: "True"
+  fullName: NixUniversalSDK.IlluminantExtensions.GetIlluminant
+  nameWithType: IlluminantExtensions.GetIlluminant
 - uid: NixUniversalSDK.IMeasurementData
   name: IMeasurementData
   href: api/NixUniversalSDK.IMeasurementData.html
@@ -3478,45 +3588,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.IMeasurementData.TCompEnabled
   nameWithType: IMeasurementData.TCompEnabled
-- uid: NixUniversalSDK.IMeasurementData.TReal
-  name: TReal
-  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TReal
-  commentId: P:NixUniversalSDK.IMeasurementData.TReal
-  fullName: NixUniversalSDK.IMeasurementData.TReal
-  nameWithType: IMeasurementData.TReal
-- uid: NixUniversalSDK.IMeasurementData.TReal*
-  name: TReal
-  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TReal_
-  commentId: Overload:NixUniversalSDK.IMeasurementData.TReal
-  isSpec: "True"
-  fullName: NixUniversalSDK.IMeasurementData.TReal
-  nameWithType: IMeasurementData.TReal
-- uid: NixUniversalSDK.IMeasurementData.TRef
-  name: TRef
-  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TRef
-  commentId: P:NixUniversalSDK.IMeasurementData.TRef
-  fullName: NixUniversalSDK.IMeasurementData.TRef
-  nameWithType: IMeasurementData.TRef
-- uid: NixUniversalSDK.IMeasurementData.TRef*
-  name: TRef
-  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TRef_
-  commentId: Overload:NixUniversalSDK.IMeasurementData.TRef
-  isSpec: "True"
-  fullName: NixUniversalSDK.IMeasurementData.TRef
-  nameWithType: IMeasurementData.TRef
-- uid: NixUniversalSDK.IMeasurementData.TScan
-  name: TScan
-  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TScan
-  commentId: P:NixUniversalSDK.IMeasurementData.TScan
-  fullName: NixUniversalSDK.IMeasurementData.TScan
-  nameWithType: IMeasurementData.TScan
-- uid: NixUniversalSDK.IMeasurementData.TScan*
-  name: TScan
-  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TScan_
-  commentId: Overload:NixUniversalSDK.IMeasurementData.TScan
-  isSpec: "True"
-  fullName: NixUniversalSDK.IMeasurementData.TScan
-  nameWithType: IMeasurementData.TScan
 - uid: NixUniversalSDK.IMeasurementData.TileDelta
   name: TileDelta
   href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TileDelta
@@ -3569,6 +3640,45 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.IMeasurementData.ToDensityData
   nameWithType: IMeasurementData.ToDensityData
+- uid: NixUniversalSDK.IMeasurementData.TReal
+  name: TReal
+  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TReal
+  commentId: P:NixUniversalSDK.IMeasurementData.TReal
+  fullName: NixUniversalSDK.IMeasurementData.TReal
+  nameWithType: IMeasurementData.TReal
+- uid: NixUniversalSDK.IMeasurementData.TReal*
+  name: TReal
+  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TReal_
+  commentId: Overload:NixUniversalSDK.IMeasurementData.TReal
+  isSpec: "True"
+  fullName: NixUniversalSDK.IMeasurementData.TReal
+  nameWithType: IMeasurementData.TReal
+- uid: NixUniversalSDK.IMeasurementData.TRef
+  name: TRef
+  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TRef
+  commentId: P:NixUniversalSDK.IMeasurementData.TRef
+  fullName: NixUniversalSDK.IMeasurementData.TRef
+  nameWithType: IMeasurementData.TRef
+- uid: NixUniversalSDK.IMeasurementData.TRef*
+  name: TRef
+  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TRef_
+  commentId: Overload:NixUniversalSDK.IMeasurementData.TRef
+  isSpec: "True"
+  fullName: NixUniversalSDK.IMeasurementData.TRef
+  nameWithType: IMeasurementData.TRef
+- uid: NixUniversalSDK.IMeasurementData.TScan
+  name: TScan
+  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TScan
+  commentId: P:NixUniversalSDK.IMeasurementData.TScan
+  fullName: NixUniversalSDK.IMeasurementData.TScan
+  nameWithType: IMeasurementData.TScan
+- uid: NixUniversalSDK.IMeasurementData.TScan*
+  name: TScan
+  href: api/NixUniversalSDK.IMeasurementData.html#NixUniversalSDK_IMeasurementData_TScan_
+  commentId: Overload:NixUniversalSDK.IMeasurementData.TScan
+  isSpec: "True"
+  fullName: NixUniversalSDK.IMeasurementData.TScan
+  nameWithType: IMeasurementData.TScan
 - uid: NixUniversalSDK.IMeasurementDataExtensions
   name: IMeasurementDataExtensions
   href: api/NixUniversalSDK.IMeasurementDataExtensions.html
@@ -3626,6 +3736,49 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.IMeasurementDataExtensions.ToRgbValue
   nameWithType: IMeasurementDataExtensions.ToRgbValue
+- uid: NixUniversalSDK.InterfaceType
+  name: InterfaceType
+  href: api/NixUniversalSDK.InterfaceType.html
+  commentId: T:NixUniversalSDK.InterfaceType
+  fullName: NixUniversalSDK.InterfaceType
+  nameWithType: InterfaceType
+- uid: NixUniversalSDK.InterfaceType.Ble
+  name: Ble
+  href: api/NixUniversalSDK.InterfaceType.html#NixUniversalSDK_InterfaceType_Ble
+  commentId: F:NixUniversalSDK.InterfaceType.Ble
+  fullName: NixUniversalSDK.InterfaceType.Ble
+  nameWithType: InterfaceType.Ble
+- uid: NixUniversalSDK.InterfaceType.Undefined
+  name: Undefined
+  href: api/NixUniversalSDK.InterfaceType.html#NixUniversalSDK_InterfaceType_Undefined
+  commentId: F:NixUniversalSDK.InterfaceType.Undefined
+  fullName: NixUniversalSDK.InterfaceType.Undefined
+  nameWithType: InterfaceType.Undefined
+- uid: NixUniversalSDK.InterfaceType.UsbCdc
+  name: UsbCdc
+  href: api/NixUniversalSDK.InterfaceType.html#NixUniversalSDK_InterfaceType_UsbCdc
+  commentId: F:NixUniversalSDK.InterfaceType.UsbCdc
+  fullName: NixUniversalSDK.InterfaceType.UsbCdc
+  nameWithType: InterfaceType.UsbCdc
+- uid: NixUniversalSDK.InterfaceTypeExtensions
+  name: InterfaceTypeExtensions
+  href: api/NixUniversalSDK.InterfaceTypeExtensions.html
+  commentId: T:NixUniversalSDK.InterfaceTypeExtensions
+  fullName: NixUniversalSDK.InterfaceTypeExtensions
+  nameWithType: InterfaceTypeExtensions
+- uid: NixUniversalSDK.InterfaceTypeExtensions.GetName(NixUniversalSDK.InterfaceType)
+  name: GetName(InterfaceType)
+  href: api/NixUniversalSDK.InterfaceTypeExtensions.html#NixUniversalSDK_InterfaceTypeExtensions_GetName_NixUniversalSDK_InterfaceType_
+  commentId: M:NixUniversalSDK.InterfaceTypeExtensions.GetName(NixUniversalSDK.InterfaceType)
+  fullName: NixUniversalSDK.InterfaceTypeExtensions.GetName(NixUniversalSDK.InterfaceType)
+  nameWithType: InterfaceTypeExtensions.GetName(InterfaceType)
+- uid: NixUniversalSDK.InterfaceTypeExtensions.GetName*
+  name: GetName
+  href: api/NixUniversalSDK.InterfaceTypeExtensions.html#NixUniversalSDK_InterfaceTypeExtensions_GetName_
+  commentId: Overload:NixUniversalSDK.InterfaceTypeExtensions.GetName
+  isSpec: "True"
+  fullName: NixUniversalSDK.InterfaceTypeExtensions.GetName
+  nameWithType: InterfaceTypeExtensions.GetName
 - uid: NixUniversalSDK.ISpectralData
   name: ISpectralData
   href: api/NixUniversalSDK.ISpectralData.html
@@ -3764,159 +3917,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ISpectralDataExtensions.ToRgbValue
   nameWithType: ISpectralDataExtensions.ToRgbValue
-- uid: NixUniversalSDK.Illuminant
-  name: Illuminant
-  href: api/NixUniversalSDK.Illuminant.html
-  commentId: T:NixUniversalSDK.Illuminant
-  fullName: NixUniversalSDK.Illuminant
-  nameWithType: Illuminant
-- uid: NixUniversalSDK.Illuminant.A
-  name: A
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_A
-  commentId: F:NixUniversalSDK.Illuminant.A
-  fullName: NixUniversalSDK.Illuminant.A
-  nameWithType: Illuminant.A
-- uid: NixUniversalSDK.Illuminant.C
-  name: C
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_C
-  commentId: F:NixUniversalSDK.Illuminant.C
-  fullName: NixUniversalSDK.Illuminant.C
-  nameWithType: Illuminant.C
-- uid: NixUniversalSDK.Illuminant.D50
-  name: D50
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D50
-  commentId: F:NixUniversalSDK.Illuminant.D50
-  fullName: NixUniversalSDK.Illuminant.D50
-  nameWithType: Illuminant.D50
-- uid: NixUniversalSDK.Illuminant.D55
-  name: D55
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D55
-  commentId: F:NixUniversalSDK.Illuminant.D55
-  fullName: NixUniversalSDK.Illuminant.D55
-  nameWithType: Illuminant.D55
-- uid: NixUniversalSDK.Illuminant.D65
-  name: D65
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D65
-  commentId: F:NixUniversalSDK.Illuminant.D65
-  fullName: NixUniversalSDK.Illuminant.D65
-  nameWithType: Illuminant.D65
-- uid: NixUniversalSDK.Illuminant.D75
-  name: D75
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_D75
-  commentId: F:NixUniversalSDK.Illuminant.D75
-  fullName: NixUniversalSDK.Illuminant.D75
-  nameWithType: Illuminant.D75
-- uid: NixUniversalSDK.Illuminant.F11
-  name: F11
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_F11
-  commentId: F:NixUniversalSDK.Illuminant.F11
-  fullName: NixUniversalSDK.Illuminant.F11
-  nameWithType: Illuminant.F11
-- uid: NixUniversalSDK.Illuminant.F2
-  name: F2
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_F2
-  commentId: F:NixUniversalSDK.Illuminant.F2
-  fullName: NixUniversalSDK.Illuminant.F2
-  nameWithType: Illuminant.F2
-- uid: NixUniversalSDK.Illuminant.F7
-  name: F7
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_F7
-  commentId: F:NixUniversalSDK.Illuminant.F7
-  fullName: NixUniversalSDK.Illuminant.F7
-  nameWithType: Illuminant.F7
-- uid: NixUniversalSDK.Illuminant.None
-  name: None
-  href: api/NixUniversalSDK.Illuminant.html#NixUniversalSDK_Illuminant_None
-  commentId: F:NixUniversalSDK.Illuminant.None
-  fullName: NixUniversalSDK.Illuminant.None
-  nameWithType: Illuminant.None
-- uid: NixUniversalSDK.IlluminantExtensions
-  name: IlluminantExtensions
-  href: api/NixUniversalSDK.IlluminantExtensions.html
-  commentId: T:NixUniversalSDK.IlluminantExtensions
-  fullName: NixUniversalSDK.IlluminantExtensions
-  nameWithType: IlluminantExtensions
-- uid: NixUniversalSDK.IlluminantExtensions.GetFullName(NixUniversalSDK.Illuminant)
-  name: GetFullName(Illuminant)
-  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetFullName_NixUniversalSDK_Illuminant_
-  commentId: M:NixUniversalSDK.IlluminantExtensions.GetFullName(NixUniversalSDK.Illuminant)
-  fullName: NixUniversalSDK.IlluminantExtensions.GetFullName(NixUniversalSDK.Illuminant)
-  nameWithType: IlluminantExtensions.GetFullName(Illuminant)
-- uid: NixUniversalSDK.IlluminantExtensions.GetFullName*
-  name: GetFullName
-  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetFullName_
-  commentId: Overload:NixUniversalSDK.IlluminantExtensions.GetFullName
-  isSpec: "True"
-  fullName: NixUniversalSDK.IlluminantExtensions.GetFullName
-  nameWithType: IlluminantExtensions.GetFullName
-- uid: NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.Byte)
-  name: GetIlluminant(byte)
-  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetIlluminant_System_Byte_
-  commentId: M:NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.Byte)
-  name.vb: GetIlluminant(Byte)
-  fullName: NixUniversalSDK.IlluminantExtensions.GetIlluminant(byte)
-  fullName.vb: NixUniversalSDK.IlluminantExtensions.GetIlluminant(Byte)
-  nameWithType: IlluminantExtensions.GetIlluminant(byte)
-  nameWithType.vb: IlluminantExtensions.GetIlluminant(Byte)
-- uid: NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.String)
-  name: GetIlluminant(string)
-  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetIlluminant_System_String_
-  commentId: M:NixUniversalSDK.IlluminantExtensions.GetIlluminant(System.String)
-  name.vb: GetIlluminant(String)
-  fullName: NixUniversalSDK.IlluminantExtensions.GetIlluminant(string)
-  fullName.vb: NixUniversalSDK.IlluminantExtensions.GetIlluminant(String)
-  nameWithType: IlluminantExtensions.GetIlluminant(string)
-  nameWithType.vb: IlluminantExtensions.GetIlluminant(String)
-- uid: NixUniversalSDK.IlluminantExtensions.GetIlluminant*
-  name: GetIlluminant
-  href: api/NixUniversalSDK.IlluminantExtensions.html#NixUniversalSDK_IlluminantExtensions_GetIlluminant_
-  commentId: Overload:NixUniversalSDK.IlluminantExtensions.GetIlluminant
-  isSpec: "True"
-  fullName: NixUniversalSDK.IlluminantExtensions.GetIlluminant
-  nameWithType: IlluminantExtensions.GetIlluminant
-- uid: NixUniversalSDK.InterfaceType
-  name: InterfaceType
-  href: api/NixUniversalSDK.InterfaceType.html
-  commentId: T:NixUniversalSDK.InterfaceType
-  fullName: NixUniversalSDK.InterfaceType
-  nameWithType: InterfaceType
-- uid: NixUniversalSDK.InterfaceType.Ble
-  name: Ble
-  href: api/NixUniversalSDK.InterfaceType.html#NixUniversalSDK_InterfaceType_Ble
-  commentId: F:NixUniversalSDK.InterfaceType.Ble
-  fullName: NixUniversalSDK.InterfaceType.Ble
-  nameWithType: InterfaceType.Ble
-- uid: NixUniversalSDK.InterfaceType.Undefined
-  name: Undefined
-  href: api/NixUniversalSDK.InterfaceType.html#NixUniversalSDK_InterfaceType_Undefined
-  commentId: F:NixUniversalSDK.InterfaceType.Undefined
-  fullName: NixUniversalSDK.InterfaceType.Undefined
-  nameWithType: InterfaceType.Undefined
-- uid: NixUniversalSDK.InterfaceType.UsbCdc
-  name: UsbCdc
-  href: api/NixUniversalSDK.InterfaceType.html#NixUniversalSDK_InterfaceType_UsbCdc
-  commentId: F:NixUniversalSDK.InterfaceType.UsbCdc
-  fullName: NixUniversalSDK.InterfaceType.UsbCdc
-  nameWithType: InterfaceType.UsbCdc
-- uid: NixUniversalSDK.InterfaceTypeExtensions
-  name: InterfaceTypeExtensions
-  href: api/NixUniversalSDK.InterfaceTypeExtensions.html
-  commentId: T:NixUniversalSDK.InterfaceTypeExtensions
-  fullName: NixUniversalSDK.InterfaceTypeExtensions
-  nameWithType: InterfaceTypeExtensions
-- uid: NixUniversalSDK.InterfaceTypeExtensions.GetName(NixUniversalSDK.InterfaceType)
-  name: GetName(InterfaceType)
-  href: api/NixUniversalSDK.InterfaceTypeExtensions.html#NixUniversalSDK_InterfaceTypeExtensions_GetName_NixUniversalSDK_InterfaceType_
-  commentId: M:NixUniversalSDK.InterfaceTypeExtensions.GetName(NixUniversalSDK.InterfaceType)
-  fullName: NixUniversalSDK.InterfaceTypeExtensions.GetName(NixUniversalSDK.InterfaceType)
-  nameWithType: InterfaceTypeExtensions.GetName(InterfaceType)
-- uid: NixUniversalSDK.InterfaceTypeExtensions.GetName*
-  name: GetName
-  href: api/NixUniversalSDK.InterfaceTypeExtensions.html#NixUniversalSDK_InterfaceTypeExtensions_GetName_
-  commentId: Overload:NixUniversalSDK.InterfaceTypeExtensions.GetName
-  isSpec: "True"
-  fullName: NixUniversalSDK.InterfaceTypeExtensions.GetName
-  nameWithType: InterfaceTypeExtensions.GetName
 - uid: NixUniversalSDK.LicenseFeature
   name: LicenseFeature
   href: api/NixUniversalSDK.LicenseFeature.html
@@ -4541,25 +4541,6 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ScanModeExtensions.GetScanMode
   nameWithType: ScanModeExtensions.GetScanMode
-- uid: NixUniversalSDK.ScanResultEventArgs
-  name: ScanResultEventArgs
-  href: api/NixUniversalSDK.ScanResultEventArgs.html
-  commentId: T:NixUniversalSDK.ScanResultEventArgs
-  fullName: NixUniversalSDK.ScanResultEventArgs
-  nameWithType: ScanResultEventArgs
-- uid: NixUniversalSDK.ScanResultEventArgs.Device
-  name: Device
-  href: api/NixUniversalSDK.ScanResultEventArgs.html#NixUniversalSDK_ScanResultEventArgs_Device
-  commentId: P:NixUniversalSDK.ScanResultEventArgs.Device
-  fullName: NixUniversalSDK.ScanResultEventArgs.Device
-  nameWithType: ScanResultEventArgs.Device
-- uid: NixUniversalSDK.ScanResultEventArgs.Device*
-  name: Device
-  href: api/NixUniversalSDK.ScanResultEventArgs.html#NixUniversalSDK_ScanResultEventArgs_Device_
-  commentId: Overload:NixUniversalSDK.ScanResultEventArgs.Device
-  isSpec: "True"
-  fullName: NixUniversalSDK.ScanResultEventArgs.Device
-  nameWithType: ScanResultEventArgs.Device
 - uid: NixUniversalSDK.ScannerCreatedEventArgs
   name: ScannerCreatedEventArgs
   href: api/NixUniversalSDK.ScannerCreatedEventArgs.html
@@ -4579,6 +4560,25 @@ references:
   isSpec: "True"
   fullName: NixUniversalSDK.ScannerCreatedEventArgs.State
   nameWithType: ScannerCreatedEventArgs.State
+- uid: NixUniversalSDK.ScanResultEventArgs
+  name: ScanResultEventArgs
+  href: api/NixUniversalSDK.ScanResultEventArgs.html
+  commentId: T:NixUniversalSDK.ScanResultEventArgs
+  fullName: NixUniversalSDK.ScanResultEventArgs
+  nameWithType: ScanResultEventArgs
+- uid: NixUniversalSDK.ScanResultEventArgs.Device
+  name: Device
+  href: api/NixUniversalSDK.ScanResultEventArgs.html#NixUniversalSDK_ScanResultEventArgs_Device
+  commentId: P:NixUniversalSDK.ScanResultEventArgs.Device
+  fullName: NixUniversalSDK.ScanResultEventArgs.Device
+  nameWithType: ScanResultEventArgs.Device
+- uid: NixUniversalSDK.ScanResultEventArgs.Device*
+  name: Device
+  href: api/NixUniversalSDK.ScanResultEventArgs.html#NixUniversalSDK_ScanResultEventArgs_Device_
+  commentId: Overload:NixUniversalSDK.ScanResultEventArgs.Device
+  isSpec: "True"
+  fullName: NixUniversalSDK.ScanResultEventArgs.Device
+  nameWithType: ScanResultEventArgs.Device
 - uid: NixUniversalSDK.SpectralData
   name: SpectralData
   href: api/NixUniversalSDK.SpectralData.html
@@ -5063,18 +5063,6 @@ references:
   commentId: F:NixUniversalSDK.Wrapper.DeviceScannerModule.DefaultMaxReportIntervalMs
   fullName: NixUniversalSDK.Wrapper.DeviceScannerModule.DefaultMaxReportIntervalMs
   nameWithType: DeviceScannerModule.DefaultMaxReportIntervalMs
-- uid: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
-  name: ScanResultDelegate
-  href: api/NixUniversalSDK.Wrapper.DeviceScannerModule.html#NixUniversalSDK_Wrapper_DeviceScannerModule_ScanResultDelegate
-  commentId: P:NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
-  fullName: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
-  nameWithType: DeviceScannerModule.ScanResultDelegate
-- uid: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate*
-  name: ScanResultDelegate
-  href: api/NixUniversalSDK.Wrapper.DeviceScannerModule.html#NixUniversalSDK_Wrapper_DeviceScannerModule_ScanResultDelegate_
-  commentId: Overload:NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
-  fullName: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
-  nameWithType: DeviceScannerModule.ScanResultDelegate
 - uid: NixUniversalSDK.Wrapper.DeviceScannerModule.ScannerCreatedDelegate
   name: ScannerCreatedDelegate
   href: api/NixUniversalSDK.Wrapper.DeviceScannerModule.html#NixUniversalSDK_Wrapper_DeviceScannerModule_ScannerCreatedDelegate
@@ -5111,6 +5099,18 @@ references:
   commentId: Overload:NixUniversalSDK.Wrapper.DeviceScannerModule.ScannerStoppedDelegate
   fullName: NixUniversalSDK.Wrapper.DeviceScannerModule.ScannerStoppedDelegate
   nameWithType: DeviceScannerModule.ScannerStoppedDelegate
+- uid: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
+  name: ScanResultDelegate
+  href: api/NixUniversalSDK.Wrapper.DeviceScannerModule.html#NixUniversalSDK_Wrapper_DeviceScannerModule_ScanResultDelegate
+  commentId: P:NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
+  fullName: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
+  nameWithType: DeviceScannerModule.ScanResultDelegate
+- uid: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate*
+  name: ScanResultDelegate
+  href: api/NixUniversalSDK.Wrapper.DeviceScannerModule.html#NixUniversalSDK_Wrapper_DeviceScannerModule_ScanResultDelegate_
+  commentId: Overload:NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
+  fullName: NixUniversalSDK.Wrapper.DeviceScannerModule.ScanResultDelegate
+  nameWithType: DeviceScannerModule.ScanResultDelegate
 - uid: NixUniversalSDK.Wrapper.Exported
   name: Exported
   href: api/NixUniversalSDK.Wrapper.Exported.html
