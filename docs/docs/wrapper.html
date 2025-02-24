@@ -86,7 +86,7 @@
 <h2 id="overview">Overview</h2>
 <p>For Windows applications that are not .NET based, it may be possible to use <code>NixUniversalSDK</code> indirectly. For example, the SDK download provides a project <code>NixUniversalSDK.Wrapper</code> which allows for its usage in C/C++ applications.</p>
 <p>The <code>NixUniversalSDK.Wrapper</code> contains single <code>IDeviceScanner</code> and <code>IDeviceCompat</code> instances. It provides a static interface to access these instances and also provides callbacks for device and scanner events. The project contains a basic implementation, but can be modified or expanded to better suit your specific application.</p>
-<p>The wrapper project is part of the SDK examples which are available <a href="https://www.nixsensor.com/sdk-windows">online</a>.</p>
+<p>The wrapper project is part of the SDK examples which are available <a href="https://www.nixsensor.com/sdk-windows-prerelease">online</a>.</p>
 <h3 id="known-limitations">Known limitations</h3>
 <ul>
 <li>The wrapper project is written in C# and is built to a self-contained native library using NativeAOT. NativeAOT builds use code-trimming and should specify runtime directives as described <a href="add-to-vs.html#runtime-directives">here</a>. Note that the provided wrapper project has already declared these runtime directives; no further configuration is necessary.</li>
