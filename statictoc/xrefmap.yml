@@ -6050,6 +6050,21 @@ references:
   commentId: Overload:NixUniversalSDK.Wrapper.Exported.Measurement_GetLastModesJson
   fullName: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastModesJson
   nameWithType: Exported.Measurement_GetLastModesJson
+- uid: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson(System.IntPtr)
+  name: Measurement_GetLastReferencesJson(nint)
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Measurement_GetLastReferencesJson_System_IntPtr_
+  commentId: M:NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson(System.IntPtr)
+  name.vb: Measurement_GetLastReferencesJson(IntPtr)
+  fullName: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson(nint)
+  fullName.vb: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson(System.IntPtr)
+  nameWithType: Exported.Measurement_GetLastReferencesJson(nint)
+  nameWithType.vb: Exported.Measurement_GetLastReferencesJson(IntPtr)
+- uid: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson*
+  name: Measurement_GetLastReferencesJson
+  href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Measurement_GetLastReferencesJson_
+  commentId: Overload:NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson
+  fullName: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson
+  nameWithType: Exported.Measurement_GetLastReferencesJson
 - uid: NixUniversalSDK.Wrapper.Exported.Measurement_GetLastSpectralJson(System.IntPtr)
   name: Measurement_GetLastSpectralJson(nint)
   href: api/NixUniversalSDK.Wrapper.Exported.html#NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_IntPtr_

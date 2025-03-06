@@ -2584,6 +2584,50 @@ public static nint GetSdkId()</code></pre>
 
 
 
+  <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastReferencesJson_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson*"></a>
+
+  <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastReferencesJson_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastReferencesJson(System.IntPtr)">
+  Measurement_GetLastReferencesJson(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of <a class="xref" href="NixUniversalSDK.ReferenceWhite.html">reference white</a> names available for the last measurement, formatted as JSON.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint Measurement_GetLastReferencesJson(nint scanModeNamePtr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scanModeNamePtr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd><p>Pointer to scan mode name to select, which must match one of the names in the <a class="xref" href="NixUniversalSDK.ScanMode.html">ScanMode</a> enum (e.g. - &quot;M0&quot;, &quot;M1&quot;, or &quot;M2&quot;)</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastReferencesJson_System_IntPtr__examples">Examples</h4>
+  <p>An example of calling this function is shown below:</p>
+<pre><code class="lang-csharp">string references = Measurement_GetLastReferencesJson("M2");</code></pre>
+<p>Example JSON output:</p>
+<pre><code class="lang-csharp">["D50_2","D65_10"]</code></pre>
+
+
+
+
+
+
   <a id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastSpectralJson*"></a>
 
   <h3 id="NixUniversalSDK_Wrapper_Exported_Measurement_GetLastSpectralJson_System_IntPtr_" data-uid="NixUniversalSDK.Wrapper.Exported.Measurement_GetLastSpectralJson(System.IntPtr)">
