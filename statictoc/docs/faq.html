@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Frequently Asked Questions </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Frequently Asked Questions ">
+    
+    
+      <link rel="shortcut icon" href="../images/ic_nix_swatches.png">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/nix_logo_grey.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../index.html" title="Docs">Docs</a>
+                      </li>
+                      <li>
+                          <a href="../api/NixUniversalSDK.html" title="API">API</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Getting Started</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="add-to-vs.html" title="Adding to Your Visual Studio Project" class="">Adding to Your Visual Studio Project</a>
+                          </li>
+                          <li class="">
+                            <a href="activating-license.html" title="Activating the SDK License" class="">Activating the SDK License</a>
+                          </li>
+                          <li class="">
+                            <a href="discovering-connecting.html" title="Discovering and Connecting to Nix Devices" class="">Discovering and Connecting to Nix Devices</a>
+                          </li>
+                          <li class="">
+                            <a href="device-operations.html" title="Device Operations" class="">Device Operations</a>
+                          </li>
+                          <li class="">
+                            <a href="handling-measurements.html" title="Handling Measurement Data" class="">Handling Measurement Data</a>
+                          </li>
+                          <li class="active">
+                            <a href="faq.html" title="Frequently Asked Questions" class="active">Frequently Asked Questions</a>
+                          </li>
+                          <li class="">
+                            <a href="example-apps.html" title="Example Applications" class="">Example Applications</a>
+                          </li>
+                          <li class="">
+                            <a href="wrapper.html" title="Wrapper for Usage in C/C++" class="">Wrapper for Usage in C/C++</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <a href="../api/NixUniversalSDK.html" title="API" class="">API</a>
+                    </li>
+                    <li class="">
+                      <a href="release-notes.html" title="Release Notes" class="">Release Notes</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+
+<p>This section includes tips on how to troubleshoot common issues that may be encountered when implementing the <code>NixUniversalSDK</code> into your Windows application.</p>
+<h2 id="build-errors-and-compatibility">Build errors and compatibility</h2>
+<ol>
+<li>I am building an application for .NET 6.0 or higher but am getting a <a href="https://learn.microsoft.com/en-us/dotnet/core/tools/sdk-errors/netsdk1149">NETSDK1149</a> error. How do I configure my project to avoid this?
+<ul>
+<li>A NETSDK1149 error generally indicates a missing platform and version qualifier when configuring your project.</li>
+<li>When targeting .NET 6 or higher, you need to include the Windows platform and version qualifiers for your project's target framework.
+<ul>
+<li>For example, in the .csproj file the TargetFramework should be specified like 'net9.0-windows10.0.22621.0' instead of 'net9.0'.</li>
+<li>If the latter is specified (without 'windows' and target version), your project will try and build against a .NET Standard version of the library which is included for compatibility for the older .NET Framework.</li>
+<li>.NET Core 3.1 and .NET 5 are not supported. Only .NET Framework (4.7 and up), or .NET 6.0 on Windows 10 and 11 are supported.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>My application is not written in .NET. Is there a C/C++ interface available?
+<ul>
+<li>It is possible to build a wrapper for the <code>NixUniversalSDK</code> which provides a C/C++ interface. A full-featured project is provided in the examples to accomplish this exact purpose. Refer to <a href="wrapper.html">Wrapper for Usage in C/C++</a> for additional details.</li>
+</ul>
+</li>
+<li>Can I use the Nix Universal SDK in a Windows virtual machine on macOS (for example, in Parallels Desktop)?
+<ul>
+<li>No, it is not recommended to use the Windows version of the <code>NixUniversalSDK</code> in a Parallels Desktop virtual machine.
+<ul>
+<li>Limitations of the BLE pass-through to the virtual machine prevent Bluetooth connections from opening properly.</li>
+<li>USB connections to Nix devices may work unreliably in a virtual machine.</li>
+</ul>
+</li>
+<li>Instead, it is recommended to support macOS with native applications using our <a href="https://www.nixsensor.com/sdk-doc-ios">macOS version</a> of <code>NixUniversalSDK</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="license-and-activation-issues">License and activation issues</h2>
+<ol>
+<li>The <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a> cannot start and is indicating an <a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html#NixUniversalSDK_DeviceScannerState_ErrorLicense"><code>ErrorLicense</code></a> state. How do I resolve this?
+<ul>
+<li>Check the license manager state via <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_State"><code>LicenseManager.State</code></a>. This will be one of the <a class="xref" href="../api/NixUniversalSDK.LicenseManagerState.html"><code>LicenseManagerState</code></a> enum, which will describe the problem.</li>
+<li>Activate the license manager by calling <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html#NixUniversalSDK_LicenseManager_Activate_"><code>LicenseManager.Activate</code></a> and ensure that its state is <code>Active</code> before initializing the <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a>.</li>
+</ul>
+</li>
+<li>My license is active, but Nix devices immediately disconnect with an <a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html#NixUniversalSDK_DeviceStatus_ErrorUnauthorized"><code>ErrorUnauthorized</code></a> status.
+<ul>
+<li>Depending on license conditions, the <code>NixUniversalSDK</code> may require periodic internet access to check if a device is authorized by the active license.</li>
+<li>If set by the license, internet connections are required:
+<ul>
+<li>On the first connection of a particular device serial number.</li>
+<li>At least once per 30 day period thereafter.</li>
+</ul>
+</li>
+<li>If you are behind a firewall, white-list access to <a href="https://nixsensor.com/nixserial">https://nixsensor.com/nixserial</a> to ensure that the server can be reached.</li>
+<li>If your license includes provisions for private-labelled devices, these devices may be exempted from this requirement.</li>
+<li>Please contact us via e-mail at <a href="mailto:sdk@nixsensor.com">sdk@nixsensor.com</a> if alternate license arrangements are required.</li>
+</ul>
+</li>
+</ol>
+<h2 id="device-discovery-and-connection">Device discovery and connection</h2>
+<ol>
+<li>Can a single Nix device be connected to more than one application at a time?
+<ul>
+<li>No, a Nix device can only communicate with a single application running on a single host at any given time.</li>
+</ul>
+</li>
+<li>Can I open a connection to multiple Nix devices simultaneously inside the same application?
+<ul>
+<li>No, the <code>NixUniversalSDK</code> is configured to work with a single device at a time.</li>
+</ul>
+</li>
+<li>How long should I run the <a class="xref" href="../api/NixUniversalSDK.DeviceScanner.html"><code>DeviceScanner</code></a> for when discovering nearby devices?
+<ul>
+<li>When discovering Nix devices over Bluetooth, the default 20 second search period is recommended.
+<ul>
+<li>If you wish to use a shorter period, at least 10 seconds is highly suggested.</li>
+<li>Nix devices advertise their presence once per second, but some advertisement packets may be missed due to other Bluetooth traffic. The default 20 second period allows multiple advertisement to be reliably received.</li>
+</ul>
+</li>
+<li>If you are only interested in finding USB attached devices, consider listing these directly by awaiting <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_ListUsbDevicesAsync_"><code>ListUsbDevicesAsync()</code></a>, which does not require an ongoing search.</li>
+</ul>
+</li>
+<li>The device scanner found more than one device. How should I handle multiple nearby devices?
+<ul>
+<li>It is best practice to show a list of nearby devices in your UI sorted by signal strength (<a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Rssi">RSSI</a>). Including the device <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Name">name</a> and <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">ID</a> also helps the user distinguish between devices.
+<ul>
+<li>Note that RSSI is a negative number and ranges from 0 (strongest) to -128 (weakest). Show  the strongest signal devices at the top of the list.</li>
+</ul>
+</li>
+<li>You should prompt your user to bring their Nix device closer to their PC when searching over Bluetooth. This will increase the relative signal strength of their device over other nearby Nix devices.</li>
+</ul>
+</li>
+<li>How should signal strength (RSSI) be used?
+<ul>
+<li>RSSI indicates relative signal strength and ranges from 0 (strongest) to -128 (weakest). When sorting a list of devices by RSSI, sort in descending order (i.e. - show the values closer to 0 at the top of the list).</li>
+<li>Note that USB devices always report an RSSI of '0'. You can and should distinguish between USB and Bluetooth devices in any displayed device list. The <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_InterfaceType"><code>InterfaceType</code></a> property allows you to distinguish between the two.</li>
+<li>Rather than displaying the RSSI value directly, consider showing it with signal strength icons, as shown in the <a href="example-apps.html#winui3-demo">WinUI3 demo</a> application.</li>
+</ul>
+</li>
+</ol>
+<p><img src="../images/device_list_example.png" width="250" height="251" alt="WinUI3 Devices List Example"></p>
+<ol start="6">
+<li>Bluetooth is not available on my Windows system and the <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html"><code>DeviceScanner</code></a> cannot start. How do I discover USB attached devices in this scenario?
+<ul>
+<li>If Bluetooth hardware is unavailable on the Windows system, it is still possible to list USB attached devices without running a device search. Refer to <a class="xref" href="../api/NixUniversalSDK.IDeviceScanner.html#NixUniversalSDK_IDeviceScanner_ListUsbDevicesAsync_"><code>ListUsbDevicesAsync()</code></a>.</li>
+</ul>
+</li>
+<li>My USB attached Nix device is not recognized or listed by the SDK.
+<ul>
+<li>Verify that your USB cable provides both power and data connection (i.e. - it is a USB data cable and not a simple charging cable).</li>
+<li>Check the Windows Device Manager. Confirm that the Nix device enumerates as a 'USB Serial Port' under 'Ports (COM &amp; LPT)'</li>
+<li>If you are running antivirus software, verify that it is not blocking access to the system COM ports.</li>
+</ul>
+</li>
+<li>The device scanner is running, but no nearby Nix devices are found.
+<ul>
+<li>For USB attached devices, complete the troubleshooting steps listed above in item #7.</li>
+<li>For Bluetooth attached devices:
+<ul>
+<li>Ensure that the Nix device is charged.</li>
+<li>Ensure that it is not actively connected to another application (see item #1). If in doubt, connecting the Nix device to a charger will reset any active connections.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Connecting and using a Nix device over Bluetooth seems too slow. Can the connection speed be increased?
+<ul>
+<li>Opening a connection and measuring with the Nix device is an asynchronous process, so some delays are to be expected.
+<ul>
+<li>Negotiating a BLE connection can take 5 to 30 seconds under ideal conditions.</li>
+<li>Measurements are expected to take 2 to 3 seconds under ideal conditions.</li>
+</ul>
+</li>
+<li>On Windows 11 PCs, Bluetooth performance should follow these expectations. If Bluetooth performance is slow on Windows 11, verify that your application includes the runtime directives listed <a href="add-to-vs.html#runtime-directives">here</a>.</li>
+<li>On Windows 10 PCs, Bluetooth connection speeds to a Nix device are restricted. This is caused by a limitation in the BLE stack in the Windows 10 SDK.
+<ul>
+<li>On Windows 10, Bluetooth operations may be 2 - 3 times slower than Windows 11. Unfortunately, this is expected behaviour.</li>
+<li>Should faster communications be required, consider implementing a USB connection to the Nix device.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="other">Other</h2>
+<ol>
+<li>Can I rename the Nix device?
+<ul>
+<li>The device <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Name">name</a> is fixed in the device firmware and cannot be changed.</li>
+</ul>
+</li>
+<li>Can I assign a nickname to a particular device?
+<ul>
+<li>For Bluetooth devices, the device <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_Id">ID</a> represents a hardware address. Since this is visible during the device search, this can be used by your application to tag or nickname individual devices during a device search or re-connection.
+<ul>
+<li>Note that the ID for USB attached devices is the COM port number, which may be recycled by the Windows system. It is not recommended to use the COM port number for nicknaming purposes.</li>
+</ul>
+</li>
+<li>Once connected, the device <a class="xref" href="../api/NixUniversalSDK.IDeviceCompat.html#NixUniversalSDK_IDeviceCompat_SerialNumber">serial number</a> can be used to uniquely identify devices regardless of their connection interface.</li>
+</ul>
+</li>
+<li>Does the SDK provide access to any existing colour libraries (paint colours, PANTONE, RAL, NCS, etc.)?
+<ul>
+<li>No, the <code>NixUniversalSDK</code> does not provide any colour libraries. Creation and maintenance of colour libraries is the responsibility of the application creator or the application end-user.</li>
+<li>When handling your own colour library data, the <a class="xref" href="../api/NixUniversalSDK.ColorUtils.html"><code>ColorUtils</code></a> class provides many helpful functions for manual colour conversions and delta E calculations (e.g. - for colour matching against a library).</li>
+</ul>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li>Review the <a href="example-apps.html">example applications</a></li>
+<li><a href="../index.html#additional-support">Get additional support</a></li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nixsensor/nix-universal-sdk-windows/blob/main/NixUniversalSDK.Docs/docs/faq.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

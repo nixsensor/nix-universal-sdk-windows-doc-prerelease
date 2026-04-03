@@ -744,6 +744,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/faq.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/handling-measurements.md",
       "output": {
         ".html": {
@@ -788,6 +798,16 @@
       "output": {
         "resource": {
           "relative_path": "images/console_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/device_list_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/device_list_example.png"
         }
       },
       "version": ""

@@ -104,6 +104,9 @@
                             <a href="docs/handling-measurements.html" title="Handling Measurement Data" class="">Handling Measurement Data</a>
                           </li>
                           <li class="">
+                            <a href="docs/faq.html" title="Frequently Asked Questions" class="">Frequently Asked Questions</a>
+                          </li>
+                          <li class="">
                             <a href="docs/example-apps.html" title="Example Applications" class="">Example Applications</a>
                           </li>
                           <li class="">
@@ -184,6 +187,7 @@
 <li>Once connected, measurements and other device operations can be performed using the <a class="xref" href="api/NixUniversalSDK.IDeviceCompat.html">IDeviceCompat</a> instance. Device parameters can also be queried. See <a href="docs/device-operations.html">Device Operations</a> for more details.</li>
 <li>Once a measurement has been completed, results are provided as <a class="xref" href="api/NixUniversalSDK.IMeasurementData.html">IMeasurementData</a> instances. These objects provide colorimetry data, density, and spectral measurements (if supported by the device and active license). See <a href="docs/handling-measurements.html">Handling Measurement Data</a> for more details.</li>
 <li>Several additional utility functions are provided by the <a class="xref" href="api/NixUniversalSDK.ColorUtils.html">ColorUtils</a> class. These include functions for manual colour conversions, delta E calculations, and more.</li>
+<li>A list of frequently asked questions (FAQ) and steps to troubleshoot common issues is available <a href="docs/faq.html">here</a>.</li>
 <li>To demonstrate integration of the Nix Universal SDK, two <a href="docs/example-apps.html">example</a> applications are provided:
 <ul>
 <li>A basic console application <code>NixExampleConsole</code>, targeting .NET Framework 4.7.2</li>
@@ -192,8 +196,14 @@
 </li>
 <li>A project demonstrating how the .NET SDK can be wrapped and used in a C/C++ application is also provided. See <a href="docs/wrapper.html">Wrapper for Usage in C/C++</a> for more details.</li>
 </ol>
+<h2 id="other-platforms">Other Platforms</h2>
+<p>Aside from Windows, alternate versions of the <code>NixUniversalSDK</code> are available for other platforms. If you are looking to add Nix device support to Android, iOS, or macOS applications please visit the following pages for further information.</p>
+<ul>
+<li>NixUniversalSDK for <a href="https://www.nixsensor.com/sdk-doc-android">Android</a></li>
+<li>NixUniversalSDK for <a href="https://www.nixsensor.com/sdk-doc-ios">iOS and macOS</a></li>
+</ul>
 <h2 id="additional-support">Additional Support</h2>
-<p>This document is not intended as an exhaustive reference. Please refer to the <a class="xref" href="api/NixUniversalSDK.html">API</a> documentation section for further details on the classes and methods provided by the Nix Universal SDK.</p>
+<p>This quick start guide is not intended as an exhaustive reference. Please refer to the <a class="xref" href="api/NixUniversalSDK.html">API</a> documentation section for further details on the classes and methods provided by the Nix Universal SDK.</p>
 <p>If you encounter any issues with SDK implementation, please contact us via e-mail at <a href="mailto:sdk@nixsensor.com">sdk@nixsensor.com</a>.</p>
 <h2 id="privacy-disclaimer">Privacy Disclaimer</h2>
 <p>Limited anonymous usage data is tracked by the Nix Universal SDK using Google Analytics. No personal user data, color data, or any data which uniquely identifies an individual Nix device is collected. Collected data is subject to the Nix Apps <a href="https://www.nixsensor.com/nix-apps-privacy-policy/">privacy policy</a>. Events and usage data tracked by the Nix SDK are solely limited to the following information:</p>

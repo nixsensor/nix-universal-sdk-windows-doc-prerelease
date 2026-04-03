@@ -83,6 +83,21 @@
         <article data-uid="">
 <h1 id="release-notes">Release Notes</h1>
 
+<h2 id="version-423">Version 4.2.3</h2>
+<ul>
+<li>Released on April 2, 2026</li>
+<li>Addressed issues that could cause an unexpected <a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html#NixUniversalSDK_DeviceStatus_ErrorUnauthorized"><code>ErrorUnauthorized</code></a> status when connecting to a device.
+<ul>
+<li>Updated header for online license authentication check.</li>
+<li>Extended the offline grace period to the intended 30 days.</li>
+</ul>
+</li>
+</ul>
+<h2 id="version-422">Version 4.2.2</h2>
+<ul>
+<li>Released on February 4, 2026</li>
+<li>Updated code signing certificate used for publishing on <a href="https://nuget.org/packages/NixUniversalSDK">nuget.org</a></li>
+</ul>
 <h2 id="version-421">Version 4.2.1</h2>
 <ul>
 <li>Released on March 7, 2025</li>
@@ -99,14 +114,14 @@
 <li>Nix Universal SDK functions must now be enabled with a license key using the <a class="xref" href="../api/NixUniversalSDK.LicenseManager.html"><code>LicenseManager</code></a>. For further details, refer to <a href="activating-license.html">Activating the SDK License</a>.</li>
 <li>Existing <code>enum</code> types have added cases related to <code>LicenseManager</code> errors. Refer to the API documentation linked below for additional details.
 <ul>
-<li><a class="xref" href="../api/NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorLicense">CommandStatus.ErrorLicense</a></li>
-<li><a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html#NixUniversalSDK_DeviceScannerState_ErrorLicense">DeviceScannerState.ErrorLicense</a></li>
-<li><a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html#NixUniversalSDK_DeviceStatus_ErrorLicense">DeviceStatus.ErrorLicense</a></li>
+<li><a class="xref" href="../api/NixUniversalSDK.CommandStatus.html#NixUniversalSDK_CommandStatus_ErrorLicense"><code>CommandStatus.ErrorLicense</code></a></li>
+<li><a class="xref" href="../api/NixUniversalSDK.DeviceScannerState.html#NixUniversalSDK_DeviceScannerState_ErrorLicense"><code>DeviceScannerState.ErrorLicense</code></a></li>
+<li><a class="xref" href="../api/NixUniversalSDK.DeviceStatus.html#NixUniversalSDK_DeviceStatus_ErrorLicense"><code>DeviceStatus.ErrorLicense</code></a></li>
 </ul>
 </li>
 <li><a class="xref" href="../api/NixUniversalSDK.ISpectralDataExtensions.html#NixUniversalSDK_ISpectralDataExtensions_ToDensityData_"><code>ISpectralData.ToDensityData()</code></a> can now return <code>null</code>.
 <ul>
-<li>The result is <code>null</code> when <a class="xref" href="../api/NixUniversalSDK.LicenseFeature.html#NixUniversalSDK_LicenseFeature_DensityData">LicenseFeature.DensityData</a> is not provided by the active license.</li>
+<li>The result is <code>null</code> when <a class="xref" href="../api/NixUniversalSDK.LicenseFeature.html#NixUniversalSDK_LicenseFeature_DensityData"><code>LicenseFeature.DensityData</code></a> is not provided by the active license.</li>
 </ul>
 </li>
 <li>Compatibility: targeted Windows framework version has been lowered for .NET Core 6 and above
